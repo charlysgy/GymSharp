@@ -18,13 +18,14 @@
         <RadioButton Grid.Row="0"
                      Grid.Column="0"
                      Grid.RowSpan="1"
-                     Grid.ColumnSpan="1"
-                     Content="Click me !!"
-                     FontSize="15" 
-                     Foreground="White">
-            <RadioButton.Background>
-                <ImageBrush ImageSource="/ressources/Images/logo_gym#.png" Stretch="UniformToFill"/>
-            </RadioButton.Background>
+                     Grid.ColumnSpan="1">
+            <RadioButton.Template>
+                <ControlTemplate>
+                    <Border>
+                        <Image Source="../../ressources/Images/logo_gym.png" Height="60"/>
+                    </Border>
+                </ControlTemplate>
+            </RadioButton.Template>
         </RadioButton>
     </Grid>
 </UserControl>

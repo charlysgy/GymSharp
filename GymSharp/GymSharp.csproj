@@ -134,5 +134,11 @@
   <ItemGroup>
     <Resource Include="Data\config.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\logo_gym.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\Nouveau Document texte.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,8 +6,7 @@
              xmlns:chart="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              xmlns:viewModel="clr-namespace:GymSharp.MVVM.ViewModel"
              xmlns:local="clr-namespace:GymSharp.MVVM.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             mc:Ignorable="d" Height="416" Width="818">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

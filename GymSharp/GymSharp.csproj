@@ -61,6 +61,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ressources\enums\exo_enum.cs" />
+    <Compile Include="ressources\enums\muscles_enum.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -112,7 +114,6 @@
   <ItemGroup>
     <Folder Include="Core\" />
     <Folder Include="MVVM\Model\" />
-    <Folder Include="ressources\enums\" />
     <Folder Include="ressources\text\English-en\" />
     <Folder Include="ressources\text\Francais-fr\" />
     <Folder Include="Theme\" />

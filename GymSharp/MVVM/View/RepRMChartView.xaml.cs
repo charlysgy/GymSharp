@@ -13,11 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GymSharp
+namespace GymSharp.MVVM.View
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Logique d'interaction pour RepRMChartView.xaml
+    /// </summary>
+    public partial class RepRMChartView : UserControl
     {
-        public MainWindow()
+        public RepRMChartView()
         {
             InitializeComponent();
         }

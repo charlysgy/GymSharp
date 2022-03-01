@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
         <DockPanel  Grid.Row="1"
@@ -26,7 +26,10 @@
                                   Margin="10 10"
                                   LegendLocation="Left"
                                   FontFamily="{Binding FontFamily}"
-                                  FontSize="{Binding FontSize}">
+                                  FontSize="{Binding FontSize}"
+                                  AxisX="{Binding AxisXName}"
+                                  AxisY="{Binding AxisYName}"
+                                  Series="{Binding SeriesCollection}">
                 <chart:CartesianChart.DataContext>
                     <viewModel:RepRMChartViewModel/>
                 </chart:CartesianChart.DataContext>

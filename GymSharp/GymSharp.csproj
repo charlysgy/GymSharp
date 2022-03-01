@@ -77,11 +77,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="MVVM\View\ListeExercice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MVVM\ViewModel\RepRMChartViewModel.cs" />
     <Compile Include="MVVM\View\RepRMChartView.xaml.cs">
       <DependentUpon>RepRMChartView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\ListeExercice.xaml.cs">
+      <DependentUpon>ListeExercice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

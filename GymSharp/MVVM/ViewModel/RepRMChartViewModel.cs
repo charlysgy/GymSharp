@@ -5,29 +5,11 @@ using LiveCharts;
 using LiveCharts.Wpf;
 using System.Windows.Media;
 using System.Collections.Generic;
-using GymSharp.ressources.enums;
 
 namespace GymSharp.MVVM.ViewModel
 {
     internal class RepRMChartViewModel : Window
     {
-
-        private enum Months
-        {
-            Janvier,
-            Fevrier,
-            Mars,
-            Avril,
-            Mai,
-            Juin,
-            Juillet,
-            Aout,
-            Septembre,
-            Octobre,
-            Novembre,
-            Decembre
-        }
-
         #region Attributes
         public SeriesCollection SeriesCollection { get; }
         public Func<double, string> Yformatter { get; }
@@ -35,14 +17,17 @@ namespace GymSharp.MVVM.ViewModel
         public string AxisXName { get; }
         public string AxisYName { get; }
         public string[] Labels { get; }
+        public bool DataLabels = true;
         
-        private List<string> ListMuscles = new List<string>();
-        private List<int> ListDays = new List<int>();
-        private List<int> ListMonths = new List<int>();
-        private List<int> ListYears = new List<int>();
+        private readonly List<Tuple<int, int>> ListExercises = new List<Tuple<int, int>>();
+        private readonly List<int> ListDays = new List<int>();
+        private readonly List<int> ListMonths = new List<int>();
+        private readonly List<int> ListYears = new List<int>();
+        private readonly string Langue;
 
         #endregion
 
+        // Constructor of the line chart 
 
         public RepRMChartViewModel()
         {
@@ -62,28 +47,55 @@ namespace GymSharp.MVVM.ViewModel
                     case "FontSize":
                         FontSize = int.Parse(value);
                         break;
+                    case "Langue":
+                        Langue = value;
+                        break;
                 }
             }
+
             stream.Close();
 
+            //Read the user data
             stream = new StreamReader("../../Data/RepMaxRepData.txt");
-            string content = stream.ReadToEnd();
+            string[] content = stream.ReadToEnd().Split('\n');
             stream.Close();
 
-            foreach (string line in content.Split('\n'))
+            // Select data and save it in lists
+            foreach (string line in content) 
             {
                 string[] data = line.Split('/');
-                if (ListDays.Count > 0 && ListDays[-1] != int.Parse(data[0]))
-                {
+                if ((ListDays.Count > 0 && ListDays[-1] != int.Parse(data[0])) || ListDays.Count == 0) //Avoiding the same day to be present multiple time
                     ListDays.Add(int.Parse(data[0]));
-                }
-                if (ListMonths.Count > 0 &&  ListMonths[-1] != int.Parse(data[1]))
-                {
+
+                if ((ListMonths.Count > 0 &&  ListMonths[-1] != int.Parse(data[1])) || ListMonths.Count == 0)
                     ListMonths.Add(int.Parse(data[1]));
-                }
-                if (ListYears.Count > 0 &&  ListYears[-1] != int.Parse(data[2]))
-                {
+                
+                if ((ListYears.Count > 0 && ListYears[-1] != int.Parse(data[2])) || ListYears.Count == 0)
                     ListYears.Add(int.Parse(data[2]));
+
+                ListExercises.Add(
+                    new Tuple<int, int>
+                        (int.Parse(data[3]), int.Parse(data[4]))
+                );
+            }
+
+            if (ListDays.Count <= 28)
+            {
+                Labels = new string[ListDays.Count];
+                for (int i = 0; i < ListDays.Count; i++) 
+                {
+                    Labels[i] = ListDays[i].ToString();
+                }
+            }
+            else
+            {
+                stream = new StreamReader($"../../ressources/text/{Langue}/Months");
+                content = stream.ReadToEnd().Split('\n');
+                stream.Close();
+
+                for (int i = 0; i < ListMonths.Count; i++)
+                {
+                    Labels[i] = content[ListMonths[i]];         //Select the corresponding month in the user language
                 }
             }
 
@@ -92,13 +104,27 @@ namespace GymSharp.MVVM.ViewModel
                 new LineSeries
                 {
                     Title = "Répétition Max",
-                    Values = new ChartValues<double> { 20, 22, 25, 30 ,35 },
+                    Values = new ChartValues<double>(),
                     PointGeometry = DefaultGeometries.Cross,
                     PointForeground = Brushes.Red,
-                    
+                    DataLabels = DataLabels
                 }
             };
+        }
 
+        // Return the average of a List<int> list
+
+        public int GetAverage(List<int> list)
+        {
+            int count = 0;
+            int total = 0;
+
+            foreach (int item in list)
+            {
+                total += item;
+                count++;
+            }
+            return total/count;
         }
     }
 }

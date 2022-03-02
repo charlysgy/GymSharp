@@ -29,7 +29,8 @@
                                   FontSize="{Binding FontSize}"
                                   AxisX="{Binding AxisXName}"
                                   AxisY="{Binding AxisYName}"
-                                  Series="{Binding SeriesCollection}">
+                                  Series="{Binding SeriesCollection}"
+                                  Zoom="Xy">
                 <chart:CartesianChart.DataContext>
                     <viewModel:RepRMChartViewModel/>
                 </chart:CartesianChart.DataContext>

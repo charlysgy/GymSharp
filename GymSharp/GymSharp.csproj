@@ -128,8 +128,6 @@
   <ItemGroup>
     <Folder Include="Core\" />
     <Folder Include="MVVM\Model\" />
-    <Folder Include="ressources\text\English-en\" />
-    <Folder Include="ressources\text\Francais-fr\" />
     <Folder Include="Theme\" />
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +144,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\Images\Nouveau Document texte.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\text\English-en\Months.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\text\English-en\Days.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\text\Francais-fr\Months.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\text\Francais-fr\Days.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

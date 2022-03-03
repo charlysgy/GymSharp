@@ -90,6 +90,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Theme\StyleBoutons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MVVM\ViewModel\RepRMChartViewModel.cs" />
@@ -128,7 +132,12 @@
   <ItemGroup>
     <Folder Include="Core\" />
     <Folder Include="MVVM\Model\" />
+<<<<<<< Updated upstream
     <Folder Include="Theme\" />
+=======
+    <Folder Include="ressources\text\English-en\" />
+    <Folder Include="ressources\text\Francais-fr\" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\text\message_accueil.txt" />

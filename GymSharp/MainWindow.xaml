@@ -11,16 +11,26 @@
     <Border Background="#ADADAD">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="266"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="75"/>
+                <RowDefinition Height="250"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image Source="ressources/Images/logo_gym.png"/>
+            <Image Source="ressources/Images/logo_gym.png" 
+                   Height="250"/>
+
+            <StackPanel Grid.Row="1">
+                <RadioButton Content="Paramètres"/>
+                <RadioButton Content="Charly est beau"/>
+                <RadioButton Content="Théodore est énerve"/>
+                <RadioButton Content="Hugo est pas drôle"/>
+                <RadioButton Content="Hugo est un fdp"/>
+            </StackPanel>
+            
         </Grid>
     </Border>
 </Window>

@@ -18,7 +18,5 @@ namespace GymSharp.ressources.enums
         Ischios = 8,
         Mollets = 9,
         Avant_bras = 10,
-        Bras = 11,
-        Jambes = 12
     }
 }

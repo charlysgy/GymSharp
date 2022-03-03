@@ -24,5 +24,10 @@ namespace GymSharp.MVVM.View
         {
             InitializeComponent();
         }
+
+        private void StackPanel_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
+        {
+
+        }
     }
 }

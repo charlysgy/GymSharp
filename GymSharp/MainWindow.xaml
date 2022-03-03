@@ -23,15 +23,13 @@
                    Height="250"/>
 
             <StackPanel Grid.Row="1">
+                <RadioButton Content="Profil"
+                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Liste Exercices"
+                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Nutrition"
+                             Style="{StaticResource StyleBoutons}"/>
                 <RadioButton Content="Paramètres"
-                             Style="{StaticResource StyleBoutons}"/>
-                <RadioButton Content="Charly est beau"
-                             Style="{StaticResource StyleBoutons}"/>
-                <RadioButton Content="Théodore est énervé"
-                             Style="{StaticResource StyleBoutons}"/>
-                <RadioButton Content="Hugo est pas drôle"
-                             Style="{StaticResource StyleBoutons}"/>
-                <RadioButton Content="Hugo est un fdp"
                              Style="{StaticResource StyleBoutons}"/>
             </StackPanel>
             

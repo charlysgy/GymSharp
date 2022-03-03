@@ -6,8 +6,7 @@
         xmlns:local="clr-namespace:GymSharp"
         mc:Ignorable="d"
         Title="MainWindow" Height="1200" Width="1920"
-        Background="Transparent"
-        AllowsTransparency="True">
+        Background="Transparent">
     <Border Background="#ADADAD">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -24,11 +23,16 @@
                    Height="250"/>
 
             <StackPanel Grid.Row="1">
-                <RadioButton Content="Paramètres"/>
-                <RadioButton Content="Charly est beau"/>
-                <RadioButton Content="Théodore est énerve"/>
-                <RadioButton Content="Hugo est pas drôle"/>
-                <RadioButton Content="Hugo est un fdp"/>
+                <RadioButton Content="Paramètres"
+                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Charly est beau"
+                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Théodore est énervé"
+                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Hugo est pas drôle"
+                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Hugo est un fdp"
+                             Style="{StaticResource StyleBoutons}"/>
             </StackPanel>
             
         </Grid>

@@ -132,12 +132,6 @@
   <ItemGroup>
     <Folder Include="Core\" />
     <Folder Include="MVVM\Model\" />
-<<<<<<< Updated upstream
-    <Folder Include="Theme\" />
-=======
-    <Folder Include="ressources\text\English-en\" />
-    <Folder Include="ressources\text\Francais-fr\" />
->>>>>>> Stashed changes
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\text\message_accueil.txt" />
@@ -150,9 +144,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\Images\logo_gym.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="ressources\Images\Nouveau Document texte.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\text\English-en\Months.txt" />

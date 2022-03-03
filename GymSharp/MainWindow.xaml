@@ -32,7 +32,14 @@
                 <RadioButton Content="Paramètres"
                              Style="{StaticResource StyleBoutons}"/>
             </StackPanel>
-            
+
+            <TextBox Grid.Row="0" Grid.Column="1" 
+                     Text="Ici il y aura les anectodes qui défileront"
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Center"
+                     FontSize="50"
+                     Background="#ADADAD"/>
+
         </Grid>
     </Border>
 </Window>

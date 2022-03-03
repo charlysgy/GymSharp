@@ -24,7 +24,7 @@
             <RadioButton.Template>
                 <ControlTemplate>
                     <Border>
-                        <Image Source="../../ressources/Images/logo_gym.png" Height="60" HorizontalAlignment="Left"/>
+                        <Image Source="../../ressources/Images/logo_gym.png" Height="70" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </RadioButton.Template>
@@ -36,7 +36,7 @@
                      Grid.ColumnSpan="1">
             <RadioButton.Template>
                 <ControlTemplate>
-                    <TextBlock Foreground="White" Text="Menu" VerticalAlignment="Center" Margin="18, 0, 0, 10"/>
+                    <TextBlock Foreground="White" Text="Menu" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Berlin Sans FB"/>
                 </ControlTemplate>
             </RadioButton.Template>
         </RadioButton>
@@ -54,7 +54,7 @@
                      Grid.ColumnSpan="1">
                 <RadioButton.Template>
                     <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Bras" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+                        <TextBlock Foreground="White" Text="Bras" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                     </ControlTemplate>
                 </RadioButton.Template>
             </RadioButton>
@@ -66,7 +66,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoBras1" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoBras1" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -77,7 +77,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoBras2" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoBras2" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -88,7 +88,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoBras3" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoBras3" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -99,7 +99,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoBras4" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoBras4" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -110,7 +110,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoBras5" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoBras5" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -123,7 +123,7 @@
                      Grid.ColumnSpan="1">
                 <RadioButton.Template>
                     <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Jambe" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+                        <TextBlock Foreground="White" Text="Jambe" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                     </ControlTemplate>
                 </RadioButton.Template>
             </RadioButton>
@@ -134,7 +134,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoJambe1" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoJambe1" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -145,7 +145,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoJambe2" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoJambe2" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -156,7 +156,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoJambe3" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoJambe3" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -167,7 +167,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoJambe4" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoJambe4" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -178,7 +178,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoJambe5" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoJambe5" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -190,7 +190,7 @@
                      Grid.ColumnSpan="1">
                 <RadioButton.Template>
                     <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Dos" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+                        <TextBlock Foreground="White" Text="Dos" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                     </ControlTemplate>
                 </RadioButton.Template>
             </RadioButton>
@@ -201,7 +201,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoDos1" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoDos1" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -212,7 +212,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoDos2" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoDos2" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -223,7 +223,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoDos3" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoDos3" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -234,7 +234,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoDos4" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoDos4" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -245,7 +245,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoDos5" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoDos5" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -257,7 +257,7 @@
                      Grid.ColumnSpan="1">
                 <RadioButton.Template>
                     <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Pectoraux" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+                        <TextBlock Foreground="White" Text="Pectoraux" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                     </ControlTemplate>
                 </RadioButton.Template>
             </RadioButton>
@@ -268,7 +268,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoPecs1" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoPecs1" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -279,7 +279,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoPecs2" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoPecs2" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -290,7 +290,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoPecs3" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoPecs3" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -301,7 +301,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoPecs4" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoPecs4" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -312,7 +312,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoPecs5" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoPecs5" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -324,7 +324,7 @@
                      Grid.ColumnSpan="1">
                 <RadioButton.Template>
                     <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Epaule" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+                        <TextBlock Foreground="White" Text="Epaule" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                     </ControlTemplate>
                 </RadioButton.Template>
             </RadioButton>
@@ -335,7 +335,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoEpaules1" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoEpaules1" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -346,7 +346,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoEpaules2" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoEpaules2" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -357,7 +357,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoEpaules3" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoEpaules3" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -368,7 +368,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoDos4" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoDos4" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -379,7 +379,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoEpaules5" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoEpaules5" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -391,7 +391,7 @@
                      Grid.ColumnSpan="1">
                 <RadioButton.Template>
                     <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Abdos" HorizontalAlignment="Left" Margin="5, 0, 0, 0"/>
+                        <TextBlock Foreground="White" Text="Abdos" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                     </ControlTemplate>
                 </RadioButton.Template>
             </RadioButton>
@@ -402,7 +402,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoAbdos1" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoAbdos1" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -413,7 +413,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoAbdos2" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoAbdos2" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -424,7 +424,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoAbdos3" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoAbdos3" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -435,7 +435,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoAbdos4" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoAbdos4" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>
@@ -446,7 +446,7 @@
                      Grid.ColumnSpan="1">
                     <RadioButton.Template>
                         <ControlTemplate>
-                            <TextBlock Foreground="White" Text="ExoAbdos5" HorizontalAlignment="Left" Margin="18, 0, 0, 0"/>
+                            <TextBlock Foreground="White" Text="ExoAbdos5" HorizontalAlignment="Left" Margin="18, 0, 0, 0" FontFamily="Berlin Sans FB"/>
                         </ControlTemplate>
                     </RadioButton.Template>
                 </RadioButton>

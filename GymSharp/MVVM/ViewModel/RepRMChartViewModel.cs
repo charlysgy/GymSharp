@@ -98,18 +98,6 @@ namespace GymSharp.MVVM.ViewModel
                     Labels[i] = content[ListMonths[i]];         //Select the corresponding month in the user language
                 }
             }
-
-            SeriesCollection = new SeriesCollection
-            {
-                new LineSeries
-                {
-                    Title = "Répétition Max",
-                    Values = new ChartValues<double>(),
-                    PointGeometry = DefaultGeometries.Cross,
-                    PointForeground = Brushes.Red,
-                    DataLabels = DataLabels
-                }
-            };
         }
 
         // Return the average of a List<int> list

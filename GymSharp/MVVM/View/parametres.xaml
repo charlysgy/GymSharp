@@ -6,7 +6,257 @@
              xmlns:local="clr-namespace:GymSharp.MVVM.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid Background="#ADADAD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Foreground="White"
+                   Text="Paramètres"
+                   TextAlignment="Center"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Grid.Column="1"
+                   Grid.Row="0"
+                   FontSize="40"
+                   FontFamily="Berlin Sans FB"
+                   Margin="0, 0, 20, 0"/>
+        
+
+        <RadioButton Grid.Row="0"
+                     Grid.Column="0"
+                     Grid.RowSpan="1"
+                     Grid.ColumnSpan="1">
+            <RadioButton.Template>
+                <ControlTemplate>
+                    <Border>
+                        <Image Source="../../ressources/Images/logo_gym.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="100"/>
+                    </Border>
+                </ControlTemplate>
+            </RadioButton.Template>
+        </RadioButton>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                    CanVerticallyScroll="True">
+
+            <RadioButton Grid.Row="1"
+                         Grid.Column="0"
+                         x:Name="ButtonProfile"
+                         GroupName="Profile">
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <TextBlock Foreground="White"
+                                   Text="Profile"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontFamily="Berlin Sans FB"
+                                   FontSize="20"
+                                   Margin="5, 0, 0, 0"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <StackPanel>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile1"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile2"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile3"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                
+            </StackPanel>
             
+            <RadioButton>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <TextBlock Foreground="White"
+                                   Text="Parametre2"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontFamily="Berlin Sans FB"
+                                   FontSize="20"
+                                   Margin="5, 0, 0, 0"/>
+                    </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+            <StackPanel>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile4"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile5"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+            </StackPanel>
+            
+            <RadioButton>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <TextBlock Foreground="White"
+                                   Text="Parametre3"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontFamily="Berlin Sans FB"
+                                   FontSize="20"
+                                   Margin="5, 0, 0, 0"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <StackPanel>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile6"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile7"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+            </StackPanel>
+            
+            <RadioButton>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <TextBlock Foreground="White"
+                                   Text="Parametre4"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontFamily="Berlin Sans FB"
+                                   FontSize="20"
+                                   Margin="5, 0, 0, 0"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <StackPanel>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile8"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sous-profile9"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">            
+            <TextBlock Foreground="White"
+                       Text="Profile"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Berlin Sans FB"
+                       FontSize="35"/>
+            <TextBlock Foreground="White"
+                       Text="Sous-profile"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Left"
+                       FontFamily="Berlin Sans FB"
+                       FontSize="30"
+                       Margin="10, 0, 0, 0"/>
+            <TextBlock Foreground="White"
+                       Text="Trucs modifiables"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Berlin Sans FB"
+                       FontSize="25"
+                       Margin="10, 0, 0, 0"/>
+        </StackPanel>
+        
     </Grid>
 </UserControl>

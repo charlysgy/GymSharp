@@ -61,6 +61,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MVVM\Model\GraphicClass.cs" />
     <Compile Include="MVVM\View\parametres.xaml.cs">
       <DependentUpon>parametres.xaml</DependentUpon>
     </Compile>

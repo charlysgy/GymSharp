@@ -23,27 +23,37 @@
                    Height="250"/>
 
             <StackPanel Grid.Row="1">
-                <Menu>
-                    <MenuItem Header="_Menu"
-                              Style="{StaticResource StyleMenu}">
+                <Menu HorizontalContentAlignment="Center">
+                    <MenuItem Header="_Menu">
                         <RadioButton Content="Profil"
-                             Style="{StaticResource StyleBoutons}"/>
+                             Style="{StaticResource StyleBoutons}"
+                                     Background="Black"/>
                         <RadioButton Content="Liste Exercices"
-                             Style="{StaticResource StyleBoutons}"/>
+                             Style="{StaticResource StyleBoutons}"
+                                     Background="Black"/>
                         <RadioButton Content="Nutrition"
-                             Style="{StaticResource StyleBoutons}"/>
+                             Style="{StaticResource StyleBoutons}"
+                                     Background="Black"/>
                         <RadioButton Content="Paramètres"
-                             Style="{StaticResource StyleBoutons}"/>
+                             Style="{StaticResource StyleBoutons}"
+                                     Background="Black"/>
                     </MenuItem>
                 </Menu>
             </StackPanel>
 
             <TextBox Grid.Row="0" Grid.Column="1" 
-                     Text="les anectodes qui défileront"
+                     Text="Les anectodes qui défileront"
                      VerticalContentAlignment="Center"
                      HorizontalContentAlignment="Center"
-                     FontSize="50"
+                     FontSize="40"
                      Background="#ADADAD"/>
+
+            <TextBox Grid.Row="1" Grid.Column="1"
+                     Text="Ici apparaîtra la fenêtre sélectionnée"
+                     VerticalContentAlignment="Center"
+                     HorizontalContentAlignment="Center"
+                     FontSize="25"
+                     Background="Azure"/>
 
         </Grid>
     </Border>

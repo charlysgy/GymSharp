@@ -61,7 +61,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="MVVM\ViewModel\ViewModel_ListeExercice.cs" />
     <Compile Include="MVVM\View\parametres.xaml.cs">
       <DependentUpon>parametres.xaml</DependentUpon>
     </Compile>
@@ -136,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
-    <Folder Include="MVVM\Model\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\text\message_accueil.txt" />
@@ -161,6 +159,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\text\Francais-fr\Days.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\text\English-en\Muscles.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

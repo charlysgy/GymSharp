@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ControlTemplate x:Key="{StaticResource MenuItem.TopLevelItemTemplateKey}"
-                     TargetType="{x:Type MenuItem}">
+                     TargetType="{x:Type MenuItem}"
+                     x:Key="StylMenu">
         <Border x:Name="Border">
             <Grid>
                 <ContentPresenter Margin="6,3,6,3"
@@ -25,7 +26,7 @@
                     </Setter.Value>
                 </Setter>
             </Trigger>
-            <Trigger Property="IsEnablec"
+            <Trigger Property="IsEnabled"
                      Value="False">
                 <Setter Property="Foreground">
                     <Setter.Value>

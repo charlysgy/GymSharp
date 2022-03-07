@@ -21,11 +21,11 @@
 
             <Image Source="ressources/Images/logo_gym.png" 
                    Height="250"/>
-            
+
             <StackPanel Grid.Row="1">
                 <Menu>
                     <MenuItem Header="_Menu"
-                              Style="{x:Static StyleMenu}">
+                              Style="{StaticResource StyleMenu}">
                         <RadioButton Content="Profil"
                              Style="{StaticResource StyleBoutons}"/>
                         <RadioButton Content="Liste Exercices"
@@ -37,18 +37,6 @@
                     </MenuItem>
                 </Menu>
             </StackPanel>
-
-            <!--<ComboBox Grid.Row="1"
-                      Height="200">
-                <RadioButton Content="Profil"
-                             Style="{StaticResource StyleBoutons}"/>
-                <RadioButton Content="Profil"
-                             Style="{StaticResource StyleBoutons}"/>
-                <RadioButton Content="Profil"
-                             Style="{StaticResource StyleBoutons}"/>
-                <RadioButton Content="Profil"
-                             Style="{StaticResource StyleBoutons}"/>
-            </ComboBox>-->
 
             <TextBox Grid.Row="0" Grid.Column="1" 
                      Text="les anectodes qui défileront"

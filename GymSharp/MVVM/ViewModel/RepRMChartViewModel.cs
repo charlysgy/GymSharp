@@ -5,6 +5,8 @@ using LiveCharts;
 using LiveCharts.Wpf;
 using System.Windows.Media;
 using System.Collections.Generic;
+using GymSharp.MVVM.Model;
+using GymSharp.ressources.enums;
 
 namespace GymSharp.MVVM.ViewModel
 {
@@ -16,6 +18,14 @@ namespace GymSharp.MVVM.ViewModel
 
         public string AxisXName { get; }
         public string AxisYName { get; }
+        public string PecRadButtons { get; }
+        public string DosRadButtons { get; }
+        public string BrasRadButtons { get; }
+        public string EpauleRadButtons { get; }
+        public string AbsRadButtons { get; }
+        public string QuadRadButtons { get; }
+        public string IschioRadButtons { get; }
+        public string MolletRadButtons { get; }
         public string[] Labels { get; }
         public bool DataLabels = true;
         
@@ -23,7 +33,9 @@ namespace GymSharp.MVVM.ViewModel
         private readonly List<int> ListDays = new List<int>();
         private readonly List<int> ListMonths = new List<int>();
         private readonly List<int> ListYears = new List<int>();
+        private readonly StreamReader stream;
         private readonly string Langue;
+        private readonly string[] content;
 
         #endregion
 
@@ -33,8 +45,7 @@ namespace GymSharp.MVVM.ViewModel
         {
             // Read the config text file to set attributes values and Chart basic configuration
 
-            StreamReader stream = new StreamReader("../../Data/config.txt");
-            foreach (string line in stream.ReadToEnd().Split('\n'))
+            foreach (string line in GraphicClass.GetConfig("../../Data/config.txt"))
             {
                 string attribute = line.Split(':')[0], value = line.Split(':')[1];
 
@@ -53,66 +64,38 @@ namespace GymSharp.MVVM.ViewModel
                 }
             }
 
-            stream.Close();
-
-            //Read the user data
-            stream = new StreamReader("../../Data/RepMaxRepData.txt");
-            string[] content = stream.ReadToEnd().Split('\n');
-            stream.Close();
-
-            // Select data and save it in lists
-            foreach (string line in content) 
+            if (Langue != "Francais-fr")
             {
-                string[] data = line.Split('/');
-                if ((ListDays.Count > 0 && ListDays[-1] != int.Parse(data[0])) || ListDays.Count == 0) //Avoiding the same day to be present multiple time
-                    ListDays.Add(int.Parse(data[0]));
-
-                if ((ListMonths.Count > 0 &&  ListMonths[-1] != int.Parse(data[1])) || ListMonths.Count == 0)
-                    ListMonths.Add(int.Parse(data[1]));
-                
-                if ((ListYears.Count > 0 && ListYears[-1] != int.Parse(data[2])) || ListYears.Count == 0)
-                    ListYears.Add(int.Parse(data[2]));
-
-                ListExercises.Add(
-                    new Tuple<int, int>
-                        (int.Parse(data[3]), int.Parse(data[4]))
-                );
-            }
-
-            if (ListDays.Count <= 28)
-            {
-                Labels = new string[ListDays.Count];
-                for (int i = 0; i < ListDays.Count; i++) 
-                {
-                    Labels[i] = ListDays[i].ToString();
-                }
-            }
-            else
-            {
-                stream = new StreamReader($"../../ressources/text/{Langue}/Months");
+                stream = new StreamReader($"../../ressources/text/{Langue}/Muscles.txt");
                 content = stream.ReadToEnd().Split('\n');
                 stream.Close();
 
-                for (int i = 0; i < ListMonths.Count; i++)
-                {
-                    Labels[i] = content[ListMonths[i]];         //Select the corresponding month in the user language
-                }
+                PecRadButtons = content[(int)Muscles.Pectoraux];
+                DosRadButtons = content[(int)Muscles.Dos];
+                BrasRadButtons = content[(int)Muscles.Biceps];
+                EpauleRadButtons = content[(int)Muscles.Epaules];
+                AbsRadButtons = content[(int)Muscles.Abdominaux];
+                QuadRadButtons = content[(int)Muscles.Quadirceps];
+                IschioRadButtons = content[(int)Muscles.Ischios];
+                MolletRadButtons = content[(int)Muscles.Mollets];
             }
-        }
-
-        // Return the average of a List<int> list
-
-        public int GetAverage(List<int> list)
-        {
-            int count = 0;
-            int total = 0;
-
-            foreach (int item in list)
+            else
             {
-                total += item;
-                count++;
+                PecRadButtons = "Pectauraux";
+                DosRadButtons = "Dos";
+                BrasRadButtons = "Bras";
+                EpauleRadButtons = "Epaules";
+                AbsRadButtons = "Abdos";
+                QuadRadButtons = "Quadricpes";
+                IschioRadButtons = "Ischios";
+                MolletRadButtons = "Mollets";
             }
-            return total/count;
+
+            content = GraphicClass.GetData("../../Data/RepMaxRepData.txt");
+            ListDays = GraphicClass.GetListDays(content);
+            ListMonths = GraphicClass.GetListMonths(content);
+            ListYears = GraphicClass.GetListYears(content);
+            
         }
     }
 }

@@ -21,10 +21,22 @@
                     Grid.Row="0"
                     Grid.Column="0"
                     Grid.ColumnSpan="2">
-            <RadioButton Content=""/>
-            <RadioButton />
-            <RadioButton />
-            <RadioButton />
+            <RadioButton Content="{Binding PecRadButton}"
+                         Cursor="Hand"/>
+            <RadioButton Content="{Binding DosRadButton}" 
+                         Cursor="Hand"/>
+            <RadioButton Content="{Binding BrasRadButton}" 
+                         Cursor="Hand"/>
+            <RadioButton Content="{Binding EpauleRadButton}" 
+                         Cursor="Hand"/>
+            <RadioButton Content="{Binding AbsRadButton}" 
+                         Cursor="Hand"/>
+            <RadioButton Content="{Binding QuadRadButton}" 
+                         Cursor="Hand"/>
+            <RadioButton Content="{Binding IschioRadButton}" 
+                         Cursor="Hand"/>
+            <RadioButton Content="{Binding MolletRadButton}" 
+                         Cursor="Hand"/>
         </StackPanel>
 
         <DockPanel  Grid.Row="1"

@@ -109,7 +109,7 @@
                 <RadioButton.Template>
                     <ControlTemplate>
                         <TextBlock Foreground="White"
-                                   Text="Parametre2"
+                                   Text="Paramètre2"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Left"
                                    FontFamily="Berlin Sans FB"
@@ -123,7 +123,7 @@
                     <RadioButton.Template>
                         <ControlTemplate>
                             <TextBlock Foreground="White"
-                                       Text="Sous-profile4"
+                                       Text="SousParamètre"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        FontFamily="Berlin Sans FB"
@@ -136,7 +136,7 @@
                     <RadioButton.Template>
                         <ControlTemplate>
                             <TextBlock Foreground="White"
-                                       Text="Sous-profile5"
+                                       Text="SousParamètre"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        FontFamily="Berlin Sans FB"
@@ -151,7 +151,7 @@
                 <RadioButton.Template>
                     <ControlTemplate>
                         <TextBlock Foreground="White"
-                                   Text="Parametre3"
+                                   Text="Paramètre3"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Left"
                                    FontFamily="Berlin Sans FB"
@@ -165,7 +165,7 @@
                     <RadioButton.Template>
                         <ControlTemplate>
                             <TextBlock Foreground="White"
-                                       Text="Sous-profile6"
+                                       Text="SousParamètre"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        FontFamily="Berlin Sans FB"
@@ -178,7 +178,7 @@
                     <RadioButton.Template>
                         <ControlTemplate>
                             <TextBlock Foreground="White"
-                                       Text="Sous-profile7"
+                                       Text="SousParamètre"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        FontFamily="Berlin Sans FB"
@@ -193,7 +193,7 @@
                 <RadioButton.Template>
                     <ControlTemplate>
                         <TextBlock Foreground="White"
-                                   Text="Parametre4"
+                                   Text="Paramètre4"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="Left"
                                    FontFamily="Berlin Sans FB"
@@ -207,7 +207,7 @@
                     <RadioButton.Template>
                         <ControlTemplate>
                             <TextBlock Foreground="White"
-                                       Text="Sous-profile8"
+                                       Text="SousParamètre"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        FontFamily="Berlin Sans FB"
@@ -220,7 +220,7 @@
                     <RadioButton.Template>
                         <ControlTemplate>
                             <TextBlock Foreground="White"
-                                       Text="Sous-profile9"
+                                       Text="SousParamètre"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"
                                        FontFamily="Berlin Sans FB"

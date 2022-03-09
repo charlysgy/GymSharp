@@ -1,0 +1,3 @@
+﻿graphique$
+textblock1:Your stats
+radiobuttons:

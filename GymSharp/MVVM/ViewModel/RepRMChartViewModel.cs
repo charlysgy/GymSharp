@@ -2,11 +2,13 @@
 using System.Windows;
 using System.IO;
 using LiveCharts;
-using LiveCharts.Wpf;
 using System.Windows.Media;
 using System.Collections.Generic;
 using GymSharp.MVVM.Model;
 using GymSharp.ressources.enums;
+using GymSharp.MVVM.View;
+using System.Windows.Controls;
+using System.Windows.Data;
 
 namespace GymSharp.MVVM.ViewModel
 {
@@ -15,6 +17,7 @@ namespace GymSharp.MVVM.ViewModel
         #region Attributes
         public SeriesCollection SeriesCollection { get; }
         public Func<double, string> Yformatter { get; }
+        public GroupItem RadioButtonsBodyParts { get; }
 
         public string AxisXName { get; }
         public string AxisYName { get; }
@@ -72,7 +75,7 @@ namespace GymSharp.MVVM.ViewModel
 
                 PecRadButtons = content[(int)Muscles.Pectoraux];
                 DosRadButtons = content[(int)Muscles.Dos];
-                BrasRadButtons = content[(int)Muscles.Biceps];
+                BrasRadButtons = content[(int)Muscles.Bras];
                 EpauleRadButtons = content[(int)Muscles.Epaules];
                 AbsRadButtons = content[(int)Muscles.Abdominaux];
                 QuadRadButtons = content[(int)Muscles.Quadirceps];
@@ -95,7 +98,6 @@ namespace GymSharp.MVVM.ViewModel
             ListDays = GraphicClass.GetListDays(content);
             ListMonths = GraphicClass.GetListMonths(content);
             ListYears = GraphicClass.GetListYears(content);
-            
         }
     }
 }

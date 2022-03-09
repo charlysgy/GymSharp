@@ -62,6 +62,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MVVM\Model\GraphicClass.cs" />
+    <Compile Include="MVVM\ViewModel\ViewModel_ListeExercice.cs" />
     <Compile Include="MVVM\View\parametres.xaml.cs">
       <DependentUpon>parametres.xaml</DependentUpon>
     </Compile>
@@ -163,6 +164,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\text\English-en\Muscles.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\text\English-en\Translated.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

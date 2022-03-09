@@ -17,28 +17,48 @@
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Orientation="Horizontal"
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2">
-            <RadioButton Content="{Binding PecRadButton}"
-                         Cursor="Hand"/>
+        
+        <TextBlock x:Name="textBlockUL" Grid.Row="0"
+                   Grid.Column="0"
+                   Text="Votre suivi"
+                   Foreground="White"
+                   FontFamily="Berlin sans FB"
+                   FontSize="20"
+                   Margin="5 5 15 0"/>
+        <StackPanel x:Name="panelBodyParts" Grid.Row="0"
+                    Grid.Column="1"
+                    Orientation="Horizontal"
+                    VerticalAlignment="Center">
+            <RadioButton GroupName="RadioButtonsBodyParts"
+                         
+                            Content="{Binding PecRadButton}"
+                            Cursor="Hand"/>
             <RadioButton Content="{Binding DosRadButton}" 
-                         Cursor="Hand"/>
+                            Cursor="Hand"/>
             <RadioButton Content="{Binding BrasRadButton}" 
-                         Cursor="Hand"/>
+                            Cursor="Hand"/>
             <RadioButton Content="{Binding EpauleRadButton}" 
-                         Cursor="Hand"/>
+                            Cursor="Hand"/>
             <RadioButton Content="{Binding AbsRadButton}" 
-                         Cursor="Hand"/>
+                            Cursor="Hand"/>
             <RadioButton Content="{Binding QuadRadButton}" 
-                         Cursor="Hand"/>
+                            Cursor="Hand"/>
             <RadioButton Content="{Binding IschioRadButton}" 
-                         Cursor="Hand"/>
+                            Cursor="Hand"/>
             <RadioButton Content="{Binding MolletRadButton}" 
-                         Cursor="Hand"/>
+                            Cursor="Hand"/>
         </StackPanel>
-
+        <DockPanel Grid.Row="1"
+                   Grid.Column="0">
+            <CheckBox />
+            <CheckBox />
+            <CheckBox />
+            <CheckBox />
+            <CheckBox />
+            <CheckBox />
+            <CheckBox />
+            <CheckBox />
+        </DockPanel>
         <DockPanel  Grid.Row="1"
                     Grid.Column="1"
                     Grid.RowSpan="1"
@@ -59,5 +79,8 @@
             </chart:CartesianChart>
             
         </DockPanel>
+        <StackPanel x:Name="ExercicesList">
+            
+        </StackPanel>
     </Grid>
 </UserControl>

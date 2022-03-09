@@ -1,4 +1,3 @@
-﻿Configuration file needs to be kept in the exact same order and following the "Property:value" format
-Langue:Francais-fr
+﻿Langue:Francais-fr
 FontSize:14
-FontFamily:Arial
+FontFamily:Berlin sans FB

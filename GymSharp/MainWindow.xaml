@@ -21,7 +21,11 @@
 
             <Image Source="ressources/Images/logo_gym.png" 
                    Height="250"/>
-
+            <!--Ca ne va pas ton menu ici, soit tu fait des RadioButtons 
+            soit tu fais des MenuItem mais pas l'un dans l'autre
+            J'ai trouver le moyen de faire des animations, on verra ça 
+            pour faire apparaitre le menu "comme s'il glissit de la gauche"
+            en attendant laisse le fixe-->
             <StackPanel Grid.Row="1">
                 <Menu HorizontalContentAlignment="Center">
                     <MenuItem Header="_Menu">

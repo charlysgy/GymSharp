@@ -30,7 +30,6 @@
                     Orientation="Horizontal"
                     VerticalAlignment="Center">
             <RadioButton GroupName="RadioButtonsBodyParts"
-                         
                             Content="{Binding PecRadButton}"
                             Cursor="Hand"/>
             <RadioButton Content="{Binding DosRadButton}" 

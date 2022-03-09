@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using GymSharp.MVVM.View; /*Permet de définir où se trouve les views*/
 
 namespace GymSharp
 {
@@ -20,6 +8,25 @@ namespace GymSharp
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void HomeCommand(object sender, RoutedEventArgs e)
+        {
+            viewContainer.Children.Clear();
+        }
+
+        private void ExercicesCommand(object sender, RoutedEventArgs e)
+        {
+            viewContainer.Children.Clear();
+            UIElement element = new ListeExercices();
+            viewContainer.Children.Add(element);
+        }
+
+        private void ParametreCommand(object sender, RoutedEventArgs e)
+        {
+            viewContainer.Children.Clear();
+            UIElement element = new parametres();
+            viewContainer.Children.Add(element);
         }
     }
 }

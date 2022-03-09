@@ -10,37 +10,36 @@
     <Border Background="#ADADAD">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="266"/>
+                <ColumnDefinition Width="Auto"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="250"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
             <Image Source="ressources/Images/logo_gym.png" 
-                   Height="250"/>
-            <!--Ca ne va pas ton menu ici, soit tu fait des RadioButtons 
-            soit tu fais des MenuItem mais pas l'un dans l'autre
-            J'ai trouver le moyen de faire des animations, on verra ça 
-            pour faire apparaitre le menu "comme s'il glissit de la gauche"
-            en attendant laisse le fixe-->
+                   Height="50"
+                   MouseDown="HomeCommand"/> <!--A terme il faudra faire une view "Home" ou "Accueil"-->
+            
             <StackPanel Grid.Row="1">
                 <Menu HorizontalContentAlignment="Center">
                     <MenuItem Header="_Menu">
                         <RadioButton Content="Profil"
-                             Style="{StaticResource StyleBoutons}"
+                                     Style="{StaticResource StyleBoutons}"
                                      Background="Black"/>
                         <RadioButton Content="Liste Exercices"
-                             Style="{StaticResource StyleBoutons}"
-                                     Background="Black"/>
+                                     Style="{StaticResource StyleBoutons}"
+                                     Background="Black"
+                                     Checked="ExercicesCommand"/>
                         <RadioButton Content="Nutrition"
-                             Style="{StaticResource StyleBoutons}"
+                                     Style="{StaticResource StyleBoutons}"
                                      Background="Black"/>
                         <RadioButton Content="Paramètres"
-                             Style="{StaticResource StyleBoutons}"
-                                     Background="Black"/>
+                                     Style="{StaticResource StyleBoutons}"
+                                     Background="Black"
+                                     Checked="ParametreCommand"/>
                     </MenuItem>
                 </Menu>
             </StackPanel>
@@ -52,12 +51,11 @@
                      FontSize="40"
                      Background="#ADADAD"/>
 
-            <TextBox Grid.Row="1" Grid.Column="1"
-                     Text="Ici apparaîtra la fenêtre sélectionnée"
-                     VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"
-                     FontSize="25"
-                     Background="Azure"/>
+            <DockPanel Grid.Row="1"
+                       Grid.Column="1"
+                       x:Name="viewContainer">
+                
+            </DockPanel>
 
         </Grid>
     </Border>

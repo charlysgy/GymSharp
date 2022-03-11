@@ -40,6 +40,10 @@
                                      Style="{StaticResource StyleBoutons}"
                                      Background="Black"
                                      Checked="ParametreCommand"/>
+                        <RadioButton Content="Graphique"
+                                     Style="{StaticResource StyleBoutons}"
+                                     Background="Black"
+                                     Checked="GraphiqueCommand"/>
                     </MenuItem>
                 </Menu>
             </StackPanel>

@@ -28,5 +28,12 @@ namespace GymSharp
             UIElement element = new parametres();
             viewContainer.Children.Add(element);
         }
+
+        private void GraphiqueCommand(object sender, RoutedEventArgs e)
+        {
+            viewContainer.Children.Clear();
+            UIElement element = new RepRMChartView();
+            viewContainer.Children.Add(element);
+        }
     }
 }

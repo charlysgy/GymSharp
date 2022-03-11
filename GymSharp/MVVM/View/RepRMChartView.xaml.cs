@@ -1,28 +1,59 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using GymSharp.MVVM.ViewModel;
+using GymSharp.ressources.enums;
 
 namespace GymSharp.MVVM.View
 {
-    /// <summary>
-    /// Logique d'interaction pour RepRMChartView.xaml
-    /// </summary>
+    /* <summary>
+       Logique d'interaction pour RepRMChartView.xaml
+       </summary> */
     public partial class RepRMChartView : UserControl
     {
         public RepRMChartView()
         {
             InitializeComponent();
+            RepRMChartViewModel.View = this;
+        }
+
+        private void PecRadChecked(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.ChangeGridCheckBox((Muscles)1);
+        }
+
+        private void BrasRadChecked(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.ChangeGridCheckBox((Muscles)2);
+        }
+
+        private void DosRadChecked(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.ChangeGridCheckBox((Muscles)3);
+        }
+
+        private void EpauleRadChecked(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.ChangeGridCheckBox((Muscles)4);
+        }
+
+        private void AbsRadChecked(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.ChangeGridCheckBox((Muscles)5);
+        }
+
+        private void QuadRadChecked(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.ChangeGridCheckBox((Muscles)6);
+        }
+
+        private void IschioRadChecked(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.ChangeGridCheckBox((Muscles)7);
+        }
+
+        private void MolletRadChecked(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.ChangeGridCheckBox((Muscles)8);
         }
     }
 }

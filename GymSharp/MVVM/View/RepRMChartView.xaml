@@ -16,11 +16,11 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="1*"
-                              Name="secondColumn"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
         <Grid x:Name="gridBodyParts" 
@@ -28,7 +28,8 @@
               Grid.Column="0"
               Grid.ColumnSpan="2"
               VerticalAlignment="Stretch"
-              HorizontalAlignment="Stretch">
+              HorizontalAlignment="Stretch"
+              Height="Auto">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -40,6 +41,10 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
 
             <TextBlock x:Name="textBlockUL" 
                    Grid.Row="0"
@@ -51,107 +56,99 @@
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"/>
 
-            <RadioButton Grid.Column="1"
+            <RadioButton x:Name="_1" 
+                         Grid.Row="0"
+                         Grid.Column="1"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding PecRadButton}"
-                         IsChecked="True"
                          Cursor="Hand"
-                         Checked="PecRadChecked"/>
-            
-            <RadioButton Grid.Column="2" 
+                         Checked="BodyPartChecked"/>
+
+            <RadioButton x:Name="_2" 
+                         Grid.Row="0"
+                         Grid.Column="2" 
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding DosRadButton}" 
                          Cursor="Hand"
-                         Checked="DosRadChecked"/>
-            
-            <RadioButton Grid.Column="3" 
+                         Checked="BodyPartChecked"/>
+
+            <RadioButton x:Name="_3" 
+                         Grid.Column="3" 
+                         Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding BrasRadButton}" 
                          Cursor="Hand"
-                         Checked="BrasRadChecked"/>
-            
-            <RadioButton Grid.Column="4" 
+                         Checked="BodyPartChecked"/>
+
+            <RadioButton x:Name="_4" 
+                         Grid.Column="4" 
+                         Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding EpauleRadButton}" 
                          Cursor="Hand"
-                         Checked="EpauleRadChecked"/>
-            
-            <RadioButton Grid.Column="5" 
+                         Checked="BodyPartChecked"/>
+
+            <RadioButton x:Name="_5" 
+                         Grid.Column="5" 
+                         Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding AbsRadButton}" 
                          Cursor="Hand"
-                         Checked="AbsRadChecked"/>
-            
-            <RadioButton Grid.Column="6" 
+                         Checked="BodyPartChecked"/>
+
+            <RadioButton x:Name="_6" 
+                         Grid.Column="6" 
+                         Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding QuadRadButton}" 
                          Cursor="Hand"
-                         Checked="QuadRadChecked"/>
-            
-            <RadioButton Grid.Column="7" 
+                         Checked="BodyPartChecked"/>
+
+            <RadioButton x:Name="_7" 
+                         Grid.Column="7" 
+                         Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding IschioRadButton}" 
                          Cursor="Hand"
-                         Checked="IschioRadChecked"/>
-            
-            <RadioButton Grid.Column="8" 
+                         Checked="BodyPartChecked"/>
+
+            <RadioButton x:Name="_8" 
+                         Grid.Column="8" 
+                         Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding MolletRadButton}" 
                          Cursor="Hand"
-                         Checked="MolletRadChecked"/>
+                         Checked="BodyPartChecked"/>
         </Grid>
 
-        <Grid x:Name="checkBoxGrid" 
-              Grid.Row="1"
-              Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <CheckBox Grid.Row="0" 
-                      Style="{StaticResource StyleCheckBox}"/>
-            <CheckBox Grid.Row="1" 
-                      Style="{StaticResource StyleCheckBox}"/>
-            <CheckBox Grid.Row="2" 
-                      Style="{StaticResource StyleCheckBox}"/>
-            <CheckBox Grid.Row="3" 
-                      Style="{StaticResource StyleCheckBox}"/>
-            <CheckBox Grid.Row="4" 
-                      Style="{StaticResource StyleCheckBox}"/>
-            <CheckBox Grid.Row="5" 
-                      Style="{StaticResource StyleCheckBox}"/>
-            <CheckBox Grid.Row="6" 
-                      Style="{StaticResource StyleCheckBox}"/>
-            <CheckBox Grid.Row="7" 
-                      Style="{StaticResource StyleCheckBox}"/>
-        </Grid>
-
-        <DockPanel  Grid.Row="1"
-                    Grid.Column="1"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1">
-
-            <chart:CartesianChart x:Name="LineChart"
-                                  Margin="10 10"
+        <DockPanel  x:Name="chartPanel" 
+                    Grid.Row="1"
+                    Grid.Column="1">
+            <chart:CartesianChart x:Name="chart"
                                   LegendLocation="Left"
-                                  FontFamily="Berlin sans FB"
-                                  FontSize="15"
-                                  Zoom="Xy">
-                <chart:CartesianChart.DataContext>
-                    <viewModel:RepRMChartViewModel/>
-                </chart:CartesianChart.DataContext>
+                                  Series="{Binding Collection}">
+                
+                <chart:CartesianChart.AxisX>
+                    <chart:Axis Title="{Binding AxisXName}"
+                                Labels="{Binding XLabels}"
+                                Foreground="White"
+                                LabelsRotation="25"
+                                MinValue="0">
+                        <chart:Axis.Separator>
+                            <chart:Separator Step="2"/>
+                        </chart:Axis.Separator>
+                    </chart:Axis>
+                </chart:CartesianChart.AxisX>
+                
+                <chart:CartesianChart.AxisY>
+                    <chart:Axis Title="{Binding AxisYName}"
+                                Foreground="White"
+                                MinValue="0"
+                                Labels="{Binding YLabels}"/>
+                </chart:CartesianChart.AxisY>
+
             </chart:CartesianChart>
-
         </DockPanel>
-        <StackPanel x:Name="ExercicesList">
-
-        </StackPanel>
     </Grid>
     <UserControl.DataContext>
         <viewModel:RepRMChartViewModel/>

@@ -1,28 +1,30 @@
 ﻿using System;
 using System.Windows;
 using System.IO;
-using LiveCharts;
 using System.Windows.Media;
 using System.Collections.Generic;
 using GymSharp.MVVM.Model;
 using GymSharp.ressources.enums;
 using GymSharp.MVVM.View;
 using System.Windows.Controls;
+using LiveCharts;
+using LiveCharts.Wpf;
 using System.Windows.Data;
 
 namespace GymSharp.MVVM.ViewModel
 {
-    internal class RepRMChartViewModel : UserControl
+    public class RepRMChartViewModel : UserControl
     {
         #region Attributes
-        public SeriesCollection SeriesCollection { get; }
-        public Func<double, string> Yformatter { get; }
-        public GroupItem RadioButtonsBodyParts { get; }
+        public SeriesCollection Collection { get; }
         public FontFamily Fontfamily { get; }
         public static RepRMChartView View { get; set; }
 
         public string AxisXName { get; }
         public string AxisYName { get; }
+        public string[] XLabels { get; }
+        public string[] YLabels { get; }
+
         public string PecRadButton { get; }
         public string DosRadButton { get; }
         public string BrasRadButton { get; }
@@ -31,16 +33,13 @@ namespace GymSharp.MVVM.ViewModel
         public string QuadRadButton { get; }
         public string IschioRadButton { get; }
         public string MolletRadButton { get; }
-        public string[] Labels { get; }
-        public bool DataLabels = true;
         
-        private readonly List<Tuple<int, string>> ListExercises = new List<Tuple<int, string>>();
-        private readonly List<int> ListDays = new List<int>();
-        private readonly List<int> ListMonths = new List<int>();
-        private readonly List<int> ListYears = new List<int>();
-        private readonly StreamReader stream;
-        private readonly string Langue;
-        private readonly string[] content;
+        private static readonly List<int> ListDays = new List<int>();
+        private static readonly List<int> ListMonths = new List<int>();
+        private static readonly List<int> ListYears = new List<int>();
+        private static readonly List<List<int>> ListDataExercices = new List<List<int>>();
+        private static readonly List<int?> ListRM = new List<int?>();
+        public readonly string Langue;
 
         #endregion
 
@@ -70,8 +69,8 @@ namespace GymSharp.MVVM.ViewModel
 
             if (Langue != "Francais-fr")
             {
-                stream = new StreamReader($"../../ressources/text/{Langue}/Muscles.txt");
-                content = stream.ReadToEnd().Split('\n');
+                StreamReader stream = new StreamReader($"../../ressources/text/{Langue}/Muscles.txt");
+                string[] content = stream.ReadToEnd().Split('\n');
                 stream.Close();
 
                 PecRadButton = content[(int)Muscles.Pectoraux  -1];
@@ -93,29 +92,74 @@ namespace GymSharp.MVVM.ViewModel
                 QuadRadButton = "Quadricpes";
                 IschioRadButton = "Ischios";
                 MolletRadButton = "Mollets";
+
+                AxisXName = "Date";
+                AxisYName = "Poids : Kg";
             }
 
-            content = GraphicClass.GetData("../../Data/RepMaxRepData.txt");
-            ListDays = GraphicClass.GetListDays(content);
-            ListMonths = GraphicClass.GetListMonths(content);
-            ListYears = GraphicClass.GetListYears(content);
-        }
+            string[] data = GraphicClass.GetData("../../Data/RepMaxRepData.txt");
+            GraphicClass.InitLists(data, ListDays, ListMonths, ListYears, ListDataExercices, ListRM);
 
-        public static void ChangeGridCheckBox(Muscles muscle)
-        {
-            try
+            if (ListDays.Count > 30)
             {
-                if (View.checkBoxGrid != null)
+                if (ListMonths.Count >= 12)
                 {
-                    foreach (int exo in Enum.GetValues(typeof(Exercice))) {
-
-                    }
+                    
                 }
             }
-            catch (NullReferenceException)
+            else
             {
+                string[] daysName = new string[ListDays.Count +1];
+                for (int i = 0; i < ListDays.Count; i++)
+                {
+                    DateTime date = new DateTime(ListYears[i], ListMonths[i], ListDays[i]);
+                    daysName[i] = date.ToString("dddd") + " " + date.ToString("MM");
+                }
+                daysName[daysName.Length - 1] = "";
+                XLabels = daysName;
+            }
+        }
+
+        public static void ChangeMuscleButtons(int muscle)
+        {
+            List<UIElement> elementList = new List<UIElement>();
+            foreach (UIElement element in View.gridBodyParts.Children)
+            {
+                if (Grid.GetRow(element) == 1)
+                {
+                    elementList.Add(element);
+                }
+            }
+
+            foreach (UIElement element in elementList)
+            {
+                View.gridBodyParts.Children.Remove(element);
+            }
+
+            View.gridBodyParts.RowDefinitions.RemoveAt(1);
+            View.gridBodyParts.RowDefinitions.Add(new RowDefinition());
+
+            int currentCol = 1;
+            foreach (Exercice exo in Enum.GetValues(typeof(Exercice)))
+            {
+                RadioButton radio = new RadioButton();
+                if ((int)exo < 100)
+                {
+                    if ((int)exo / 10 == (int)muscle)
+                    {
+                        radio.Name = exo.ToString();
+                        radio.Checked += View.ExoChecked;
+                        radio.Content = exo.ToString().Replace("_", " ");
+                        radio.SetValue(Grid.RowProperty, 1);
+                        radio.SetValue(Grid.ColumnProperty, currentCol);
+                        View.gridBodyParts.Children.Add(radio);
+                        currentCol++;
+                    }
+                }
+                
             }
             
         }
+
     }
 }

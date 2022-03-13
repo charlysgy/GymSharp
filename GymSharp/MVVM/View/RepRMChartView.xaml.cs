@@ -1,7 +1,12 @@
-﻿using System.Windows;
+﻿using System.IO;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using GymSharp.MVVM.ViewModel;
 using GymSharp.ressources.enums;
+using LiveCharts.Wpf;
+using LiveCharts;
+using System;
 
 namespace GymSharp.MVVM.View
 {
@@ -16,44 +21,15 @@ namespace GymSharp.MVVM.View
             RepRMChartViewModel.View = this;
         }
 
-        private void PecRadChecked(object sender, RoutedEventArgs e)
+        public void BodyPartChecked(object sender, RoutedEventArgs e)
         {
-            RepRMChartViewModel.ChangeGridCheckBox((Muscles)1);
+            RadioButton radio = sender as RadioButton;
+            RepRMChartViewModel.ChangeMuscleButtons(int.Parse(radio.Name.Replace("_", "")));
         }
 
-        private void BrasRadChecked(object sender, RoutedEventArgs e)
+        public void ExoChecked(object sender, RoutedEventArgs e)
         {
-            RepRMChartViewModel.ChangeGridCheckBox((Muscles)2);
-        }
 
-        private void DosRadChecked(object sender, RoutedEventArgs e)
-        {
-            RepRMChartViewModel.ChangeGridCheckBox((Muscles)3);
-        }
-
-        private void EpauleRadChecked(object sender, RoutedEventArgs e)
-        {
-            RepRMChartViewModel.ChangeGridCheckBox((Muscles)4);
-        }
-
-        private void AbsRadChecked(object sender, RoutedEventArgs e)
-        {
-            RepRMChartViewModel.ChangeGridCheckBox((Muscles)5);
-        }
-
-        private void QuadRadChecked(object sender, RoutedEventArgs e)
-        {
-            RepRMChartViewModel.ChangeGridCheckBox((Muscles)6);
-        }
-
-        private void IschioRadChecked(object sender, RoutedEventArgs e)
-        {
-            RepRMChartViewModel.ChangeGridCheckBox((Muscles)7);
-        }
-
-        private void MolletRadChecked(object sender, RoutedEventArgs e)
-        {
-            RepRMChartViewModel.ChangeGridCheckBox((Muscles)8);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace GymSharp
         private void ExercicesCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
-            UIElement element = new ListeExercices();
+            UIElement element = new ListeExerciceView();
             viewContainer.Children.Add(element);
         }
 

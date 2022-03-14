@@ -1,12 +1,13 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 using GymSharp.MVVM.ViewModel;
 
 namespace GymSharp.MVVM.View
 {
     /// <summary>
     /// Logique d'interaction pour UserControl2.xaml
-    /// </summary>
-    public 
+    /// </summary> 
     public partial class ListeExerciceView : UserControl
     {
         

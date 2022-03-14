@@ -9,7 +9,6 @@ using GymSharp.MVVM.View;
 using System.Windows.Controls;
 using LiveCharts;
 using LiveCharts.Wpf;
-using System.Windows.Data;
 
 namespace GymSharp.MVVM.ViewModel
 {

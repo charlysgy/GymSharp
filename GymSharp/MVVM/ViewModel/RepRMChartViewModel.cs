@@ -16,7 +16,7 @@ namespace GymSharp.MVVM.ViewModel
     public class RepRMChartViewModel : UserControl
     {
         #region Attributes
-        public SeriesCollection Collection { get; }
+        public static SeriesCollection ChartSeries;
         public FontFamily Fontfamily { get; }
         public static RepRMChartView View { get; set; }
 
@@ -24,6 +24,7 @@ namespace GymSharp.MVVM.ViewModel
         public string AxisYName { get; }
         public string[] XLabels { get; }
         public string[] YLabels { get; }
+        public int Step { get; }
 
         public string PecRadButton { get; }
         public string DosRadButton { get; }
@@ -39,7 +40,7 @@ namespace GymSharp.MVVM.ViewModel
         private static readonly List<int> ListYears = new List<int>();
         private static readonly List<List<int>> ListDataExercices = new List<List<int>>();
         private static readonly List<int?> ListRM = new List<int?>();
-        public readonly string Langue;
+        private readonly string Langue;
 
         #endregion
 
@@ -100,16 +101,33 @@ namespace GymSharp.MVVM.ViewModel
             string[] data = GraphicClass.GetData("../../Data/RepMaxRepData.txt");
             GraphicClass.InitLists(data, ListDays, ListMonths, ListYears, ListDataExercices, ListRM);
 
+            string[] daysName = new string[ListDays.Count + 1];
+
             if (ListDays.Count > 30)
             {
                 if (ListMonths.Count >= 12)
                 {
-                    
+                    for (int i = 0; i < ListDays.Count; i++)
+                    {
+                        DateTime date = new DateTime(ListYears[i], ListMonths[i], ListDays[i]);
+                        daysName[i] = date.ToString("yyyy");
+                    }
+                    daysName[daysName.Length - 1] = "";
+                    XLabels = daysName;
+                }
+                else
+                {
+                    for (int i = 0; i < ListDays.Count; i++)
+                    {
+                        DateTime date = new DateTime(ListYears[i], ListMonths[i], ListDays[i]);
+                        daysName[i] = date.ToString("MMMM yyyy");
+                    }
+                    daysName[daysName.Length - 1] = "";
+                    XLabels = daysName;
                 }
             }
             else
             {
-                string[] daysName = new string[ListDays.Count +1];
                 for (int i = 0; i < ListDays.Count; i++)
                 {
                     DateTime date = new DateTime(ListYears[i], ListMonths[i], ListDays[i]);
@@ -122,6 +140,7 @@ namespace GymSharp.MVVM.ViewModel
 
         public static void ChangeMuscleButtons(int muscle)
         {
+            //Suppression des élément dans la ligne 1 (ça commence à 0)
             List<UIElement> elementList = new List<UIElement>();
             foreach (UIElement element in View.gridBodyParts.Children)
             {
@@ -136,6 +155,7 @@ namespace GymSharp.MVVM.ViewModel
                 View.gridBodyParts.Children.Remove(element);
             }
 
+            //Suppression de la ligne pour mettre à jour la page
             View.gridBodyParts.RowDefinitions.RemoveAt(1);
             View.gridBodyParts.RowDefinitions.Add(new RowDefinition());
 
@@ -161,5 +181,40 @@ namespace GymSharp.MVVM.ViewModel
             
         }
 
+        public static void ShowSeries(int exo)
+        {
+            ChartValues<int> RepList = new ChartValues<int>();
+            ChartValues<int> PoidsList = new ChartValues<int>();
+
+            foreach (List<int> list in ListDataExercices)
+            {
+                if (list[0] == exo)
+                {
+                    RepList.Add(list[1]);
+                    PoidsList.Add(list[2]);
+                }
+            }
+            
+            ChartSeries = new SeriesCollection
+            {
+                new LineSeries()
+                {
+                    Title = "Répétitions " + (Exercice)exo,
+                    PointGeometry = null,
+                    Values = RepList,
+                    Fill = Brushes.Transparent
+                },
+
+                new LineSeries()
+                {
+                    Title = "Poids (Kg)",
+                    PointGeometry = null,
+                    Values=PoidsList,
+                    Fill = Brushes.Transparent
+                }
+            };
+
+            View.chart.Series = ChartSeries;
+        }
     }
 }

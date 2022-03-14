@@ -23,13 +23,14 @@ namespace GymSharp.MVVM.View
 
         public void BodyPartChecked(object sender, RoutedEventArgs e)
         {
-            RadioButton radio = sender as RadioButton;
+            RadioButton radio = (RadioButton)sender;
             RepRMChartViewModel.ChangeMuscleButtons(int.Parse(radio.Name.Replace("_", "")));
         }
 
         public void ExoChecked(object sender, RoutedEventArgs e)
         {
-
+            RadioButton radio = (RadioButton)sender;
+            RepRMChartViewModel.ShowSeries((int)Enum.Parse(typeof(Exercice), radio.Name));
         }
     }
 }

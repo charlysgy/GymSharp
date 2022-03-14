@@ -126,8 +126,8 @@
                     Grid.Column="1">
             <chart:CartesianChart x:Name="chart"
                                   LegendLocation="Left"
-                                  Series="{Binding Collection}">
-                
+                                  Zoom="Y">
+
                 <chart:CartesianChart.AxisX>
                     <chart:Axis Title="{Binding AxisXName}"
                                 Labels="{Binding XLabels}"

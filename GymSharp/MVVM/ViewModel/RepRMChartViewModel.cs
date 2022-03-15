@@ -139,11 +139,11 @@ namespace GymSharp.MVVM.ViewModel
 
         public static void ChangeMuscleButtons(int muscle)
         {
-            //Suppression des élément dans la ligne 1 (ça commence à 0)
+            //Suppression des anciens radiobutton 
             List<UIElement> elementList = new List<UIElement>();
-            foreach (UIElement element in View.gridBodyParts.Children)
+            foreach (UIElement element in View.gridExos.Children)
             {
-                if (Grid.GetRow(element) == 1)
+                if (Grid.GetRow(element) == 0)
                 {
                     elementList.Add(element);
                 }
@@ -151,31 +151,67 @@ namespace GymSharp.MVVM.ViewModel
 
             foreach (UIElement element in elementList)
             {
-                View.gridBodyParts.Children.Remove(element);
+                View.gridExos.Children.Remove(element);
             }
 
-            //Suppression de la ligne pour mettre à jour la page
-            View.gridBodyParts.RowDefinitions.RemoveAt(1);
-            View.gridBodyParts.RowDefinitions.Add(new RowDefinition());
+            View.gridExos.RowDefinitions.Clear();
+            View.gridExos.ColumnDefinitions.Clear();
 
-            int currentCol = 1;
+            View.gridExos.RowDefinitions.Add(new RowDefinition());
+
+            int currentCol = 0;
             foreach (Exercice exo in Enum.GetValues(typeof(Exercice)))
             {
-                RadioButton radio = new RadioButton();
+
                 if ((int)exo < 100)
                 {
-                    if ((int)exo / 10 == (int)muscle)
+                    if ((int)exo / 10 == muscle)
                     {
-                        radio.Name = exo.ToString();
+                        ColumnDefinition col = new ColumnDefinition
+                        {
+                            Width = new GridLength(1, GridUnitType.Star)
+                        };
+                        View.gridExos.ColumnDefinitions.Add(col);
+
+                        RadioButton radio = new RadioButton()
+                        {
+                            Name = exo.ToString(),
+                            Content = exo.ToString().Replace("_", " "),
+                            Width = View.Width
+                        };
                         radio.Checked += View.ExoChecked;
-                        radio.Content = exo.ToString().Replace("_", " ");
-                        radio.SetValue(Grid.RowProperty, 1);
+                        radio.SetValue(Grid.RowProperty, 0);
                         radio.SetValue(Grid.ColumnProperty, currentCol);
-                        View.gridBodyParts.Children.Add(radio);
+                        radio.Style = (Style)Application.Current.TryFindResource("StyleBoutons");
+                        View.gridExos.Children.Add(radio);
                         currentCol++;
                     }
                 }
-                
+                else
+                {
+                    if ((int)exo / 100 == muscle)
+                    {
+                        ColumnDefinition col = new ColumnDefinition
+                        {
+                            Width = new GridLength(1, GridUnitType.Star)
+                        };
+
+                        View.gridExos.ColumnDefinitions.Add(col);
+                        RadioButton radio = new RadioButton()
+                        {
+                            Name = exo.ToString(),
+                            Content = exo.ToString().Replace("_", " "),
+                            Width = View.Width
+                        };
+                        radio.Style = (Style)Application.Current.TryFindResource("StyleBoutons");
+                        radio.Checked += View.ExoChecked;
+                        radio.SetValue(Grid.RowProperty, 0);
+                        radio.SetValue(Grid.ColumnProperty, currentCol);
+                        View.gridExos.Children.Add(radio);
+                        currentCol++;
+                    }
+                }
+
             }
             
         }

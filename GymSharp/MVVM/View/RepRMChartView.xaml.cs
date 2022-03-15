@@ -31,6 +31,6 @@ namespace GymSharp.MVVM.View
         {
             RadioButton radio = (RadioButton)sender;
             RepRMChartViewModel.ShowSeries((int)Enum.Parse(typeof(Exercice), radio.Name));
-        }
+        } 
     }
 }

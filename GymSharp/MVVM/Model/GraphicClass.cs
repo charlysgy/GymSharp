@@ -25,14 +25,9 @@ namespace GymSharp.MVVM.Model
         }
 
         
-        public static void InitLists(string[] content,
-                                    List<int> days,
-                                    List<int> months,
-                                    List<int> years,
-                                    List<List<int>> exercices,
-                                    List<int?> rm)
-        {  //    03/01/2022/14/12/15/none
-
+        public static void InitLists(string[] content, List<int> days, List<int> months,
+                                    List<int> years, List<List<int>> exercices, List<int?> rm)
+        {
             foreach (string line in content)
             {
                 string[] data = line.Replace("\r", "").Split('/');

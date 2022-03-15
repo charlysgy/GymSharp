@@ -16,7 +16,8 @@
                                        Height="50"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
-                                       Foreground="White"/>
+                                       Foreground="White"
+                                       TextWrapping="WrapWithOverflow"/>
 
                         </Grid>
                     </ControlTemplate>

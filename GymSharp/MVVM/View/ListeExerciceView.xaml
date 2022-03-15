@@ -40,7 +40,7 @@
                     </ControlTemplate>
                 </RadioButton.Template>
             </RadioButton>
-            <StackPanel>
+            <StackPanel x:Name="ListExoPanel">
 
                 <RadioButton Content="ExoBras1"
                              Style="{StaticResource StyleBoutons}"

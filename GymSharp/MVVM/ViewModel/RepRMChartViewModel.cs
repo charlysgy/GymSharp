@@ -169,7 +169,7 @@ namespace GymSharp.MVVM.ViewModel
                     {
                         ColumnDefinition col = new ColumnDefinition
                         {
-                            Width = new GridLength(1, GridUnitType.Star)
+                            Width = new GridLength(1, GridUnitType.Auto)
                         };
                         View.gridExos.ColumnDefinitions.Add(col);
 
@@ -177,8 +177,9 @@ namespace GymSharp.MVVM.ViewModel
                         {
                             Name = exo.ToString(),
                             Content = exo.ToString().Replace("_", " "),
-                            Width = View.Width
                         };
+                        radio.Cursor = System.Windows.Input.Cursors.Hand;
+                        radio.Margin = new Thickness(5, 0, 5, 0);
                         radio.Checked += View.ExoChecked;
                         radio.SetValue(Grid.RowProperty, 0);
                         radio.SetValue(Grid.ColumnProperty, currentCol);
@@ -200,9 +201,11 @@ namespace GymSharp.MVVM.ViewModel
                         RadioButton radio = new RadioButton()
                         {
                             Name = exo.ToString(),
-                            Content = exo.ToString().Replace("_", " "),
-                            Width = View.Width
+                            Content = exo.ToString().Replace("_", " ")
                         };
+                        radio.Cursor = System.Windows.Input.Cursors.Hand;
+                        radio.Margin = new Thickness(5, 0, 5, 0);
+                        radio.Height = double.NaN;
                         radio.Style = (Style)Application.Current.TryFindResource("StyleBoutons");
                         radio.Checked += View.ExoChecked;
                         radio.SetValue(Grid.RowProperty, 0);

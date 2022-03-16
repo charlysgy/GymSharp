@@ -109,14 +109,22 @@
                          Checked="BodyPartChecked"/>
         </Grid>
 
-        <Grid x:Name="gridExos"
-              Grid.Row="1"
-              Grid.Column="1"
-              Grid.ColumnSpan="1">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-        </Grid>
+        <ScrollViewer Grid.Row="1"
+                      Grid.Column="1" 
+                      HorizontalScrollBarVisibility="Auto"
+                      VerticalScrollBarVisibility="Disabled">
+            <StackPanel ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                        ScrollViewer.VerticalScrollBarVisibility="Disabled" >
+                <Grid x:Name="gridExos"
+                  Grid.Row="1"
+                  Grid.Column="1"
+                  Grid.ColumnSpan="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
 
         <DockPanel  x:Name="chartPanel" 
                     Grid.Row="2"

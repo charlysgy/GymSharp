@@ -1,3 +1,9 @@
-﻿graphique$
+﻿$firststart
+Create your profile to start use GymSharp
+Your First Name
+Your Surname
+Your Age
+What's your purpose ?
+$graphique
 textblock1:Your stats
 radiobuttons:

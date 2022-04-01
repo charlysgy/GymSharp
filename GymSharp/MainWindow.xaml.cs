@@ -1,5 +1,7 @@
 ﻿using System.Windows;
-using GymSharp.MVVM.View; /*Permet de définir où se trouve les views*/
+using GymSharp.MVVM.View;
+using System.IO;
+using GymSharp.ressources.Utils;
 
 namespace GymSharp
 {
@@ -8,6 +10,7 @@ namespace GymSharp
         public MainWindow()
         {
             InitializeComponent();
+            FindPath.FindFile("MainWindow.xaml");
         }
 
         private void HomeCommand(object sender, RoutedEventArgs e)

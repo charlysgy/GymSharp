@@ -91,6 +91,7 @@
     </Compile>
     <Compile Include="ressources\enums\exo_enum.cs" />
     <Compile Include="ressources\enums\muscles_enum.cs" />
+    <Compile Include="ressources\Utils\FindPath.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -202,6 +203,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\text\English-en\Translated.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\enflag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\frflag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Data\userProfile.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

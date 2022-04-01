@@ -12,17 +12,27 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using GymSharp;
 
 namespace GymSharp.MVVM.View
 {
     /// <summary>
     /// Logique d'interaction pour FirstStartView.xaml
     /// </summary>
-    public partial class FirstStartView : UserControl
+    public partial class FirstStartView : Window
     {
         public FirstStartView()
         {
             InitializeComponent();
+            /*ImageBrush lBoxBg = new ImageBrush();
+            lBoxBg.ImageSource = new BitmapImage(new Uri(@"../../ressources/Images/enflag.png"));*/
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow window = new MainWindow();
+            Content = window;
         }
     }
 }

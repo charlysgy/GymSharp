@@ -3,7 +3,8 @@ Create your profile to start use GymSharp
 Your First Name
 Your Surname
 Your Age
-What's your purpose ?
+Your weight
+What's your purpose ?{Begin Sport, Increase my Endurance, Increase Power, Decrease Fat Purcentage, Keep my body trained}
 $graphique
 textblock1:Your stats
 radiobuttons:

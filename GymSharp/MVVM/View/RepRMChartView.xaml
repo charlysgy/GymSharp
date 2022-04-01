@@ -114,7 +114,7 @@
                       HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Disabled">
             <StackPanel ScrollViewer.HorizontalScrollBarVisibility="Auto" 
-                        ScrollViewer.VerticalScrollBarVisibility="Disabled" >
+                        ScrollViewer.VerticalScrollBarVisibility="Disabled">
                 <Grid x:Name="gridExos"
                   Grid.Row="1"
                   Grid.Column="1"

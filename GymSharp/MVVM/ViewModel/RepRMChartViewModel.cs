@@ -5,6 +5,7 @@ using System.Windows.Media;
 using System.Collections.Generic;
 using GymSharp.MVVM.Model;
 using GymSharp.ressources.enums;
+using GymSharp.ressources.Utils;
 using GymSharp.MVVM.View;
 using System.Windows.Controls;
 using LiveCharts;
@@ -47,7 +48,7 @@ namespace GymSharp.MVVM.ViewModel
         public RepRMChartViewModel()
         {
             // Read the config text file to set attributes values and Chart basic configuration
-
+            File.CreateText(Directory.GetCurrentDirectory());
             foreach (string line in GraphicClass.GetConfig())
             {
                 string attribute = line.Split(':')[0], value = line.Split(':')[1].Replace("\r", "");

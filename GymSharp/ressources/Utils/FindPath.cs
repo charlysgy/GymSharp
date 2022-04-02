@@ -15,10 +15,28 @@ namespace GymSharp.ressources.Utils
             string path = "";
             List<string> dirs = new List<string>();
 
-            foreach (string dir in Directory.GetDirectories(basePath))
+            bool Explorer(string tempPath)
             {
-                if (File.Exists(path)) //Terminer la recherche de fichier
+                if (File.Exists(Path.Combine(tempPath, filename)))
+                {
+                    path = Path.Combine(path, filename);
+                    return true;
+                }
+                else
+                {
+                    foreach (string dir in Directory.GetDirectories(tempPath))
+                    {
+                        if (Explorer(Path.Combine(tempPath, dir)))
+                        {
+                            path = Path.Combine(dir, path);
+                            return true;
+                        }
+                    }
+                    return false;
+                }
             }
+
+            return path;
         }
 
         private static string FindBase()
@@ -29,7 +47,7 @@ namespace GymSharp.ressources.Utils
             {
                 foreach (string dir in Directory.GetDirectories(Path.Combine("../", path)))
                 {
-                    if (dir.Substring(path.Length) == "GymSharp")
+                    if (dir.Substring(path.Length).Contains("GymSharp"))
                     {
                         found = true;
                     }

@@ -10,7 +10,6 @@ namespace GymSharp
         public MainWindow()
         {
             InitializeComponent();
-            FindPath.FindFile("MainWindow.xaml");
         }
 
         private void HomeCommand(object sender, RoutedEventArgs e)

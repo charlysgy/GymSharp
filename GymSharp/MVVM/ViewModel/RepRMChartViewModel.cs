@@ -98,6 +98,7 @@ namespace GymSharp.MVVM.ViewModel
             }
 
             string[] data = GraphicClass.GetData("../../Data/RepMaxRepData.txt");
+
             GraphicClass.InitLists(data, ListDays, ListMonths, ListYears, ListDataExercices, ListRM);
             string[] daysName = new string[ListDays.Count + 1];
 

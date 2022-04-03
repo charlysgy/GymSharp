@@ -9,7 +9,7 @@ namespace GymSharp.ressources.Utils
         /*
          * Methods that search for a file in the project directories
          * <return>true if file has been found and modify filename in reference with the valid path
-         * false if file has not been found, path is not change in this case</return>
+         * false if file has not been found, filename is not change in this case</return>
          */
         public static bool FindFile(ref string filename)
         {
@@ -31,6 +31,36 @@ namespace GymSharp.ressources.Utils
                 }
                 i++;
             }
+            return found;
+        }
+
+        /*
+         * Methods that search for a directory in the project directories
+         * <return>true if directory has been found and modify dirname in reference with the valid path
+         * false if drectory has not been found, dirname is not change in this case</return>
+         */
+        public static bool FindDirectory(ref string dirname)
+        {
+            bool found = false;
+            string basePath = FindBase();
+            List<string> dirs = Directory.GetDirectories(basePath).ToList();
+            int i = 0;
+
+            while (!found && i < dirs.Count)
+            {
+                if (dirs[i].Contains(dirname))
+                {
+                    dirname = dirs[i];
+                    found = true;
+                }
+
+                foreach (string dir in Directory.GetDirectories(dirs[i]))
+                {
+                    dirs.Add(dir);
+                }
+                i++;
+            }
+
             return found;
         }
 

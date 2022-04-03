@@ -1,7 +1,6 @@
 ﻿using System.Windows;
 using GymSharp.MVVM.View;
 using System.IO;
-using GymSharp.ressources.Utils;
 
 namespace GymSharp
 {

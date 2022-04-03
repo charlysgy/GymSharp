@@ -5,7 +5,7 @@ using System.Windows.Media;
 using System.Collections.Generic;
 using GymSharp.MVVM.Model;
 using GymSharp.ressources.enums;
-using GymSharp.ressources.Utils;
+using GymSharp.Utils;
 using GymSharp.MVVM.View;
 using System.Windows.Controls;
 using LiveCharts;
@@ -69,7 +69,9 @@ namespace GymSharp.MVVM.ViewModel
 
             if (Langue != "Francais-fr")
             {
-                StreamReader stream = new StreamReader($"../../ressources/text/{Langue}/Muscles.txt");
+                string muscleFile = "Muscles.txt";
+                FindPath.FindFile(ref muscleFile);
+                StreamReader stream = new StreamReader(muscleFile);
                 string[] content = stream.ReadToEnd().Split('\n');
                 stream.Close();
 
@@ -97,7 +99,9 @@ namespace GymSharp.MVVM.ViewModel
                 AxisYName = "Poids : Kg";
             }
 
-            string[] data = GraphicClass.GetData("../../Data/RepMaxRepData.txt");
+            string exosDataFile = "exosData.txt";
+            FindPath.FindFile(ref exosDataFile);
+            string[] data = GraphicClass.GetData(exosDataFile);
 
             GraphicClass.InitLists(data, ListDays, ListMonths, ListYears, ListDataExercices, ListRM);
             string[] daysName = new string[ListDays.Count + 1];

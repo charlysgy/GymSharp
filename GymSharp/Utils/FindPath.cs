@@ -2,7 +2,7 @@
 using System.Linq;
 using System.IO;
 
-namespace GymSharp.ressources.Utils
+namespace GymSharp.Utils
 {
     internal class FindPath
     {

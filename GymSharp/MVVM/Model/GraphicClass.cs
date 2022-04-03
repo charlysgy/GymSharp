@@ -1,6 +1,6 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Collections.Generic;
+using GymSharp.Utils;
 
 
 namespace GymSharp.MVVM.Model
@@ -9,8 +9,9 @@ namespace GymSharp.MVVM.Model
     {
         public static string[] GetConfig()
         {
-            string currentDir = Directory.GetCurrentDirectory();
-            StreamReader stream = new StreamReader($"{currentDir}/../../Data/config.txt");
+            string file = "config.txt";
+            FindPath.FindFile(ref file);
+            StreamReader stream = new StreamReader(file);
             string[] content = stream.ReadToEnd().Split('\n');
             stream.Close();
             return content;

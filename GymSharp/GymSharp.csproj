@@ -91,7 +91,7 @@
     </Compile>
     <Compile Include="ressources\enums\exo_enum.cs" />
     <Compile Include="ressources\enums\muscles_enum.cs" />
-    <Compile Include="ressources\Utils\FindPath.cs" />
+    <Compile Include="Utils\FindPath.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -178,7 +178,7 @@
     <Resource Include="ressources\text\message_accueil.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Data\RepMaxRepData.txt" />
+    <Resource Include="Data\exosData.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Data\config.txt" />

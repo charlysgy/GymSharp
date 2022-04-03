@@ -48,7 +48,6 @@ namespace GymSharp.MVVM.ViewModel
         public RepRMChartViewModel()
         {
             // Read the config text file to set attributes values and Chart basic configuration
-            File.CreateText(Directory.GetCurrentDirectory());
             foreach (string line in GraphicClass.GetConfig())
             {
                 string attribute = line.Split(':')[0], value = line.Split(':')[1].Replace("\r", "");
@@ -100,7 +99,6 @@ namespace GymSharp.MVVM.ViewModel
 
             string[] data = GraphicClass.GetData("../../Data/RepMaxRepData.txt");
             GraphicClass.InitLists(data, ListDays, ListMonths, ListYears, ListDataExercices, ListRM);
-
             string[] daysName = new string[ListDays.Count + 1];
 
             if (ListDays.Count > 30)

@@ -1,45 +1,44 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
 
 namespace GymSharp.ressources.Utils
 {
     internal class FindPath
     {
-        public static string FindFile(string filename)
+        /*
+         * Methods that search for a file in the project directories
+         * <return>true if file has been found and modify filename in reference with the valid path
+         * false if file has not been found, path is not change in this case</return>
+         */
+        public static bool FindFile(ref string filename)
         {
             string basePath = FindBase();
-            string path = "";
-            List<string> dirs = new List<string>();
+            List<string> dirs = Directory.GetDirectories(basePath).ToList();
+            int i = 0;
+            bool found = false;
 
-            bool Explorer(string tempPath)
+            while (!found && i < dirs.Count)
             {
-                if (File.Exists(Path.Combine(tempPath, filename)))
-                {
-                    path = Path.Combine(path, filename);
-                    return true;
+                if (File.Exists(dirs[i] + $"\\{filename}")) {
+                    filename = Path.Combine(dirs[i], filename);
+                    found = true;
                 }
-                else
-                {
-                    foreach (string dir in Directory.GetDirectories(tempPath))
-                    {
-                        if (Explorer(Path.Combine(tempPath, dir)))
-                        {
-                            path = Path.Combine(dir, path);
-                            return true;
-                        }
-                    }
-                    return false;
-                }
-            }
 
-            return path;
+                foreach (string dir in Directory.GetDirectories(dirs[i]))
+                {
+                    dirs.Add(dir);
+                }
+                i++;
+            }
+            return found;
         }
 
-        private static string FindBase()
+        /*
+         * Return the path from the current directory where the code runs to the base of the project
+         * Takes no parameter
+         */
+        public static string FindBase()
         {
             string path = "";
             bool found = false;
@@ -51,21 +50,37 @@ namespace GymSharp.ressources.Utils
                     {
                         found = true;
                     }
+                    path += "../";
                 }
             }
             return path;
         }
-        
-        private static List<string> ExploreDir(string dir)
+
+        /*
+         * Parameter : path, the path to the directory where files are going to be search
+         * Returns a string array where strings are files in the path specified in parameter
+         */
+        public static string[] GetAllFiles(string path)
         {
-            List<string> list = new List<string>();
+            return Directory.GetFiles(path);
+        }
 
-            foreach (string file in Directory.GetFiles(dir))
-            {
-                list.Add(file);
-            }
+        /*
+         * Parameter : path, the path to the directory where directories are going to be search
+         * Returns a string array where strings are directories in the path specified in parameter
+         */
+        public static string[] GetAllDir(string path)
+        {
+            return Directory.GetDirectories(path);
+        }
 
-            return list;
+        /*
+         * Takes no parameter
+         * Returns a string containing the absolute path of the directory where code is running
+         */
+        public static string GetCurrentDir()
+        {
+            return Directory.GetCurrentDirectory();
         }
     }
 }

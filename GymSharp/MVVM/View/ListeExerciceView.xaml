@@ -33,6 +33,7 @@
                     CanVerticallyScroll="True"
                     Name="Panel">
 
+<<<<<<< Updated upstream
             <RadioButton>
                 <RadioButton.Template>
                     <ControlTemplate>
@@ -53,138 +54,162 @@
                              Name="ButExoBras2"/>
 
 
+=======
+            <RadioButton Content="Bras"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButBras"/>
 
-                <RadioButton Content="ExoBras3"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoBras1"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoBras1"/>
 
+            <RadioButton Content="ExoBras2"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoBras2"/>
 
-                <RadioButton Content="ExoBras4"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoBras3"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoBras3"/>
 
+            <RadioButton Content="ExoBras4"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoBras4"/>
 
-                <RadioButton Content="ExoBras5"
-                             Style="{StaticResource StyleBoutons}"/>
-            </StackPanel >
+            <RadioButton Content="ExoBras5"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoBras5"/>
+ 
+            
+            
+            <RadioButton Content="Jambe"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButJambe"/>            
+            
+            <RadioButton Content="ExoJambe1"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoJambe1"/>
+>>>>>>> Stashed changes
 
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Jambe" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-            <StackPanel>
-                <RadioButton Content="ExoJambe1"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoJambe2"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoJambe2"/>
 
-                <RadioButton Content="ExoJambe2"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoJambe3"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoJambe3"/>
 
-                <RadioButton Content="ExoJambe3"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoJambe4"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoJambe4"/>
 
-                <RadioButton Content="ExoJambe4"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoJambe5"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoJambe5"/>
 
-                <RadioButton Content="ExoJambe5"
-                             Style="{StaticResource StyleBoutons}"/>
-            </StackPanel>
+            
+            
+            <RadioButton Content="Dos"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoDos"/>
+            
+            <RadioButton Content="ExoDos1"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoDos1"/>
 
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Dos" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-            <StackPanel>
-                <RadioButton Content="ExoDos1"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoDos2"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoDos2"/>
 
-                <RadioButton Content="ExoDos2"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoDos3"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoDos3"/>
 
-                <RadioButton Content="ExoDos3"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoDos4"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoDos4"/>
 
-                <RadioButton Content="ExoDos4"
-                             Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoDos5"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoDos5"/>
 
-                <RadioButton Content="ExoDos5"
-                             Style="{StaticResource StyleBoutons}"/>
-            </StackPanel>
+            
 
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Pectoraux" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-                <StackPanel>
-                    <RadioButton Content="ExoPecs1"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="Pectauraux"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButPecs"/>
 
-                    <RadioButton Content="ExoPecs2"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoPecs1"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoPecs1"/>
 
-                    <RadioButton Content="ExoPecs3"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoPecs2"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoPecs2"/>
 
-                    <RadioButton Content="ExoPecs4"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoPecs3"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoPecs3"/>
 
-                    <RadioButton Content="ExoPecs5"
-                                 Style="{StaticResource StyleBoutons}"/>
-                </StackPanel>
+            <RadioButton Content="ExoPecs4"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoPecs4"/>
 
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Epaule" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-                <StackPanel>
-                    <RadioButton Content="ExoEpaules1"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoPecs5"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoPecs5"/>
 
-                    <RadioButton Content="ExoEpaules2"
-                                 Style="{StaticResource StyleBoutons}"/>
+            
 
-                    <RadioButton Content="ExoEpaules3"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="Epaules"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoEpaules"/>
 
-                    <RadioButton Content="ExoEpaules4"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoEpaules1"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoEpaules1"/>
 
-                    <RadioButton Content="ExoEpaules5"
-                                 Style="{StaticResource StyleBoutons}"/>
-                </StackPanel>
+            <RadioButton Content="ExoEpaules2"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoEpaules2"/>
 
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Abdos" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-                <StackPanel>
-                    <RadioButton Content="ExoAbdos1"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoEpaules3"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoEpaules3"/>
 
-                    <RadioButton Content="ExoAbdos2"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoEpaules4"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoEpaules4"/>
 
-                    <RadioButton Content="ExoAbdos3"
-                                 Style="{StaticResource StyleBoutons}"/>
+            <RadioButton Content="ExoEpaules5"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoEpaules5"/>
 
-                    <RadioButton Content="ExoAbdos4"
-                                 Style="{StaticResource StyleBoutons}"/>
+            
+            
 
-                    <RadioButton Content="ExoAbdos5"
-                                 Style="{StaticResource StyleBoutons}"/>
-                </StackPanel>
+            <RadioButton Content="Abdos"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButAbdos"/>
+
+            <RadioButton Content="ExoAbdos1"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoAbdos1"/>
+
+            <RadioButton Content="ExoAbdos2"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoAbdos2"/>
+
+            <RadioButton Content="ExoAbdos3"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoAbdos3"/>
+
+            <RadioButton Content="ExoAbdos4"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoAbdos4"/>
+
+            <RadioButton Content="ExoAbdos5"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="ButExoAbdos5"/>
 
         </StackPanel>
 

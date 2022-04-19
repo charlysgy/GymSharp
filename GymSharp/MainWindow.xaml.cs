@@ -1,14 +1,21 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using GymSharp.MVVM.View;
 using System.IO;
+using GymSharp.ressources.enums;
+using System.Linq;
 
 namespace GymSharp
 {
     public partial class MainWindow : Window
     {
+        private const string Path = "../../ressources/text/messages_accueil.txt";
+
         public MainWindow()
         {
+            DataContext = this;
             InitializeComponent();
+            Anecdote.Text = GetAnecdote();
         }
 
         private void HomeCommand(object sender, RoutedEventArgs e)
@@ -35,6 +42,31 @@ namespace GymSharp
             viewContainer.Children.Clear();
             UIElement element = new RepRMChartView();
             viewContainer.Children.Add(element);
+        }
+
+        public static string GetAnecdote()
+        {
+            string date = DateTime.Now.DayOfYear.ToString();
+            int jour = Int32.Parse(date);
+            int nbAnecdote = File.ReadLines(Path).Count() - 1;
+            int anecdoteJour = 0;
+            if (nbAnecdote > jour)
+            {
+                anecdoteJour = nbAnecdote % jour;
+            }
+            else
+            {
+                anecdoteJour = jour % nbAnecdote;
+            }
+            string res = "";
+            using (StreamReader sr = new StreamReader(Path))
+            {
+                for (int i = 0; i <= anecdoteJour; i++)
+                {
+                    res = sr.ReadLine();
+                }
+            }
+            return res;
         }
     }
 }

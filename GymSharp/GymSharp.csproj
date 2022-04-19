@@ -175,9 +175,6 @@
     <Folder Include="Core\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ressources\text\message_accueil.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Data\exosData.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +209,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Data\userProfile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\text\messages_accueil.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

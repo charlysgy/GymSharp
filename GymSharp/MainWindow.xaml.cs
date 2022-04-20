@@ -45,6 +45,13 @@ namespace GymSharp
             viewContainer.Children.Add(element);
         }
 
+        private void ModelCommand(object sender, RoutedEventArgs e)
+        {
+            viewContainer.Children.Clear();
+            UIElement element = new _3DView();
+            viewContainer.Children.Add(element);
+        }
+
         public static string GetAnecdote()
         {
             string date = DateTime.Now.DayOfYear.ToString();

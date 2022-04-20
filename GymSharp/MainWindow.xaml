@@ -50,7 +50,11 @@
                         <RadioButton Content="Graphique"
                                      Style="{StaticResource StyleBoutons}"
                                      Background="Black"
-                                     Checked="GraphiqueCommand"/>
+                                     Checked="GraphiqueCommand"/>*
+                        <RadioButton Content="3Dmodel"
+                                     Style="{StaticResource StyleBoutons}"
+                                     Background="Black"
+                                     Checked="ModelCommand"/>
                     </MenuItem>
                 </Menu>
             </StackPanel>

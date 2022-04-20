@@ -12,6 +12,38 @@
         WindowStartupLocation="CenterScreen" 
         SizeChanged="Window_SizeChanged">
 
+    <Window.Resources>
+        <Style TargetType="ToolTip"
+               x:Key="tooltip_style">
+            <Setter Property="Placement"
+                    Value="Right"/>
+            <Setter Property="Height"
+                    Value="40"/>
+            <Setter Property="Width"
+                    Value="125"/>
+            <Setter Property="Margin"
+                    Value="20,0,0,0"/>
+            <Setter Property="Background"
+                    Value="Silver"/>
+            <Setter Property="BorderBrush"
+                    Value="Transparent"/>
+            <Setter Property="Foreground"
+                    Value="White"/>
+            <Setter Property="FontSize"
+                    Value="16"/>
+            <Setter Property="PlacementRectangle"
+                    Value="60,0,0,0"/>
+            <Setter Property="HorizontalOffset"
+                    Value="15"/>
+            <Setter Property="VerticalOffset"
+                    Value="6"/>
+            <Setter Property="HasDropShadow"
+                    Value="True"/>
+            <Setter Property="HorizontalContentAlignment"
+                    Value="Center"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid Background="#ADADAD">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -56,7 +88,8 @@
                                   Margin="10"
                                   Height="50"
                                   Width="50"
-                                  BorderThickness="0">
+                                  BorderThickness="0"
+                                  Style="{StaticResource StyleToggleButton}">
                         <ToggleButton.Background>
                             <ImageBrush ImageSource="/ressources/Images/logo_gym.png"/>
                         </ToggleButton.Background>
@@ -95,7 +128,8 @@
                               BorderBrush="Transparent"
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15">
+                                      Margin="0,0,0,15"
+                                   MouseEnter="ListViewItem_MouseEnter">
                         <StackPanel Orientation="Horizontal"
                                         Width="230">
                             <Image Source="/ressources/Images/icone_maison.png"
@@ -107,13 +141,15 @@
                         </StackPanel>
                         <ListViewItem.ToolTip>
                             <ToolTip x:Name="tooltip_home"
-                                         Content="Accueil"/>
+                                     Content="Accueil"
+                                     Style="{StaticResource tooltip_style}"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
 
                     <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
-                                      Selected="ParametreCommand">
+                                      Selected="ParametreCommand"
+                                   MouseEnter="ListViewItem_MouseEnter">
                         <StackPanel Orientation="Horizontal"
                                         Width="230">
                             <Image Source="/ressources/Images/utilisateur.png"
@@ -125,13 +161,15 @@
                         </StackPanel>
                         <ListViewItem.ToolTip>
                             <ToolTip x:Name="tooltip_profil"
-                                         Content="Profil"/>
+                                         Content="Profil"
+                                     Style="{StaticResource tooltip_style}"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
 
                     <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
-                                      Selected="ExercicesCommand">
+                                      Selected="ExercicesCommand"
+                                  MouseEnter="ListViewItem_MouseEnter">
                         <StackPanel Orientation="Horizontal"
                                     Width="230">
                             <Image  Source="/ressources/Images/haltere.png"
@@ -143,13 +181,15 @@
                         </StackPanel>
                         <ListViewItem.ToolTip>
                             <ToolTip    x:Name="tooltip_liste_exercices"
-                                        Content="Liste Exercices"/>
+                                        Content="Liste Exercices"
+                                        Style="{StaticResource tooltip_style}"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
 
                     <ListViewItem HorizontalAlignment="Left"
                                   Margin="0,0,0,15"
-                                  Selected="GraphiqueCommand">
+                                  Selected="GraphiqueCommand"
+                                   MouseEnter="ListViewItem_MouseEnter">
                         <StackPanel Orientation="Horizontal"
                                     Width="230">
                             <Image  Source="/ressources/Images/graphique.png"
@@ -161,13 +201,15 @@
                         </StackPanel>
                         <ListViewItem.ToolTip>
                             <ToolTip    x:Name="tooltip_liste_graphique"
-                                        Content="Graphique"/>
+                                        Content="Graphique"
+                                        Style="{StaticResource tooltip_style}"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
 
                     <ListViewItem   HorizontalAlignment="Left"
                                     Margin="0,0,0,15"
-                                    Selected="ModelCommand">
+                                    Selected="ModelCommand"
+                                     MouseEnter="ListViewItem_MouseEnter">
                         <StackPanel Orientation="Horizontal"
                                     Width="230">
                             <Image  Source="/ressources/Images/corps.png"
@@ -179,12 +221,14 @@
                         </StackPanel>
                         <ListViewItem.ToolTip>
                             <ToolTip x:Name="tooltip_corps"
-                                             Content="Corps 3D"/>
+                                             Content="Corps 3D"
+                                     Style="{StaticResource tooltip_style}"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
 
                     <ListViewItem   HorizontalAlignment="Left"
-                                    Margin="0,0,0,15">
+                                    Margin="0,0,0,15"
+                                     MouseEnter="ListViewItem_MouseEnter">
                         <StackPanel Orientation="Horizontal"
                                     Width="230">
                             <Image  Source="/ressources/Images/parametres.png"
@@ -196,9 +240,47 @@
                         </StackPanel>
                         <ListViewItem.ToolTip>
                             <ToolTip    x:Name="tooltip_parametres"
-                                        Content="Paramètres"/>
+                                        Content="Paramètres"
+                                        Style="{StaticResource tooltip_style}"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
+
+                    <ListView.ItemContainerStyle>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <Border x:Name="bord"
+                                                Height="50"
+                                                BorderBrush="{TemplateBinding BorderBrush}"
+                                                BorderThickness="{TemplateBinding BorderThickness}"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}"
+                                                SnapsToDevicePixels="True">
+                                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <MultiTrigger>
+                                                <MultiTrigger.Conditions>
+                                                    <Condition Property="IsMouseOver"
+                                                               Value="True"/>
+                                                </MultiTrigger.Conditions>
+                                                <Setter Property="Background"
+                                                        TargetName="bord"
+                                                        Value="Green"/>
+                                                <Setter Property="BorderBrush"
+                                                        TargetName="bord"
+                                                        Value="Violet"/>
+                                            </MultiTrigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.ItemContainerStyle>
+                    
                 </ListView>
             </StackPanel>
         </Grid>

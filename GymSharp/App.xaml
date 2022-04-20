@@ -11,6 +11,7 @@
                 <ResourceDictionary Source="./Theme/StyleMenu.xaml"/>
                 <ResourceDictionary Source="./Theme/StyleCheckBox.xaml"/>
                 <ResourceDictionary Source="./Theme/StyleTextBox.xaml"/>
+                <ResourceDictionary Source="./Theme/StyleToggleButton.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>

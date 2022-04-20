@@ -82,5 +82,27 @@ namespace GymSharp
             toggle_button.Width = this.ActualHeight / 10;
             toggle_button.Height = this.ActualHeight / 10;
         }
+
+        private void ListViewItem_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if (toggle_button.IsChecked == true)
+            {
+                tooltip_home.Visibility = Visibility.Collapsed;
+                tooltip_profil.Visibility = Visibility.Collapsed;
+                tooltip_liste_exercices.Visibility = Visibility.Collapsed;
+                tooltip_liste_graphique.Visibility = Visibility.Collapsed;
+                tooltip_corps.Visibility = Visibility.Collapsed;
+                tooltip_parametres.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                tooltip_home.Visibility = Visibility.Visible;
+                tooltip_profil.Visibility = Visibility.Visible;
+                tooltip_liste_exercices.Visibility = Visibility.Visible;
+                tooltip_liste_graphique.Visibility = Visibility.Visible;
+                tooltip_corps.Visibility = Visibility.Visible;
+                tooltip_parametres.Visibility = Visibility.Visible;
+            }
+        }
     }
 }

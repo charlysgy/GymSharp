@@ -12,25 +12,28 @@
         WindowStartupLocation="CenterScreen" 
         SizeChanged="Window_SizeChanged">
 
+    <Grid Background="#ADADAD">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
-    <Grid>
-        <Grid Background="#ADADAD">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-
-            <Grid x:Name="nav_panel"
-                  HorizontalAlignment="Left"
-                  Width="100"
-                  Background="#777777"
-                  Grid.Column="0">
-                <StackPanel x:Name="stack_panel">
-                    <Grid Height="90">
-                        <TextBlock Grid.Row="1"
+        <Grid   x:Name="nav_panel"
+                HorizontalAlignment="Left"
+                Width="100"
+                Background="#777777"
+                Grid.Column="0"
+                Grid.Row="0"
+                Grid.RowSpan="3">
+            <StackPanel x:Name="stack_panel">
+                <Grid Height="90">
+                    <TextBlock Grid.Row="1"
                                    Grid.Column="0"
                                    Margin="100,-20,0,0"
                                    Text="M E N U"
@@ -39,177 +42,184 @@
                                    Background="Transparent"
                                    HorizontalAlignment="Left"
                                    VerticalAlignment="Center">
-                            <TextBlock.Effect>
-                                <DropShadowEffect BlurRadius="10"
+                        <TextBlock.Effect>
+                            <DropShadowEffect BlurRadius="10"
                                                   ShadowDepth="1"
                                                   Direction="-90"
                                                   Color="White"/>
-                            </TextBlock.Effect>
+                        </TextBlock.Effect>
 
-                        </TextBlock>
-                        <ToggleButton x:Name="toggle_button"
+                    </TextBlock>
+                    <ToggleButton x:Name="toggle_button"
                                   VerticalAlignment="Center"
                                   HorizontalAlignment="Left"
                                   Margin="10"
                                   Height="50"
                                   Width="50"
                                   BorderThickness="0">
-                            <ToggleButton.Background>
-                                <ImageBrush ImageSource="/ressources/Images/logo_gym.png"/>
-                            </ToggleButton.Background>
-                            <ToggleButton.Triggers>
-                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
-                                    <BeginStoryboard>
-                                        <Storyboard x:Name="HidePanel">
-                                            <DoubleAnimation Storyboard.TargetName="nav_panel"
+                        <ToggleButton.Background>
+                            <ImageBrush ImageSource="/ressources/Images/logo_gym.png"/>
+                        </ToggleButton.Background>
+                        <ToggleButton.Triggers>
+                            <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="HidePanel">
+                                        <DoubleAnimation Storyboard.TargetName="nav_panel"
                                                          Storyboard.TargetProperty="Width"
                                                          BeginTime="0:0:0"
                                                          From="230" To="100"
                                                          Duration="0:0:0.2"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                                <EventTrigger RoutedEvent="ToggleButton.Checked">
-                                    <BeginStoryboard>
-                                        <Storyboard x:Name="ShowPanel">
-                                            <DoubleAnimation Storyboard.TargetName="nav_panel"
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                            <EventTrigger RoutedEvent="ToggleButton.Checked">
+                                <BeginStoryboard>
+                                    <Storyboard x:Name="ShowPanel">
+                                        <DoubleAnimation Storyboard.TargetName="nav_panel"
                                                          Storyboard.TargetProperty="Width"
                                                          BeginTime="0:0:0"
                                                          From="100" To="230"
                                                          Duration="0:0:0.3"/>
-                                        </Storyboard>
-                                    </BeginStoryboard>
-                                </EventTrigger>
-                            </ToggleButton.Triggers>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </EventTrigger>
+                        </ToggleButton.Triggers>
 
-                        </ToggleButton>
-                    </Grid>
-                    <ListView x:Name="List_View"
+                    </ToggleButton>
+                </Grid>
+                <ListView x:Name="List_View"
+                              Grid.Row="0"
+                              Grid.Column="0"
+                              Grid.RowSpan="2"
                               Background="Transparent"
                               BorderBrush="Transparent"
                               ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                        <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15">
-                            <StackPanel Orientation="Horizontal"
-                                        Width="230">
-                                <Image Source="/ressources/Images/icone_maison.png"
-                                       Stretch="None"
-                                       Margin="12,0,0,0"/>
-                                <TextBlock Text="Accueil"
-                                           Margin="50,0,0,0"/>
-
-                            </StackPanel>
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tooltip_home"
-                                         Content="Accueil"/>
-                            </ListViewItem.ToolTip>
-                        </ListViewItem>
-
-                        <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15">
-                            <StackPanel Orientation="Horizontal"
-                                        Width="230">
-                                <Image Source="/ressources/Images/utilisateur.png"
-                                       Stretch="None"
-                                       Margin="12,0,0,0"/>
-                                <TextBlock Text="Profil"
-                                           Margin="50,0,0,0"/>
-
-                            </StackPanel>
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tooltip_profil"
-                                         Content="Profil"/>
-                            </ListViewItem.ToolTip>
-                        </ListViewItem>
-
-                        <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15">
-                            <StackPanel Orientation="Horizontal"
-                                        Width="230">
-                                <Image Source="/ressources/Images/haltere.png"
-                                       Stretch="None"
-                                       Margin="12,0,0,0"/>
-                                <TextBlock Text="Liste Exercices"
-                                           Margin="50,0,0,0"/>
-
-                            </StackPanel>
-                            <ListViewItem.ToolTip>
-                                <ToolTip x:Name="tooltip_liste_exercices"
-                                         Content="Liste Exercices"/>
-                            </ListViewItem.ToolTip>
-                        </ListViewItem>
-                    </ListView>
-
                     <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15">
                         <StackPanel Orientation="Horizontal"
                                         Width="230">
-                            <Image Source="/ressources/Images/graphique.png"
+                            <Image Source="/ressources/Images/icone_maison.png"
                                        Stretch="None"
                                        Margin="12,0,0,0"/>
-                            <TextBlock Text="Graphique"
+                            <TextBlock Text="Accueil"
                                            Margin="50,0,0,0"/>
 
                         </StackPanel>
                         <ListViewItem.ToolTip>
-                            <ToolTip x:Name="tooltip_liste_graphique"
-                                         Content="Graphique"/>
+                            <ToolTip x:Name="tooltip_home"
+                                         Content="Accueil"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
 
                     <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15">
+                                      Margin="0,0,0,15"
+                                      Selected="ParametreCommand">
                         <StackPanel Orientation="Horizontal"
                                         Width="230">
-                            <Image Source="/ressources/Images/corps.png"
+                            <Image Source="/ressources/Images/utilisateur.png"
                                        Stretch="None"
                                        Margin="12,0,0,0"/>
-                            <TextBlock Text="Corps 3D"
+                            <TextBlock Text="Profil"
                                            Margin="50,0,0,0"/>
+
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip x:Name="tooltip_profil"
+                                         Content="Profil"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+
+                    <ListViewItem HorizontalAlignment="Left"
+                                      Margin="0,0,0,15"
+                                      Selected="ExercicesCommand">
+                        <StackPanel Orientation="Horizontal"
+                                    Width="230">
+                            <Image  Source="/ressources/Images/haltere.png"
+                                    Stretch="None"
+                                    Margin="12,0,0,0"/>
+                            <TextBlock  Text="Liste Exercices"
+                                        Margin="50,0,0,0"/>
+
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip    x:Name="tooltip_liste_exercices"
+                                        Content="Liste Exercices"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+
+                    <ListViewItem HorizontalAlignment="Left"
+                                  Margin="0,0,0,15"
+                                  Selected="GraphiqueCommand">
+                        <StackPanel Orientation="Horizontal"
+                                    Width="230">
+                            <Image  Source="/ressources/Images/graphique.png"
+                                    Stretch="None"
+                                    Margin="12,0,0,0"/>
+                            <TextBlock Text="Graphique"
+                                               Margin="50,0,0,0"/>
+
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip    x:Name="tooltip_liste_graphique"
+                                        Content="Graphique"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+
+                    <ListViewItem   HorizontalAlignment="Left"
+                                    Margin="0,0,0,15"
+                                    Selected="ModelCommand">
+                        <StackPanel Orientation="Horizontal"
+                                    Width="230">
+                            <Image  Source="/ressources/Images/corps.png"
+                                    Stretch="None"
+                                    Margin="12,0,0,0"/>
+                            <TextBlock Text="Corps 3D"
+                                       Margin="50,0,0,0"/>
 
                         </StackPanel>
                         <ListViewItem.ToolTip>
                             <ToolTip x:Name="tooltip_corps"
-                                         Content="Corps 3D"/>
+                                             Content="Corps 3D"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
 
-                    <ListViewItem HorizontalAlignment="Left"
-                                      Margin="0,0,0,15">
+                    <ListViewItem   HorizontalAlignment="Left"
+                                    Margin="0,0,0,15">
                         <StackPanel Orientation="Horizontal"
-                                        Width="230">
-                            <Image Source="/ressources/Images/parametres.png"
-                                       Stretch="None"
-                                       Margin="12,0,0,0"/>
-                            <TextBlock Text="Paramètres"
-                                           Margin="50,0,0,0"/>
+                                    Width="230">
+                            <Image  Source="/ressources/Images/parametres.png"
+                                    Stretch="None"
+                                    Margin="12,0,0,0"/>
+                            <TextBlock  Text="Paramètres"
+                                        Margin="50,0,0,0"/>
 
                         </StackPanel>
                         <ListViewItem.ToolTip>
-                            <ToolTip x:Name="tooltip_parametres"
-                                         Content="Paramètres"/>
+                            <ToolTip    x:Name="tooltip_parametres"
+                                        Content="Paramètres"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>
-                </StackPanel>
-            </Grid>
-
-            <TextBlock TextBlock.TextAlignment="Center"
-                        TextWrapping="Wrap"
-                        FontSize="20"
-                        Background="#ADADAD"
-                        x:Name="Anecdote"
-                        VerticalAlignment="Top"
-                       Grid.Column="1"
-                       Grid.Row="0"
-                       Margin="10">
-            </TextBlock>
-
-
+                </ListView>
+            </StackPanel>
         </Grid>
+
+        <TextBlock  TextBlock.TextAlignment="Center"
+                    TextWrapping="Wrap"
+                    FontSize="20"
+                    Background="#ADADAD"
+                    x:Name="Anecdote"
+                    VerticalAlignment="Top"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    Grid.Row="0"
+                    Margin="10">
+        </TextBlock>
 
         <DockPanel x:Name="viewContainer"
                    Grid.Row="1"
-                   Grid.Column="1"/>
-
+                   Grid.RowSpan="2"
+                   Grid.Column="1"
+                   Grid.ColumnSpan="2"/>
     </Grid>
+
 </Window>

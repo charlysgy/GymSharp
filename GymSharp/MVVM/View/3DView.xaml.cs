@@ -24,6 +24,34 @@ namespace GymSharp.MVVM.View
         public _3DView()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            switch (button.Name)
+            {
+                case "Left":
+                    pCamera.Position = new Point3D(5, 0, 0);
+                    pCamera.LookDirection = new Vector3D(-1, 0, 0);
+                    break;
+                case "Right":
+                    pCamera.Position = new Point3D(-5, 0, 0);
+                    pCamera.LookDirection = new Vector3D(1, 0, 0);
+                    break;
+                case "Face":
+                    pCamera.Position = new Point3D(0, 0, 5);
+                    pCamera.LookDirection = new Vector3D(0.0001, 0, -1);
+                    break;
+                case "Back":
+                    pCamera.Position = new Point3D(0, 0, -5);
+                    pCamera.LookDirection = new Vector3D(0.0001, 0, 1);
+                    break;
+            }
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
             foreach (Button but in buttonContainer.Children)
             {
                 but.Height = ActualHeight / 8;
@@ -31,31 +59,12 @@ namespace GymSharp.MVVM.View
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void UserControl_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            Button button = (Button)sender;
-            switch (button.Content)
+            foreach (Button but in buttonContainer.Children)
             {
-                case "Left":
-                    pCamera.Position = new Point3D(3, 0, 0);
-                    pCamera.LookDirection = new Vector3D(-1, 0, 0);
-                    pLight.Direction = new Vector3D(-1, 0, 0);
-                    break;
-                case "Right":
-                    pCamera.Position = new Point3D(-3, 0, 0);
-                    pCamera.LookDirection = new Vector3D(1, 0, 0);
-                    pLight.Direction = new Vector3D(1, 0, 0);
-                    break;
-                case "Up":
-                    pCamera.Position = new Point3D(0, 3, 0);
-                    pCamera.LookDirection = new Vector3D(0.0001, -1, 0);
-                    pLight.Direction = new Vector3D(0.0001, -1, 0);
-                    break;
-                case "Down":
-                    pCamera.Position = new Point3D(0, -3, 0);
-                    pCamera.LookDirection = new Vector3D(0.0001, 1, 0);
-                    pLight.Direction = new Vector3D(0.0001, 1, 0);
-                    break;
+                but.Height = ActualHeight / 8;
+                but.Width = ActualHeight / 8;
             }
         }
     }

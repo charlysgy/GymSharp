@@ -104,7 +104,7 @@ namespace GymSharp.MVVM.ViewModel
             string[] data = GraphicClass.GetData(exosDataFile);
 
             GraphicClass.InitLists(data, ListDays, ListMonths, ListYears, ListDataExercices, ListRM);
-            string[] daysName = new string[ListDays.Count + 1];
+            string[] daysName = new string[ListDays.Count];
 
             if (ListDays.Count > 30)
             {
@@ -115,7 +115,6 @@ namespace GymSharp.MVVM.ViewModel
                         DateTime date = new DateTime(ListYears[i], ListMonths[i], ListDays[i]);
                         daysName[i] = date.ToString("yyyy");
                     }
-                    daysName[daysName.Length - 1] = "";
                     XLabels = daysName;
                 }
                 else
@@ -125,7 +124,6 @@ namespace GymSharp.MVVM.ViewModel
                         DateTime date = new DateTime(ListYears[i], ListMonths[i], ListDays[i]);
                         daysName[i] = date.ToString("MMMM yyyy");
                     }
-                    daysName[daysName.Length - 1] = "";
                     XLabels = daysName;
                 }
             }
@@ -136,14 +134,18 @@ namespace GymSharp.MVVM.ViewModel
                     DateTime date = new DateTime(ListYears[i], ListMonths[i], ListDays[i]);
                     daysName[i] = date.ToString("dddd") + " " + date.ToString("MM");
                 }
-                daysName[daysName.Length - 1] = "";
                 XLabels = daysName;
             }
         }
 
         public static void ChangeMuscleButtons(int muscle)
         {
-            //Suppression des anciens radiobutton 
+            /*
+             * Get back all of the element contained by gridExos in the view and add it to a list
+             * Then delete all of the element in the list
+             * Clear the list that contains rows and columns
+             * Then add a new row inside the list containing them
+             */
             List<UIElement> elementList = new List<UIElement>();
             foreach (UIElement element in View.gridExos.Children)
             {
@@ -241,7 +243,7 @@ namespace GymSharp.MVVM.ViewModel
             {
                 new LineSeries()
                 {
-                    Title = "Répétitions " + (Exercice)exo,
+                    Title = "Répétitions \n" + (Exercice)exo,
                     PointGeometry = null,
                     Values = RepList,
                     Fill = Brushes.Transparent

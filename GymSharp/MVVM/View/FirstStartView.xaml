@@ -4,9 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymSharp"
+        xmlns:viewModel="clr-namespace:GymSharp.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800"
         Background="#ADADAD">
+    <Window.DataContext>
+        <viewModel:FirstStartViewModel/>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
@@ -36,7 +40,7 @@
                     Grid.Column="0"
                     Height="Auto"
                     VerticalAlignment="Center">
-            <TextBlock x:Name="FirstNameBox"
+            <TextBlock x:Name="FirstNameBlock"
                        Text="Votre Prénom : "
                        Foreground="White"
                        FontSize="20"
@@ -44,7 +48,8 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Margin="15 0 5 5"/>
-            <TextBox BorderBrush="#8D8D8D"
+            <TextBox x:Name="FirstNameBox" 
+                     BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
                      Style="{StaticResource StyleTextBox}"
@@ -55,7 +60,7 @@
                     Grid.Column="1"
                     Height="Auto"
                     VerticalAlignment="Center">
-            <TextBlock x:Name="SurnameBox"
+            <TextBlock x:Name="SurnameBlock"
                        Text="Votre Nom : "
                        Foreground="White"
                        FontSize="20"
@@ -63,7 +68,8 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Margin="15 0 5 5"/>
-            <TextBox BorderBrush="#8D8D8D"
+            <TextBox x:Name="SurnameBox" 
+                     BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
                      Style="{StaticResource StyleTextBox}"/>
@@ -73,7 +79,7 @@
                     Grid.Column="3"
                     Height="Auto"
                     VerticalAlignment="Center">
-            <TextBlock x:Name="AgeBox"
+            <TextBlock x:Name="AgeBlock"
                        Text="Votre Age : "
                        Foreground="White"
                        FontSize="20"
@@ -81,7 +87,8 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Margin="15 0 5 5"/>
-            <TextBox BorderBrush="#8D8D8D"
+            <TextBox x:Name="AgeBox" 
+                     BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
                      Style="{StaticResource StyleTextBox}"/>
@@ -149,12 +156,10 @@
         <StackPanel Grid.Row="2"
                     Grid.Column="2">
             <Button Click="Button_Click" 
-                    Content="Commencer à utiliser &#x0a;       GymSharp !!"
+                    Content="Commencer à utiliser  &#x0a; GymSharp !"
+                    TextBlock.TextAlignment="Center"
                     FontSize="20"
-                    BorderThickness="2"
-                    >
-                
-            </Button>
+                    BorderThickness="2"/>
         </StackPanel>
     </Grid>
 </Window>

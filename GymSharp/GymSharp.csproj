@@ -75,6 +75,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="YamlDotNet, Version=11.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
+      <HintPath>packages\YamlDotNet.11.2.1\lib\net45\YamlDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -82,7 +85,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MVVM\Model\GraphicClass.cs" />
+    <Compile Include="MVVM\ViewModel\FirstStartViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ListeExerciceViewModel.cs" />
+    <Compile Include="MVVM\View\3DView.xaml.cs">
+      <DependentUpon>3DView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\FirstStartView.xaml.cs">
       <DependentUpon>FirstStartView.xaml</DependentUpon>
     </Compile>
@@ -104,6 +111,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\3DView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\FirstStartView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -206,9 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\Images\frflag.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Data\userProfile.txt" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="ressources\text\messages_accueil.txt" />

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using GymSharp;
+using GymSharp.MVVM.ViewModel;
 
 namespace GymSharp.MVVM.View
 {
@@ -31,6 +32,7 @@ namespace GymSharp.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            FirstStartViewModel.StartButtonClicked(this);
             MainWindow window = new MainWindow();
             Content = window;
         }

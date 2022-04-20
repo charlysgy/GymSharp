@@ -140,7 +140,7 @@
                                 LabelsRotation="25"
                                 MinValue="0">
                         <chart:Axis.Separator>
-                            <chart:Separator Step="2"/>
+                            <chart:Separator Step="1"/>
                         </chart:Axis.Separator>
                     </chart:Axis>
                 </chart:CartesianChart.AxisX>

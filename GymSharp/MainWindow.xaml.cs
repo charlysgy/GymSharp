@@ -13,9 +13,10 @@ namespace GymSharp
 
         public MainWindow()
         {
-            DataContext = this;
             InitializeComponent();
             Anecdote.Text = GetAnecdote();
+            logoMenu.Width = this.Height/10;
+            logoMenu.Height = this.Height/10;
         }
 
         private void HomeCommand(object sender, RoutedEventArgs e)
@@ -67,6 +68,12 @@ namespace GymSharp
                 }
             }
             return res;
+        }
+
+        private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            logoMenu.Width = this.ActualHeight / 10;
+            logoMenu.Height = this.ActualHeight / 10;
         }
     }
 }

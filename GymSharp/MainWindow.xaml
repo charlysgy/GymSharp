@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GymSharp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800"
-        Background="Transparent" WindowStartupLocation="CenterScreen">
+        Title="MainWindow" 
+        Height="600" 
+        Width="800"
+        Background="Transparent" 
+        WindowStartupLocation="CenterScreen" 
+        SizeChanged="Window_SizeChanged">
+    
+    
     <Border Background="#ADADAD">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -19,7 +25,8 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-            <Image Source="ressources/Images/logo_gym.png" 
+            <Image x:Name="logoMenu" 
+                   Source="ressources/Images/logo_gym.png"
                    Height="50"
                    MouseDown="HomeCommand"/> <!--A terme il faudra faire une view "Home" ou "Accueil"-->
             
@@ -48,13 +55,14 @@
                 </Menu>
             </StackPanel>
 
-            <TextBox Grid.Row="0" Grid.Column="1"
-                     VerticalContentAlignment="Center"
-                     HorizontalContentAlignment="Center"
-                     FontSize="20"
-                     Background="#ADADAD"
-                     x:Name="Anecdote">
-            </TextBox>
+            <TextBlock  Grid.Row="0" Grid.Column="1"
+                        TextBlock.TextAlignment="Center"
+                        TextWrapping="Wrap"
+                        FontSize="20"
+                        Background="#ADADAD"
+                        x:Name="Anecdote"
+                        VerticalAlignment="Center">
+            </TextBlock>
 
             <DockPanel Grid.Row="1"
                        Grid.Column="1"

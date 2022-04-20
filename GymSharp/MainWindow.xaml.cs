@@ -15,8 +15,8 @@ namespace GymSharp
         {
             InitializeComponent();
             Anecdote.Text = GetAnecdote();
-            logoMenu.Width = this.Height/10;
-            logoMenu.Height = this.Height/10;
+            toggle_button.Width = this.Height/10;
+            toggle_button.Height = this.Height/10;
         }
 
         private void HomeCommand(object sender, RoutedEventArgs e)
@@ -79,8 +79,8 @@ namespace GymSharp
 
         private void Window_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            logoMenu.Width = this.ActualHeight / 10;
-            logoMenu.Height = this.ActualHeight / 10;
+            toggle_button.Width = this.ActualHeight / 10;
+            toggle_button.Height = this.ActualHeight / 10;
         }
     }
 }

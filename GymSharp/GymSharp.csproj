@@ -221,5 +221,23 @@
   <ItemGroup>
     <Resource Include="ressources\text\messages_accueil.txt" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\icone_maison.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\utilisateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\haltere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\graphique.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\corps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\parametres.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

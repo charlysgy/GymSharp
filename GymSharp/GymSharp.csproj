@@ -90,6 +90,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Data\UserProfile.cs" />
     <Compile Include="MVVM\Model\GraphicClass.cs" />
     <Compile Include="MVVM\ViewModel\FirstStartViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ListeExerciceViewModel.cs" />
@@ -250,7 +251,11 @@
     <Resource Include="ressources\Images\parametres.png" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Updated upstream
     <Resource Include="ressources\text\Francais-fr\info_bras.txt" />
+=======
+    <Resource Include="Data\userProfile.txt" />
+>>>>>>> Stashed changes
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

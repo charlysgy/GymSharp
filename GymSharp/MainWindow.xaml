@@ -10,7 +10,7 @@
         Width="800"
         Background="Transparent" 
         WindowStartupLocation="CenterScreen" 
-        SizeChanged="Window_SizeChanged">
+        SizeChanged="Window_SizeChanged" Initialized="Window_Initialized">
 
     <Window.Resources>
         <Style TargetType="ToolTip"
@@ -22,9 +22,9 @@
             <Setter Property="Width"
                     Value="125"/>
             <Setter Property="Margin"
-                    Value="20,0,0,0"/>
+                    Value="40,0,0,0"/>
             <Setter Property="Background"
-                    Value="Silver"/>
+                    Value="DarkBlue"/>
             <Setter Property="BorderBrush"
                     Value="Transparent"/>
             <Setter Property="Foreground"
@@ -32,7 +32,7 @@
             <Setter Property="FontSize"
                     Value="16"/>
             <Setter Property="PlacementRectangle"
-                    Value="60,0,0,0"/>
+                    Value="90,0,0,0"/>
             <Setter Property="HorizontalOffset"
                     Value="15"/>
             <Setter Property="VerticalOffset"
@@ -66,19 +66,19 @@
             <StackPanel x:Name="stack_panel">
                 <Grid Height="90">
                     <TextBlock Grid.Row="1"
-                                   Grid.Column="0"
-                                   Margin="100,-20,0,0"
-                                   Text="M E N U"
-                                   Foreground="White"
-                                   FontSize="22"
-                                   Background="Transparent"
-                                   HorizontalAlignment="Left"
-                                   VerticalAlignment="Center">
+                               Grid.Column="0"
+                                Margin="100,-20,0,0"
+                                Text="M E N U"
+                                Foreground="White"
+                                FontSize="22"
+                                Background="Transparent"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center">
                         <TextBlock.Effect>
                             <DropShadowEffect BlurRadius="10"
-                                                  ShadowDepth="1"
-                                                  Direction="-90"
-                                                  Color="White"/>
+                                                ShadowDepth="1"
+                                                Direction="-90"
+                                                Color="White"/>
                         </TextBlock.Effect>
 
                     </TextBlock>
@@ -121,14 +121,15 @@
                     </ToggleButton>
                 </Grid>
                 <ListView x:Name="List_View"
-                              Grid.Row="0"
-                              Grid.Column="0"
-                              Grid.RowSpan="2"
-                              Background="Transparent"
-                              BorderBrush="Transparent"
-                              ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.RowSpan="2"
+                            Background="Transparent"
+                            BorderBrush="Transparent"
+                            ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
+                                  Selected="HomeCommand"
                                    MouseEnter="ListViewItem_MouseEnter">
                         <StackPanel Orientation="Horizontal"
                                         Width="230">

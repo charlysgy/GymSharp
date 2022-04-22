@@ -4,12 +4,14 @@ using GymSharp.MVVM.View;
 using System.IO;
 using GymSharp.ressources.enums;
 using System.Linq;
+using GymSharp.Data;
 
 namespace GymSharp
 {
     public partial class MainWindow : Window
     {
-        private const string Path = "../../ressources/text/messages_accueil.txt";
+        private const string PathAccueil = "../../ressources/text/messages_accueil.txt";
+        private const string PathUserProfile = "../../Data/userProfile.txt";
 
         public MainWindow()
         {
@@ -56,7 +58,7 @@ namespace GymSharp
         {
             string date = DateTime.Now.DayOfYear.ToString();
             int jour = Int32.Parse(date);
-            int nbAnecdote = File.ReadLines(Path).Count() - 1;
+            int nbAnecdote = File.ReadLines(PathAccueil).Count() - 1;
             int anecdoteJour = 0;
             if (nbAnecdote > jour)
             {
@@ -67,7 +69,7 @@ namespace GymSharp
                 anecdoteJour = jour % nbAnecdote;
             }
             string res = "";
-            using (StreamReader sr = new StreamReader(Path))
+            using (StreamReader sr = new StreamReader(PathAccueil))
             {
                 for (int i = 0; i <= anecdoteJour; i++)
                 {
@@ -103,6 +105,23 @@ namespace GymSharp
                 tooltip_corps.Visibility = Visibility.Visible;
                 tooltip_parametres.Visibility = Visibility.Visible;
             }
+        }
+
+        private void FirstStartCommand(object sender, RoutedEventArgs e)
+        {
+            UserProfile profile = new UserProfile();
+            string prenom = profile.Get_firstName();
+            if (prenom == "First name =")
+            {
+                FirstStartView view = new FirstStartView();
+                view.OpenDialog();
+            }
+        }
+
+        private void Window_Initialized(object sender, EventArgs e)
+        {
+            RoutedEventArgs routedEventArgs = new RoutedEventArgs();
+            FirstStartCommand(sender, routedEventArgs);
         }
     }
 }

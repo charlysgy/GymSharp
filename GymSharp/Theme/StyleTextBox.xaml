@@ -13,7 +13,7 @@
                                      Text="{TemplateBinding Text}"
                                      Background="Transparent"
                                      Padding="5"
-                                     Foreground="White"
+                                     Foreground="Black"
                                      x:Name="FirstNameBox"
                                      FontFamily="Berlin sans FB"/>
 

@@ -7,7 +7,10 @@
         xmlns:viewModel="clr-namespace:GymSharp.MVVM.ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="600" Width="800"
-        Background="#ADADAD">
+        Background="#ADADAD"
+        ResizeMode="NoResize"
+        ShowInTaskbar="False"
+        WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <viewModel:FirstStartViewModel/>
     </Window.DataContext>
@@ -52,7 +55,8 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"
+                     IsReadOnly="False"
+                     Style="{StaticResource StyleTextBox}" TouchEnter="FirstNameBox_TouchEnter"
                      />
         </StackPanel>
 
@@ -60,7 +64,7 @@
                     Grid.Column="1"
                     Height="Auto"
                     VerticalAlignment="Center">
-            <TextBlock x:Name="SurnameBlock"
+            <TextBlock x:Name="LastNameBlock"
                        Text="Votre Nom : "
                        Foreground="White"
                        FontSize="20"
@@ -68,7 +72,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Margin="15 0 5 5"/>
-            <TextBox x:Name="SurnameBox" 
+            <TextBox x:Name="LastNameBox" 
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
@@ -114,6 +118,7 @@
                        Margin="10"
                        Text="Quel est votre objectif ?"
                        Foreground="White"
+                       TextWrapping="Wrap"
                        FontFamily="Berlin sans FB"
                        FontSize="25"
                        VerticalAlignment="Top"

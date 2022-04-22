@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using GymSharp;
 using GymSharp.MVVM.ViewModel;
+using GymSharp.Data;
 
 namespace GymSharp.MVVM.View
 {
@@ -23,6 +24,8 @@ namespace GymSharp.MVVM.View
     /// </summary>
     public partial class FirstStartView : Window
     {
+
+        public string FirstName;
         public FirstStartView()
         {
             InitializeComponent();
@@ -32,9 +35,27 @@ namespace GymSharp.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            UserProfile profile = new UserProfile();
+            string name = profile.Get_firstName();
             FirstStartViewModel.StartButtonClicked(this);
-            MainWindow window = new MainWindow();
-            Content = window;
+            this.Close();
+            profile.FillFirstName();
+            MainWindow mainWindow = new MainWindow();
+        }
+
+        public void OpenDialog()
+        {
+            this.ShowDialog();
+        }
+
+        public string GetInfoFirstName()
+        {
+            return FirstNameBox.SelectedText;
+        }
+
+        private void FirstNameBox_TouchEnter(object sender, TouchEventArgs e)
+        {
+            FirstName = FirstNameBox.Text;
         }
     }
 }

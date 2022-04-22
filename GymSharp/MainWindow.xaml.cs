@@ -33,10 +33,10 @@ namespace GymSharp
             viewContainer.Children.Add(element);
         }
 
-        private void ParametreCommand(object sender, RoutedEventArgs e)
+        private void ParametresCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
-            UIElement element = new parametres();
+            UIElement element = new ParametresView();
             viewContainer.Children.Add(element);
         }
 
@@ -51,6 +51,12 @@ namespace GymSharp
         {
             viewContainer.Children.Clear();
             UIElement element = new _3DView();
+            viewContainer.Children.Add(element);
+        }
+        private void ProfileCommand(object sender, RoutedEventArgs e)
+        {
+            viewContainer.Children.Clear();
+            UIElement element = new ProfileView();
             viewContainer.Children.Add(element);
         }
 

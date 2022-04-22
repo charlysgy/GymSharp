@@ -1,0 +1,499 @@
+﻿<UserControl x:Class="GymSharp.MVVM.View.ProfileView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GymSharp.MVVM.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid Background="#ADADAD">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto" 
+                    CanVerticallyScroll="True">
+
+            <RadioButton Grid.Row="1"
+                         Grid.Column="0"
+                         x:Name="ButtonProfile"
+                         GroupName="Profile">
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <TextBlock Foreground="White"
+                                   Text="Informations"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontFamily="Berlin Sans FB"
+                                   FontSize="20"
+                                   Margin="5, 0, 0, 0"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <StackPanel>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Prénom"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Nom"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Age"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Taille"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Poids"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Numéro de carte bancaire"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="RM"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Cryptogramme"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Sexe"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+
+            </StackPanel>
+
+            <RadioButton>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <TextBlock Foreground="White"
+                                   Text="Objectifs"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left"
+                                   FontFamily="Berlin Sans FB"
+                                   FontSize="20"
+                                   Margin="5, 0, 0, 0"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <StackPanel>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Poids"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="RM"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+                <RadioButton>
+                    <RadioButton.Template>
+                        <ControlTemplate>
+                            <TextBlock Foreground="White"
+                                       Text="Objectif"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Left"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="15"
+                                       Margin="10, 0, 0, 0"/>
+                        </ControlTemplate>
+                    </RadioButton.Template>
+                </RadioButton>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+                        
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                
+                
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <TextBlock Foreground="White"
+                       Text="Informations"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Berlin Sans FB"
+                       FontSize="45"/>
+                    <StackPanel CanVerticallyScroll="True"
+                                ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <TextBlock Foreground="White"
+                        Text="Prénom :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="FirstNameBox" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="FirstNameBoxProfile_TouchEnter"/>
+                        <TextBlock Foreground="White"
+                        Text="Nom :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="NameBox" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="NameBoxProfile_TouchEnter"/>
+                        <TextBlock Foreground="White"
+                        Text="Age :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="AgeBox" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="AgeBoxProfile_TouchEnter"/>
+                        <TextBlock Foreground="White"
+                        Text="Taille :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="HeightBox" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="HeightBoxProfile_TouchEnter"/>
+                        <TextBlock Foreground="White"
+                        Text="Poids :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="WeightBox" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="WeightBoxProfile_TouchEnter"/>
+                        <TextBlock Foreground="White"
+                        Text="N° de carte bancaire :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="25"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="CCBoxProfile" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="CCBoxProfile_TouchEnter"/>
+                        <TextBlock Foreground="White"
+                        Text="RM :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="RMBoxProfile" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="RMBoxProfile_TouchEnter"/>
+                        <TextBlock Foreground="White"
+                        Text="Cryptogramme :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="CryptBoxProfile" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="CryptBoxProfile_TouchEnter"/>
+                        <TextBlock Foreground="White"
+                        Text="Sexe :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                        <TextBox x:Name="SexBoxProfile" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="SexBoxProfile_TouchEnter"/>
+                    </StackPanel>
+                    
+                </StackPanel>
+                <StackPanel Grid.Row="0" Grid.Column="1">
+                    <TextBlock Foreground="White"
+                       Text="Objestifs"
+                       TextAlignment="Center"
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontFamily="Berlin Sans FB"
+                       FontSize="35"/>
+                    <TextBlock Foreground="White"
+                        Text="Poids :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                    <TextBox x:Name="WeightObjBoxProfile" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="WeightObjBoxProfile_TouchEnter"/>
+                    <TextBlock Foreground="White"
+                        Text="RM :"
+                        TextAlignment="Center"
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center"
+                        FontFamily="Berlin Sans FB"
+                        FontSize="30"
+                        Margin="10, 0, 0, 0"/>
+                    <TextBox x:Name="RMObjBoxProfile" 
+                        BorderBrush="#8D8D8D"
+                        BorderThickness="0.5"
+                        Margin="15 5"
+                        IsReadOnly="False"
+                        Style="{StaticResource StyleTextBox}"
+                        TouchEnter="RMObjBoxProfile_TouchEnter"/>
+                    <RadioButton Cursor="Hand">
+                        <RadioButton.Template>
+                            <ControlTemplate>
+                                <TextBlock Foreground="White"
+                                       Text="Objectif :"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="30"
+                                       Margin="10, 0, 0, 0"/>
+                            </ControlTemplate>
+                        </RadioButton.Template>
+                    </RadioButton>
+                    <StackPanel CanVerticallyScroll="True"
+                                ScrollViewer.VerticalScrollBarVisibility="Auto">
+                        <RadioButton Cursor="Hand">
+                            <RadioButton.Template>
+                                <ControlTemplate>
+                                    <TextBlock Foreground="White"
+                                       Text="Commencer le sport"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="25"
+                                       Margin="10, 0, 0, 0"/>
+                                </ControlTemplate>
+                            </RadioButton.Template>
+                        </RadioButton>
+                        <RadioButton Cursor="Hand">
+                            <RadioButton.Template>
+                                <ControlTemplate>
+                                    <TextBlock Foreground="White"
+                                       Text="Améliorer mon endurence"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="25"
+                                       Margin="10, 0, 0, 0"/>
+                                </ControlTemplate>
+                            </RadioButton.Template>
+                        </RadioButton>
+                        <RadioButton Cursor="Hand">
+                            <RadioButton.Template>
+                                <ControlTemplate>
+                                    <TextBlock Foreground="White"
+                                       Text="Améliorer ma force"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="25"
+                                       Margin="10, 0, 0, 0"/>
+                                </ControlTemplate>
+                            </RadioButton.Template>
+                        </RadioButton>
+                        <RadioButton Cursor="Hand">
+                            <RadioButton.Template>
+                                <ControlTemplate>
+                                    <TextBlock Foreground="White"
+                                       Text="Améliorer mon physique"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="25"
+                                       Margin="10, 0, 0, 0"/>
+                                </ControlTemplate>
+                            </RadioButton.Template>
+                        </RadioButton>
+                        <RadioButton Cursor="Hand">
+                            <RadioButton.Template>
+                                <ControlTemplate>
+                                    <TextBlock Foreground="White"
+                                       Text="Rester en forme"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="25"
+                                       Margin="10, 0, 0, 0"/>
+                                </ControlTemplate>
+                            </RadioButton.Template>
+                        </RadioButton>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -92,16 +92,21 @@
     </ApplicationDefinition>
     <Compile Include="Data\UserProfile.cs" />
     <Compile Include="MVVM\Model\GraphicClass.cs" />
+    <Compile Include="MVVM\ViewModel\ParametresViewModel.cs" />
     <Compile Include="MVVM\ViewModel\FirstStartViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ListeExerciceViewModel.cs" />
+    <Compile Include="MVVM\ViewModel\ProfileViewModel.cs" />
     <Compile Include="MVVM\View\3DView.xaml.cs">
       <DependentUpon>3DView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MVVM\View\FirstStartView.xaml.cs">
       <DependentUpon>FirstStartView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MVVM\View\parametres.xaml.cs">
-      <DependentUpon>parametres.xaml</DependentUpon>
+    <Compile Include="MVVM\View\ParametresView.xaml.cs">
+      <DependentUpon>ParametresView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MVVM\View\ProfileView.xaml.cs">
+      <DependentUpon>ProfileView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ressources\enums\exo_enum.cs" />
     <Compile Include="ressources\enums\muscles_enum.cs" />
@@ -126,7 +131,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MVVM\View\parametres.xaml">
+    <Page Include="MVVM\View\ParametresView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MVVM\View\ProfileView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

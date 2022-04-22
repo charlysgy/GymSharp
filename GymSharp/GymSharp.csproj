@@ -55,6 +55,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HelixToolkit, Version=2.20.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>packages\HelixToolkit.2.20.2\lib\netstandard1.1\HelixToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="HelixToolkit.Wpf, Version=2.20.2.0, Culture=neutral, PublicKeyToken=52aa3500039caf0d, processorArchitecture=MSIL">
+      <HintPath>packages\HelixToolkit.Wpf.2.20.2\lib\net45\HelixToolkit.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -75,6 +81,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="YamlDotNet, Version=11.0.0.0, Culture=neutral, PublicKeyToken=ec19458f3c15af5e, processorArchitecture=MSIL">
+      <HintPath>packages\YamlDotNet.11.2.1\lib\net45\YamlDotNet.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -82,7 +91,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="MVVM\Model\GraphicClass.cs" />
+    <Compile Include="MVVM\ViewModel\FirstStartViewModel.cs" />
     <Compile Include="MVVM\ViewModel\ListeExerciceViewModel.cs" />
+    <Compile Include="MVVM\View\3DView.xaml.cs">
+      <DependentUpon>3DView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MVVM\View\FirstStartView.xaml.cs">
       <DependentUpon>FirstStartView.xaml</DependentUpon>
     </Compile>
@@ -104,6 +117,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MVVM\View\3DView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MVVM\View\FirstStartView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -175,9 +192,6 @@
     <Folder Include="Core\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ressources\text\message_accueil.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Data\exosData.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -211,7 +225,25 @@
     <Resource Include="ressources\Images\frflag.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Data\userProfile.txt" />
+    <Resource Include="ressources\text\messages_accueil.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\icone_maison.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\utilisateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\haltere.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\graphique.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\corps.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\parametres.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

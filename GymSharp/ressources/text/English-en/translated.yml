@@ -1,0 +1,12 @@
+FirstStart :
+  - title : Create your profile to start using GymSharp
+  Your first name
+  Your Surname
+  Your age
+  Your weight
+  - What's your purpose ? :
+      Begin Sport
+      Increase Endurance
+      Increase Power
+      Burn Fat
+      Keep my body trained

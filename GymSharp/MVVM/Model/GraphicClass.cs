@@ -47,6 +47,5 @@ namespace GymSharp.MVVM.Model
                 }
             }
         }
-
     }
 }

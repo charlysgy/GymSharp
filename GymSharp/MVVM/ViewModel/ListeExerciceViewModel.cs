@@ -20,16 +20,13 @@ namespace GymSharp.MVVM.ViewModel
 
         }
 
-        public static void ChangeMuscleButtons(int muscle)
+        public static void ChangeInfoAboutMuscle(int muscle)
         {
             //Suppression des anciens radiobutton 
             List<UIElement> elementList = new List<UIElement>();
             foreach (UIElement element in View.gridAfficheExo.Children)
             {
-                if (Grid.GetRow(element) == 0)
-                {
-                    elementList.Add(element);
-                }
+                elementList.Add(element);
             }
 
             foreach (UIElement element in elementList)
@@ -40,65 +37,69 @@ namespace GymSharp.MVVM.ViewModel
             View.gridAfficheExo.RowDefinitions.Clear();
             View.gridAfficheExo.ColumnDefinitions.Clear();
 
+
             View.gridAfficheExo.RowDefinitions.Add(new RowDefinition());
-
-            int currentCol = 0;
-            foreach (Exercice exo in Enum.GetValues(typeof(Exercice)))
+            TextBlock text = new TextBlock()
             {
+                Foreground = System.Windows.Media.Brushes.White,
+                TextAlignment = TextAlignment.Right,
+                FontSize = 50,
+                Margin = new Thickness(0, 0, 25, 0),
+            };
+            text.SetValue(Grid.RowProperty, 0);
+            
 
-                if ((int)exo < 100)
-                {
-                    if ((int)exo / 10 == muscle)
-                    {
-                        ColumnDefinition col = new ColumnDefinition
-                        {
-                            Width = new GridLength(1, GridUnitType.Auto)
-                        };
-                        View.gridAfficheExo.ColumnDefinitions.Add(col);
-
-                        RadioButton radio = new RadioButton()
-                        {
-                            Name = exo.ToString(),
-                            Content = exo.ToString().Replace("_", " "),
-                        };
-                        radio.Cursor = System.Windows.Input.Cursors.Hand;
-                        radio.Margin = new Thickness(5, 0, 5, 0);
-                        //radio.Checked += View.ExoChecked;
-                        radio.SetValue(Grid.RowProperty, 0);
-                        radio.SetValue(Grid.ColumnProperty, currentCol);
-                        radio.Style = (Style)Application.Current.TryFindResource("StyleBoutons");
-                        View.gridAfficheExo.Children.Add(radio);
-                        currentCol++;
-                    }
-                }
-                else
-                {
-                    if ((int)exo / 100 == muscle)
-                    {
-                        ColumnDefinition col = new ColumnDefinition
-                        {
-                            Width = new GridLength(1, GridUnitType.Star)
-                        };
-
-                        View.gridAfficheExo.ColumnDefinitions.Add(col);
-                        RadioButton radio = new RadioButton()
-                        {
-                            Name = exo.ToString(),
-                            Content = exo.ToString().Replace("_", " ")
-                        };
-                        radio.Cursor = System.Windows.Input.Cursors.Hand;
-                        radio.Margin = new Thickness(5, 0, 5, 0);
-                        radio.Height = double.NaN;
-                        radio.Style = (Style)Application.Current.TryFindResource("StyleBoutons");
-                        //radio.Checked += View.ExoChecked;
-                        radio.SetValue(Grid.RowProperty, 0);
-                        radio.SetValue(Grid.ColumnProperty, currentCol);
-                        View.gridAfficheExo.Children.Add(radio);
-                        currentCol++;
-                    }
-                }
+            if (muscle > 30 && muscle < 40 || muscle == 310 || muscle == 311 || muscle == 312)
+            {
+                text.Text = "Information Exercice Bras";
+            }
+            else if (muscle == 3)
+            {
+                text.Text = "Information Bras";
+            }
+            else if (muscle == 6)
+            {
+                text.Text = "Information Jambe";
+            }
+            else if (muscle > 60 && muscle < 85)
+            {
+                text.Text = "Information Exercice Jambe";
+            }
+            else if (muscle == 2)
+            {
+                text.Text = "Information Dos";
+            }
+            else if (muscle > 20 && muscle < 30 || muscle == 210 || muscle == 211 || muscle == 212)
+            {
+                text.Text = "Information Exercice Dos";
+            }
+            else if (muscle == 1)
+            {
+                text.Text = "Information Pectoraux";
+            }
+            else if (muscle > 10 && muscle < 20)
+            {
+                text.Text = "Information Exercice Pectoraux";
+            }
+            else if (muscle == 4)
+            {
+                text.Text = "Information Epaules";
+            }
+            else if (muscle > 40 && muscle < 50)
+            {
+                text.Text = "Information Exercice Epaules";
+            }
+            else if (muscle == 5)
+            {
+                text.Text = "Information Abdos";
+            }
+            else if (muscle > 50 && muscle < 60)
+            {
+                text.Text = "Information Exercice Dos";
             }
 
+
+            View.gridAfficheExo.Children.Add(text);
         }
     }
 }

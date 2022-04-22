@@ -17,10 +17,10 @@ namespace GymSharp.MVVM.View
             ListeExerciceViewModel.View = this;
         }
 
-        public void BodyPartChecked(object sender, RoutedEventArgs e)
+        public void ExoChecked(object sender, RoutedEventArgs e)
         {
             RadioButton radio = (RadioButton)sender;
-            RepRMChartViewModel.ChangeMuscleButtons(int.Parse(radio.Name.Replace("_", "")));
+            ListeExerciceViewModel.ChangeInfoAboutMuscle(int.Parse(radio.Name.Replace("_", "")));
         }
 
         

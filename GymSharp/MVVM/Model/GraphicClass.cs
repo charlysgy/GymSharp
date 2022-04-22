@@ -1,6 +1,8 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using GymSharp.Utils;
+using GymSharp.ressources.enums;
 
 
 namespace GymSharp.MVVM.Model
@@ -46,6 +48,30 @@ namespace GymSharp.MVVM.Model
                     rm.Add(int.Parse(data[6]));
                 }
             }
+        }
+
+        public static List<List<string>> GetExos()
+        {
+            List<List<string>> res = new List<List<string>>();
+
+            for (int i = 0; i < 8; i++)
+            {
+                res.Add(new List<string>());
+            }
+
+            foreach (var exo in Enum.GetValues(typeof(Exercice)))
+            {
+                if ((int)exo >= 100)
+                {
+                    res[((int)exo / 100) - 1].Add(exo.ToString().Replace('_', ' '));
+                }
+                else
+                {
+                    res[((int)exo / 10) - 1].Add(exo.ToString().Replace('_', ' '));
+                }
+            }
+
+            return res;
         }
     }
 }

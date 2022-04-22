@@ -21,16 +21,16 @@ namespace GymSharp.MVVM.View
             RepRMChartViewModel.View = this;
         }
 
-        public void BodyPartChecked(object sender, RoutedEventArgs e)
-        {
-            RadioButton radio = (RadioButton)sender;
-            RepRMChartViewModel.ChangeMuscleButtons(int.Parse(radio.Name.Replace("_", "")));
-        }
-
         public void ExoChecked(object sender, RoutedEventArgs e)
         {
             RadioButton radio = (RadioButton)sender;
+            radio.IsChecked = false;
             RepRMChartViewModel.ShowSeries((int)Enum.Parse(typeof(Exercice), radio.Name));
-        } 
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            RepRMChartViewModel.InitExos();
+        }
     }
 }

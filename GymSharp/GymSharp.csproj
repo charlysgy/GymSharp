@@ -245,5 +245,8 @@
   <ItemGroup>
     <Resource Include="ressources\Images\parametres.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\text\Francais-fr\info_bras.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

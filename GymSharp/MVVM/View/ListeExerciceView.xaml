@@ -11,7 +11,7 @@
     <UserControl.DataContext>
         <viewModel:ListeExerciceViewModel/>
     </UserControl.DataContext>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,183 +23,305 @@
         </Grid.ColumnDefinitions>
 
         <TextBlock Foreground="White" Text="Liste" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Berlin Sans FB" FontSize="20" Grid.Column="0" Grid.Row="0"/>
-             
 
-        <StackPanel Grid.Row="1"
-                    Grid.Column="0"
-                    Grid.RowSpan="1"
-                    Grid.ColumnSpan="1" 
-                    ScrollViewer.VerticalScrollBarVisibility="Auto" 
-                    CanVerticallyScroll="True"
-                    Name="Panel">
+        <ScrollViewer Grid.Row="1"
+                      Grid.Column="0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Grid.RowSpan="1"
+                        Grid.ColumnSpan="1" 
+                        ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                        CanVerticallyScroll="True"
+                        Name="Panel">
 
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Bras" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-            <StackPanel x:Name="ListExoPanel">
+                <RadioButton Content="Bras"
+                            Style="{StaticResource StyleBoutons}"
+                            Name="_3"/>
 
-                <RadioButton Content="ExoBras1"
+                <RadioButton Content="Curls_a_la_barre"
                              Style="{StaticResource StyleBoutons}"
-                             Name="ButExoBras1"
-                             IsChecked="True"/>
+                             Name="_31"/>
 
-
-                <RadioButton Content="ExoBras2"
+                <RadioButton Content="Curls_halteres"
                              Style="{StaticResource StyleBoutons}"
-                             Name="ButExoBras2"/>
+                             Name="_32"/>
+
+                <RadioButton Content="Curls_poulie"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_33"/>
+
+                <RadioButton Content="Dips"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_34"/>
+
+                <RadioButton Content="KickBack"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_35"/>
+
+               <RadioButton Content="Developpes_a_la barre"
+                            Style="{StaticResource StyleBoutons}"
+                            Name="_36"/>
+
+                <RadioButton Content="Extension_assis"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_37"/>
+
+                <RadioButton Content="Extension_couche"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_38"/>
+
+                <RadioButton Content="Extension_a_la_poulie"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_39"/>
+
+                <RadioButton Content="Flexion_aux_halteres"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_310"/>
+
+                <RadioButton Content="Flexion_barre_pronation"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_311"/>
+
+                <RadioButton Content="Flexion_barre_supination"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_312"/>
 
 
+                <RadioButton Content="Jambe"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_6"/>
 
-                <RadioButton Content="ExoBras3"
-                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Squat"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_61"/>
+
+                <RadioButton Content="Leg_extension"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_62"/>
+
+                <RadioButton Content="Hack_squat"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_63"/>
+
+                <RadioButton Content="Presse_a_cuisse"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_64"/>
+
+                <RadioButton Content="Squat_barre_guidee"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_65"/>
+
+                <RadioButton Content="Montee_sur_banc"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_66"/>
+
+                <RadioButton Content="Sissy_squat"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_67"/>
+
+                <RadioButton Content="Souleve_de_terre_jambes_tendues"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_71"/>
+
+                <RadioButton Content="Leg_curl_debout"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_72"/>
+
+                <RadioButton Content="Good_morning"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_73"/>
+
+                <RadioButton Content="Leg_curl_assis"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_74"/>
+
+                <RadioButton Content="Fentes"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_75"/>
+
+                <RadioButton Content="Mollets_a_la_presse"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_81"/>
+
+                <RadioButton Content="Elevation_a_45"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_82"/>
+
+                <RadioButton Content="Mollets_assis"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_83"/>
+
+                <RadioButton Content="Mollets_debout"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_84"/>
 
 
-                <RadioButton Content="ExoBras4"
-                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Dos"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_2"/>
+
+                <RadioButton Content="Traction"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_21"/>
+
+                <RadioButton Content="Rowing"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_22"/>
+
+                <RadioButton Content="Shrug"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_23"/>
+
+                <RadioButton Content="Tirages_verticaux"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_24"/>
+
+                <RadioButton Content="Tirages_horizontaux"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_25"/>
+
+                <RadioButton Content="Extension_lombaire"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_26"/>
+
+                <RadioButton Content="Pullover"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_27"/>
+
+                <RadioButton Content="Shrug_incline_halteres"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_28"/>
+
+                <RadioButton Content="Rowing_barre_t"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_29"/>
+
+                <RadioButton Content="Rowing_haltere"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_210"/>
+
+                <RadioButton Content="Tirage_horizontal_haut"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_211"/>
+
+                <RadioButton Content="Rowing_deux_halteres"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_212"/>
 
 
-                <RadioButton Content="ExoBras5"
-                             Style="{StaticResource StyleBoutons}"/>
-            </StackPanel >
+                <RadioButton Content="Pectoraux"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_1"/>
 
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Jambe" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-            <StackPanel>
-                <RadioButton Content="ExoJambe1"
-                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Developpes_couche"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_11"/>
 
-                <RadioButton Content="ExoJambe2"
-                             Style="{StaticResource StyleBoutons}"/>
 
-                <RadioButton Content="ExoJambe3"
-                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Developpes_incline"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_12"/>
 
-                <RadioButton Content="ExoJambe4"
-                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Developpes_decline"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_13"/>
 
-                <RadioButton Content="ExoJambe5"
-                             Style="{StaticResource StyleBoutons}"/>
+                <RadioButton Content="Ecarte_halteres"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_14"/>
+
+                <RadioButton Content="Ecarte_poulies"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_15"/>
+
+                <RadioButton Content="Pec_deck"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_16"/>
+
+                <RadioButton Content="Pompes"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_17"/>
+
+
+                <RadioButton Content="Epaule"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_4"/>
+
+                <RadioButton Content="Developpes_epaules"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_41"/>
+
+                <RadioButton Content="Elevation_laterale"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_42"/>
+
+                <RadioButton Content="Elevation_frontale"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_43"/>
+
+                <RadioButton Content="Elevation_buste_penche"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_44"/>
+
+                <RadioButton Content="Tirage_menton"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_45"/>
+
+                <RadioButton Content="Rowing_assis"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_46"/>
+
+                <RadioButton Content="Oiseau_a_la_poulie"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_47"/>
+
+                <RadioButton Content="Elevation_frontales_incline"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_48"/>
+
+
+                <RadioButton Content="Abdos"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_5"/>
+
+                <RadioButton Content="Crunch"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_51"/>
+
+                <RadioButton Content="Crunch_a_la_poulie"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_52"/>
+
+                <RadioButton Content="Gainage"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_53"/>
+
+                <RadioButton Content="Releves_de_jambes"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_54"/>
+
+                <RadioButton Content="Flexions_laterales"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_55"/>
+
+                <RadioButton Content="Rotation_avec_baton"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_56"/>
+
             </StackPanel>
-
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Dos" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-            <StackPanel>
-                <RadioButton Content="ExoDos1"
-                             Style="{StaticResource StyleBoutons}"/>
-
-                <RadioButton Content="ExoDos2"
-                             Style="{StaticResource StyleBoutons}"/>
-
-                <RadioButton Content="ExoDos3"
-                             Style="{StaticResource StyleBoutons}"/>
-
-                <RadioButton Content="ExoDos4"
-                             Style="{StaticResource StyleBoutons}"/>
-
-                <RadioButton Content="ExoDos5"
-                             Style="{StaticResource StyleBoutons}"/>
-            </StackPanel>
-
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Pectoraux" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-                <StackPanel>
-                    <RadioButton Content="ExoPecs1"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoPecs2"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoPecs3"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoPecs4"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoPecs5"
-                                 Style="{StaticResource StyleBoutons}"/>
-                </StackPanel>
-
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Epaule" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-                <StackPanel>
-                    <RadioButton Content="ExoEpaules1"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoEpaules2"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoEpaules3"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoEpaules4"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoEpaules5"
-                                 Style="{StaticResource StyleBoutons}"/>
-                </StackPanel>
-
-            <RadioButton>
-                <RadioButton.Template>
-                    <ControlTemplate>
-                        <TextBlock Foreground="White" Text="Abdos" HorizontalAlignment="Left" Margin="5, 0, 0, 0" FontFamily="Berlin Sans FB"/>
-                    </ControlTemplate>
-                </RadioButton.Template>
-            </RadioButton>
-                <StackPanel>
-                    <RadioButton Content="ExoAbdos1"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoAbdos2"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoAbdos3"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoAbdos4"
-                                 Style="{StaticResource StyleBoutons}"/>
-
-                    <RadioButton Content="ExoAbdos5"
-                                 Style="{StaticResource StyleBoutons}"/>
-                </StackPanel>
-
-        </StackPanel>
-
+        </ScrollViewer>
         <StackPanel Grid.Row="1" 
                     Grid.Column="1"
                     Grid.RowSpan="1"
                     Grid.ColumnSpan="1"
                     Visibility="{Binding ExoBras}">
-            <Grid>
+            <Grid x:Name="gridAfficheExo">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                
-                
+
+
                 <TextBlock Foreground="White" Text="ExoBras1" TextAlignment="Right" FontFamily="Berlin Sans FB" FontSize="50" Margin="0, 0, 25, 0" Grid.Row="0"
                            Name="TextExoBras1"/>
                 <StackPanel Grid.Row="1"
@@ -209,23 +331,13 @@
                             Grid.RowSpan="1"
                             Name="StackPanelExoBras1">
                     <Image Source="../../ressources/Images/logo_gym.png" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15, 0, 0, 0"/>
-                    <TextBlock Foreground="White" Text="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="20" Margin="40, 20, 0, 0"/>
+                    <TextBlock Foreground="White" Text="_" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="20" Margin="40, 20, 0, 0"/>
                 </StackPanel>
 
-                <TextBlock Foreground="White" Text="ExoBras2" TextAlignment="Right" FontFamily="Berlin Sans FB" FontSize="50" Margin="0, 0, 25, 0" Grid.Row="0"
-                           Name="TextExoBras2"/>
-                <StackPanel Grid.Row="1"
-                            ScrollViewer.VerticalScrollBarVisibility="Auto" 
-                            CanVerticallyScroll="True"
-                            Orientation="Horizontal"
-                            Grid.RowSpan="1"
-                            Name="StackPanelExoBras2">
-                    <Image Source="../../ressources/Images/logo_gym.png" Height="200" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="15, 0, 0, 0"/>
-                    <TextBlock Foreground="White" Text="_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _" HorizontalAlignment="Right" VerticalAlignment="Top" FontFamily="Berlin Sans FB" FontSize="20" Margin="40, 20, 0, 0"/>
-                </StackPanel>
+               
             </Grid>
-            
-            
+
+
         </StackPanel>
 
     </Grid>

@@ -10,58 +10,20 @@ namespace GymSharp.MVVM.View
     /// </summary> 
     public partial class ListeExerciceView : UserControl
     {
-        
+
         public ListeExerciceView()
         {
             InitializeComponent();
             ListeExerciceViewModel.View = this;
         }
 
-        public void ClearStackPanel(StackPanel name)
+        public void BodyPartChecked(object sender, RoutedEventArgs e)
         {
-            if (name != null)
-            {
-                name.Visibility = System.Windows.Visibility.Collapsed;
-            }        
+            RadioButton radio = (RadioButton)sender;
+            RepRMChartViewModel.ChangeMuscleButtons(int.Parse(radio.Name.Replace("_", "")));
         }
 
-        public void ClearText(TextBlock text)
-        {
-            if (text != null)
-            {
-                TextExoBras1.Visibility = System.Windows.Visibility.Collapsed;
-            }           
-        }
+        
 
-        private void StackPanel_Scroll(object sender, System.Windows.Controls.Primitives.ScrollEventArgs e)
-        {
-
-        }
-        private void Changement_StackPanel (object sender, RoutedEventArgs e)
-        {
-            StackPanel name = null; 
-            TextBlock text = null;
-
-            if (ButExoBras1.IsChecked == true)
-            {
-                ClearStackPanel(name);
-                ClearText(text);
-                TextExoBras1.Visibility = System.Windows.Visibility.Visible;
-                StackPanelExoBras1.Visibility = System.Windows.Visibility.Visible;
-                name = StackPanelExoBras1;
-                text = TextExoBras1;
-                
-                
-            }
-            if (ButExoBras2.IsChecked == true)
-            {
-                ClearStackPanel(name);
-                ClearText(text);
-                TextExoBras2.Visibility = System.Windows.Visibility.Visible;
-                StackPanelExoBras2.Visibility = System.Windows.Visibility.Visible;
-                name = StackPanelExoBras2;
-                text = TextExoBras2;
-            }
-        }
     }
 }

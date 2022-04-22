@@ -10,26 +10,35 @@
              MinHeight="600"
              MinWidth="1000"
              FontFamily="{Binding Fontfamily}"
-             FontSize="15">
-
+             FontSize="15" Loaded="UserControl_Loaded">
+    <UserControl.DataContext>
+        <viewModel:RepRMChartViewModel/>
+    </UserControl.DataContext>
+    
     <Grid x:Name="grid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition x:Name="StackPanels" 
+                           Height="Auto"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        
+
         <Grid x:Name="gridBodyParts" 
               Grid.Row="0"
               Grid.Column="0"
-              Grid.ColumnSpan="2"
+              Grid.ColumnSpan="8"
               VerticalAlignment="Stretch"
-              HorizontalAlignment="Stretch"
-              Height="Auto">
+              HorizontalAlignment="Stretch">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -50,67 +59,336 @@
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding PecRadButton}"
                          Cursor="Hand"
-                         Checked="BodyPartChecked"/>
+                         VerticalAlignment="Top">
+                <RadioButton.Triggers>
+                    <EventTrigger RoutedEvent="RadioButton.Checked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="PecExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="{Binding ActualHeight, ElementName=PecExPanel}"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="RadioButton.Unchecked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="PecExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="0"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </RadioButton.Triggers>
+            </RadioButton>
 
             <RadioButton x:Name="_2" 
                          Grid.Row="0"
                          Grid.Column="1" 
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding DosRadButton}" 
-                         Cursor="Hand"
-                         Checked="BodyPartChecked"/>
+                         Cursor="Hand">
+                <RadioButton.Triggers>
+                    <EventTrigger RoutedEvent="RadioButton.Checked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="BackExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="{Binding ActualHeight, ElementName=BackExPanel}"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="RadioButton.Unchecked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="BackExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="0"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </RadioButton.Triggers>
+            </RadioButton>
 
             <RadioButton x:Name="_3" 
                          Grid.Column="2" 
                          Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding BrasRadButton}" 
-                         Cursor="Hand"
-                         Checked="BodyPartChecked"/>
+                         Cursor="Hand">
+                <RadioButton.Triggers>
+                    <EventTrigger RoutedEvent="RadioButton.Checked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ArmExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="{Binding ActualHeight, ElementName=ArmExPanel}"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="RadioButton.Unchecked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ArmExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"                                                 
+                                                 To="0"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </RadioButton.Triggers>
+            </RadioButton>
 
             <RadioButton x:Name="_4" 
                          Grid.Column="3" 
                          Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding EpauleRadButton}" 
-                         Cursor="Hand"
-                         Checked="BodyPartChecked"/>
+                         Cursor="Hand">
+                <RadioButton.Triggers>
+                    <EventTrigger RoutedEvent="RadioButton.Checked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ShoulderExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                  To="{Binding ActualHeight, ElementName=ShoulderExPanel}"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="RadioButton.Unchecked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="ShoulderExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="0"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </RadioButton.Triggers>
+            </RadioButton>
 
             <RadioButton x:Name="_5" 
                          Grid.Column="4" 
                          Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding AbsRadButton}" 
-                         Cursor="Hand"
-                         Checked="BodyPartChecked"/>
+                         Cursor="Hand">
+                <RadioButton.Triggers>
+                    <EventTrigger RoutedEvent="RadioButton.Checked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="AbsExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="{Binding ActualHeight, ElementName=AbsExPanel}"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="RadioButton.Unchecked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="AbsExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="0"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </RadioButton.Triggers>
+            </RadioButton>
 
             <RadioButton x:Name="_6" 
                          Grid.Column="5" 
                          Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding QuadRadButton}" 
-                         Cursor="Hand"
-                         Checked="BodyPartChecked"/>
+                         Cursor="Hand">
+                <RadioButton.Triggers>
+                    <EventTrigger RoutedEvent="RadioButton.Checked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="QuadExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="{Binding ActualHeight, ElementName=QuadExPanel}"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="RadioButton.Unchecked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="QuadExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="0"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </RadioButton.Triggers>
+            </RadioButton>
 
             <RadioButton x:Name="_7" 
                          Grid.Column="6" 
                          Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding IschioRadButton}" 
-                         Cursor="Hand"
-                         Checked="BodyPartChecked"/>
+                         Cursor="Hand">
+                <RadioButton.Triggers>
+                    <EventTrigger RoutedEvent="RadioButton.Checked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="IschioExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="{Binding ActualHeight, ElementName=IschioExPanel}"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="RadioButton.Unchecked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="IschioExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="0"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </RadioButton.Triggers>
+            </RadioButton>
 
             <RadioButton x:Name="_8" 
                          Grid.Column="7" 
                          Grid.Row="0"
                          Style="{StaticResource StyleBoutons}"
                          Content="{Binding MolletRadButton}" 
-                         Cursor="Hand"
-                         Checked="BodyPartChecked"/>
+                         Cursor="Hand">
+                <RadioButton.Triggers>
+                    <EventTrigger RoutedEvent="RadioButton.Checked" >
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="CalfExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="{Binding ActualHeight, ElementName=CalfExPanel}"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                    <EventTrigger RoutedEvent="RadioButton.Unchecked">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="CalfExPanel"
+                                                 Storyboard.TargetProperty="MaxHeight"
+                                                 BeginTime="0:0:0"
+                                                 To="0"
+                                                 Duration="0:0:0.5"/>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </RadioButton.Triggers>
+            </RadioButton>
         </Grid>
 
+        <StackPanel x:Name="PecExPanel"
+                    Panel.ZIndex="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.Column="0"
+                    VerticalAlignment="Top"
+                    MaxHeight="0">
+
+        </StackPanel>
+        <StackPanel x:Name="BackExPanel"
+                    Panel.ZIndex="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.Column="1"
+                    VerticalAlignment="Top"
+                    MaxHeight="0">
+
+        </StackPanel>
+        <StackPanel x:Name="ArmExPanel"
+                    Panel.ZIndex="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.Column="2"
+                    VerticalAlignment="Top"
+                    MaxHeight="0">
+
+        </StackPanel>
+        <StackPanel x:Name="ShoulderExPanel"
+                    Panel.ZIndex="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.Column="3"
+                    VerticalAlignment="Top"
+                    MaxHeight="0">
+
+        </StackPanel>
+        <StackPanel x:Name="AbsExPanel"
+                    Panel.ZIndex="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.Column="4"
+                    VerticalAlignment="Top"
+                    MaxHeight="0">
+
+        </StackPanel>
+        <StackPanel x:Name="QuadExPanel"
+                    Panel.ZIndex="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.Column="5"
+                    VerticalAlignment="Top"
+                    MaxHeight="0">
+
+        </StackPanel>
+        <StackPanel x:Name="IschioExPanel"
+                    Panel.ZIndex="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.Column="6"
+                    VerticalAlignment="Top"
+                    MaxHeight="0">
+
+        </StackPanel>
+        <StackPanel x:Name="CalfExPanel"
+                    Panel.ZIndex="1"
+                    Grid.Row="1"
+                    Grid.RowSpan="2"
+                    Grid.Column="7"
+                    VerticalAlignment="Top"
+                    MaxHeight="0">
+
+        </StackPanel>
+
+        <!--
         <ScrollViewer Grid.Row="1"
+                      Grid.RowSpan="2"
                       Grid.Column="1" 
+                      VerticalAlignment="Top"
                       HorizontalScrollBarVisibility="Auto"
                       VerticalScrollBarVisibility="Disabled">
             <StackPanel ScrollViewer.HorizontalScrollBarVisibility="Auto" 
@@ -124,11 +402,12 @@
                     </Grid.RowDefinitions>
                 </Grid>
             </StackPanel>
-        </ScrollViewer>
+        </ScrollViewer>-->
 
         <DockPanel  x:Name="chartPanel" 
                     Grid.Row="2"
-                    Grid.Column="1">
+                    Grid.Column="0"
+                    Grid.ColumnSpan="8">
             <chart:CartesianChart x:Name="chart"
                                   LegendLocation="Left"
                                   Zoom="Y">
@@ -144,7 +423,7 @@
                         </chart:Axis.Separator>
                     </chart:Axis>
                 </chart:CartesianChart.AxisX>
-                
+
                 <chart:CartesianChart.AxisY>
                     <chart:Axis Title="{Binding AxisYName}"
                                 Foreground="White"
@@ -155,7 +434,4 @@
             </chart:CartesianChart>
         </DockPanel>
     </Grid>
-    <UserControl.DataContext>
-        <viewModel:RepRMChartViewModel/>
-    </UserControl.DataContext>
 </UserControl>

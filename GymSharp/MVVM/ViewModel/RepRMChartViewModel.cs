@@ -3,13 +3,13 @@ using System.Windows;
 using System.IO;
 using System.Windows.Media;
 using System.Collections.Generic;
+using System.Windows.Controls;
+using LiveCharts;
+using LiveCharts.Wpf;
 using GymSharp.MVVM.Model;
 using GymSharp.ressources.enums;
 using GymSharp.Utils;
 using GymSharp.MVVM.View;
-using System.Windows.Controls;
-using LiveCharts;
-using LiveCharts.Wpf;
 
 namespace GymSharp.MVVM.ViewModel
 {
@@ -137,92 +137,32 @@ namespace GymSharp.MVVM.ViewModel
                 XLabels = daysName;
             }
         }
-
-        public static void ChangeMuscleButtons(int muscle)
+        
+        public static void InitExos()
         {
-            /*
-             * Get back all of the element contained by gridExos in the view and add it to a list
-             * Then delete all of the element in the list
-             * Clear the list that contains rows and columns
-             * Then add a new row inside the list containing them
-             */
-            List<UIElement> elementList = new List<UIElement>();
-            foreach (UIElement element in View.gridExos.Children)
+            List<List<string>> listExos = GraphicClass.GetExos();
+            int index = 0;
+            foreach (var element in View.grid.Children)
             {
-                if (Grid.GetRow(element) == 0)
+                if (element is StackPanel)
                 {
-                    elementList.Add(element);
-                }
-            }
+                    StackPanel panel = (StackPanel)element;
+                    panel.Background = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#ADADAD"));
 
-            foreach (UIElement element in elementList)
-            {
-                View.gridExos.Children.Remove(element);
-            }
-
-            View.gridExos.RowDefinitions.Clear();
-            View.gridExos.ColumnDefinitions.Clear();
-
-            View.gridExos.RowDefinitions.Add(new RowDefinition());
-
-            int currentCol = 0;
-            foreach (Exercice exo in Enum.GetValues(typeof(Exercice)))
-            {
-
-                if ((int)exo < 100)
-                {
-                    if ((int)exo / 10 == muscle)
+                    foreach (string str in listExos[index])
                     {
-                        ColumnDefinition col = new ColumnDefinition
-                        {
-                            Width = new GridLength(1, GridUnitType.Auto)
-                        };
-                        View.gridExos.ColumnDefinitions.Add(col);
-
-                        RadioButton radio = new RadioButton()
-                        {
-                            Name = exo.ToString(),
-                            Content = exo.ToString().Replace("_", " "),
-                        };
+                        RadioButton radio = new RadioButton();
+                        radio.BorderBrush = Brushes.Black;
+                        radio.Name = str.Replace(" ", "_");
+                        radio.Content = str;
                         radio.Cursor = System.Windows.Input.Cursors.Hand;
-                        radio.Margin = new Thickness(5, 0, 5, 0);
                         radio.Checked += View.ExoChecked;
-                        radio.SetValue(Grid.RowProperty, 0);
-                        radio.SetValue(Grid.ColumnProperty, currentCol);
                         radio.Style = (Style)Application.Current.TryFindResource("StyleBoutons");
-                        View.gridExos.Children.Add(radio);
-                        currentCol++;
+                        panel.Children.Add(radio);
                     }
+                    index++;
                 }
-                else
-                {
-                    if ((int)exo / 100 == muscle)
-                    {
-                        ColumnDefinition col = new ColumnDefinition
-                        {
-                            Width = new GridLength(1, GridUnitType.Star)
-                        };
-
-                        View.gridExos.ColumnDefinitions.Add(col);
-                        RadioButton radio = new RadioButton()
-                        {
-                            Name = exo.ToString(),
-                            Content = exo.ToString().Replace("_", " ")
-                        };
-                        radio.Cursor = System.Windows.Input.Cursors.Hand;
-                        radio.Margin = new Thickness(5, 0, 5, 0);
-                        radio.Height = double.NaN;
-                        radio.Style = (Style)Application.Current.TryFindResource("StyleBoutons");
-                        radio.Checked += View.ExoChecked;
-                        radio.SetValue(Grid.RowProperty, 0);
-                        radio.SetValue(Grid.ColumnProperty, currentCol);
-                        View.gridExos.Children.Add(radio);
-                        currentCol++;
-                    }
-                }
-
             }
-            
         }
 
         public static void ShowSeries(int exo)

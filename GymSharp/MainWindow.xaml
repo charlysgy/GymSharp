@@ -10,7 +10,8 @@
         Width="800"
         Background="Transparent" 
         WindowStartupLocation="CenterScreen" 
-        SizeChanged="Window_SizeChanged" Initialized="Window_Initialized">
+        SizeChanged="Window_SizeChanged"
+        Initialized="Window_Initialized">
 
     <Window.Resources>
         <Style TargetType="ToolTip"

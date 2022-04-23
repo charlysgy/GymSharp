@@ -38,9 +38,9 @@ namespace GymSharp.MVVM.View
             UserProfile profile = new UserProfile();
             string name = profile.Get_firstName();
             FirstStartViewModel.StartButtonClicked(this);
-            this.Close();
             profile.FillFirstName();
             MainWindow mainWindow = new MainWindow();
+            this.Close();
         }
 
         public void OpenDialog()
@@ -48,14 +48,9 @@ namespace GymSharp.MVVM.View
             this.ShowDialog();
         }
 
-        public string GetInfoFirstName()
+        public void GetInfoFirstName()
         {
-            return FirstNameBox.SelectedText;
-        }
-
-        private void FirstNameBox_TouchEnter(object sender, TouchEventArgs e)
-        {
-            FirstName = FirstNameBox.Text;
+            FirstName = FirstBox.Text;
         }
     }
 }

@@ -11,7 +11,6 @@ namespace GymSharp
     public partial class MainWindow : Window
     {
         private const string PathAccueil = "../../ressources/text/messages_accueil.txt";
-        private const string PathUserProfile = "../../Data/userProfile.txt";
 
         public MainWindow()
         {

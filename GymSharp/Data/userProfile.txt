@@ -1,7 +1,4 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 First name =
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+Last name =
+Age =
+Weight =

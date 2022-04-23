@@ -60,10 +60,10 @@ namespace GymSharp.Data
             return weight;
         }
 
-        public static void FillFirstName()
+        public static void FillFirstName(FirstStartView view)
         {
-            FirstStartView firstStartView = new FirstStartView();
-            string FirstNameToFill = firstStartView.FirstName;
+            string FirstNameToFill = view.FirstNameBox.Text;
+            Console.WriteLine("DZ" + view.FirstNameBox.Text);
             using (StreamWriter sw = new StreamWriter(PATHUSERPROFILE))
             {
                 sw.Write(FirstNameToFill);

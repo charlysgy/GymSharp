@@ -113,7 +113,7 @@ namespace GymSharp
             }
         }
 
-        private void FirstStartCommand(object sender, RoutedEventArgs e)
+        private void FirstStartCommand()
         {
             string prenom = UserProfile.Get_firstName();
             if (prenom == "First name =")
@@ -125,8 +125,7 @@ namespace GymSharp
 
         private void Window_Initialized(object sender, EventArgs e)
         {
-            RoutedEventArgs routedEventArgs = new RoutedEventArgs();
-            FirstStartCommand(sender, routedEventArgs);
+            FirstStartCommand();
         }
     }
 }

@@ -24,6 +24,7 @@ namespace GymSharp.MVVM.View
     /// </summary>
     public partial class ProfileView : UserControl
     {
+        int height;
         int cc;
         int rm;
         int rmObj;
@@ -34,102 +35,76 @@ namespace GymSharp.MVVM.View
         {
             InitializeComponent();
         }
-
-        public string GetInfoFirstName()
+        private void FirstNameBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            return FirstNameBox.SelectedText;
+            if (e.Key == Key.Enter)
+            {
+                UserProfile.firstName = FirstNameBox.Text;
+                UserProfile.FillFirstName(UserProfile.firstName);
+            }            
+        }
+        
+        private void LastNameBoxProfile_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                UserProfile.lastName = LastNameBox.Text;
+                ///UserProfile.FillLastName();
+            }
+        }
+        private void AgeBoxProfile_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                UserProfile.age = Int32.Parse(AgeBox.Text);
+                ///UserProfile.FillLastName();
+            }
         }
 
-        private void FirstNameBoxProfile_TouchEnter(object sender, TouchEventArgs e)
+        private void WeightBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            UserProfile.firstName = FirstNameBox.Text;
-        }
-        public string GetInfoName()
-        {
-            return NameBox.SelectedText;
-        }
-
-        private void NameBoxProfile_TouchEnter(object sender, TouchEventArgs e)
-        {
-            UserProfile.lastName = NameBox.Text;
-        }
-        public string GetInfoAge()
-        {
-            return AgeBox.SelectedText;
+            if (e.Key == Key.Enter)
+            {
+                UserProfile.weight = Int32.Parse(WeightBox.Text);
+                ///UserProfile.FillLastName();
+            }
         }
 
-        private void AgeBoxProfile_TouchEnter(object sender, TouchEventArgs e)
+        private void HeightBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            UserProfile.age = Int32.Parse(FirstNameBox.Text);
+            if (e.Key == Key.Enter)
+            {
+                height = Int32.Parse(HeightBox.Text);
+            }
         }
-        public string GetInfoHeight()
+        private void CCBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            return HeightBox.SelectedText;
-        }
-
-        private void HeightBoxProfile_TouchEnter(object sender, TouchEventArgs e)
-        {
-            Height = Int32.Parse(HeightBox.Text);
-        }
-        public string GetInfoWeight()
-        {
-            return WeightBox.SelectedText;
-        }
-
-        private void WeightBoxProfile_TouchEnter(object sender, TouchEventArgs e)
-        {
-            UserProfile.weight = Int32.Parse(WeightBox.Text);
-        }
-        public string GetInfoCC()
-        {
-            return CCBoxProfile.SelectedText;
-        }
-
-        private void CCBoxProfile_TouchEnter(object sender, TouchEventArgs e)
-        {
-            cc = Int32.Parse(RMBoxProfile.Text);
-        }
-        public string GetInfoCrypt()
-        {
-            return CryptBoxProfile.SelectedText;
+            if (e.Key == Key.Enter)
+            {
+                cc = Int32.Parse(LastNameBox.Text);
+            }
         }
 
         private void CryptBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
             crypt = Int32.Parse(CryptBoxProfile.Text);
         }
-        public string GetInfoSex()
-        {
-            return SexBoxProfile.SelectedText;
-        }
-
+        
         private void SexBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
             sex = SexBoxProfile.Text;
         }
-        public string GetInfoRMObj()
-        {
-            return RMObjBoxProfile.SelectedText;
-        }
-
+        
         private void RMObjBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
             rmObj = Int32.Parse(RMObjBoxProfile.Text);
         }
-        public string GetInfoWeightObj()
-        {
-            return WeightObjBoxProfile.SelectedText;
-        }
-
+        
         private void WeightObjBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
             weightObj = Int32.Parse(WeightObjBoxProfile.Text);
         }
-        public string GetInfoRM()
-        {
-            return RMBoxProfile.SelectedText;
-        }
-
+        
         private void RMBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
             rm = Int32.Parse(RMBoxProfile.Text);

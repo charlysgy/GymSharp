@@ -69,5 +69,12 @@ namespace GymSharp.Data
                 sw.Write(FirstNameToFill);
             }
         }
+        public static void FillFirstName(string name)
+        {
+            using (StreamWriter sw = new StreamWriter(PATHUSERPROFILE))
+            {
+                sw.Write(name);
+            }
+        }
     }
 }

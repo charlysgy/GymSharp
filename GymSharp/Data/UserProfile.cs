@@ -9,15 +9,15 @@ using GymSharp.MVVM.View;
 
 namespace GymSharp.Data
 {
-    public class UserProfile
+    public static class UserProfile
     {
         private const string PATHUSERPROFILE = "../../Data/userProfile.txt";
-        public string firstName;
-        public string lastName;
-        public int age;
-        public int weight;
+        public static string firstName;
+        public static string lastName;
+        public static int age;
+        public static int weight;
 
-        public string Get_firstName()
+        public static string Get_firstName()
         {
             using (StreamReader sr = new StreamReader(PATHUSERPROFILE))
             {
@@ -26,7 +26,7 @@ namespace GymSharp.Data
             return firstName;
         }
 
-        public string Get_lastName()
+        public static string Get_lastName()
         {
             using (StreamReader sr = new StreamReader(PATHUSERPROFILE))
             {
@@ -38,7 +38,7 @@ namespace GymSharp.Data
             return lastName;
         }
 
-        public int Get_age()
+        public static int Get_age()
         {
             using (StreamReader sr = new StreamReader(PATHUSERPROFILE))
             {
@@ -51,7 +51,7 @@ namespace GymSharp.Data
             return age;
         }
 
-        public int Get_weight()
+        public static int Get_weight()
         {
             using (StreamReader sr = new StreamReader(PATHUSERPROFILE))
             {
@@ -60,11 +60,9 @@ namespace GymSharp.Data
             return weight;
         }
 
-        public void FillFirstName()
+        public static void FillFirstName()
         {
             FirstStartView firstStartView = new FirstStartView();
-            object sender;
-            TouchEventArgs e;
             string FirstNameToFill = firstStartView.FirstName;
             using (StreamWriter sw = new StreamWriter(PATHUSERPROFILE))
             {

@@ -35,10 +35,9 @@ namespace GymSharp.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UserProfile profile = new UserProfile();
-            string name = profile.Get_firstName();
+            string name = UserProfile.Get_firstName();
             FirstStartViewModel.StartButtonClicked(this);
-            profile.FillFirstName();
+            UserProfile.FillFirstName();
             MainWindow mainWindow = new MainWindow();
             this.Close();
         }

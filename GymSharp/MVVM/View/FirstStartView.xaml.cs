@@ -50,7 +50,7 @@ namespace GymSharp.MVVM.View
 
         public void GetInfoFirstName()
         {
-            FirstName = FirstBox.Text;
+            FirstName = FirstNameBox.Text;
         }
     }
 }

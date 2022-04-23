@@ -63,6 +63,8 @@ namespace GymSharp.Data
         public void FillFirstName()
         {
             FirstStartView firstStartView = new FirstStartView();
+            object sender;
+            TouchEventArgs e;
             string FirstNameToFill = firstStartView.FirstName;
             using (StreamWriter sw = new StreamWriter(PATHUSERPROFILE))
             {

@@ -1,4 +1,0 @@
-First name =
-Last name =
-Age =
-Weight =

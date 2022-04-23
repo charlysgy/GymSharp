@@ -9,7 +9,7 @@
         Height="600" 
         Width="800"
         Background="Transparent" 
-        WindowStartupLocation="CenterScreen" 
+        WindowStartupLocation="CenterScreen"
         SizeChanged="Window_SizeChanged"
         Initialized="Window_Initialized">
 

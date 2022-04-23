@@ -51,12 +51,12 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Margin="15 0 5 5"/>
-            <TextBox x:Name="FirstBox" 
+            <TextBox x:Name="FirstNameBox" 
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
                      IsReadOnly="False"
-                     Style="{StaticResource StyleTextBox}"
+                     Style="{StaticResource StyleTextBox}" TouchEnter="FirstNameBox_TouchEnter"
                      />
         </StackPanel>
 

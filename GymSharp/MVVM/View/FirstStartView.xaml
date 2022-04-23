@@ -56,7 +56,7 @@
                      BorderThickness="0.5"
                      Margin="15 5"
                      IsReadOnly="False"
-                     Style="{StaticResource StyleTextBox}" TouchEnter="FirstNameBox_TouchEnter"
+                     Style="{StaticResource StyleTextBox}"
                      />
         </StackPanel>
 

@@ -47,12 +47,7 @@ namespace GymSharp.MVVM.View
             this.ShowDialog();
         }
 
-        public string GetInfoFirstName()
-        {
-            return FirstNameBox.SelectedText;
-        }
-
-        private void FirstNameBox_TouchEnter(object sender, TouchEventArgs e)
+        public void GetInfoFirstName()
         {
             FirstName = FirstNameBox.Text;
         }

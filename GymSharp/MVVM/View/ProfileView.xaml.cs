@@ -24,7 +24,6 @@ namespace GymSharp.MVVM.View
     /// </summary>
     public partial class ProfileView : UserControl
     {
-        UserProfile profile = new UserProfile();
         int cc;
         int rm;
         int rmObj;
@@ -43,7 +42,7 @@ namespace GymSharp.MVVM.View
 
         private void FirstNameBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
-            profile.firstName = FirstNameBox.Text;
+            UserProfile.firstName = FirstNameBox.Text;
         }
         public string GetInfoName()
         {
@@ -52,7 +51,7 @@ namespace GymSharp.MVVM.View
 
         private void NameBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
-            profile.lastName = NameBox.Text;
+            UserProfile.lastName = NameBox.Text;
         }
         public string GetInfoAge()
         {
@@ -61,7 +60,7 @@ namespace GymSharp.MVVM.View
 
         private void AgeBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
-            profile.age = Int32.Parse(FirstNameBox.Text);
+            UserProfile.age = Int32.Parse(FirstNameBox.Text);
         }
         public string GetInfoHeight()
         {
@@ -79,7 +78,7 @@ namespace GymSharp.MVVM.View
 
         private void WeightBoxProfile_TouchEnter(object sender, TouchEventArgs e)
         {
-            profile.weight = Int32.Parse(WeightBox.Text);
+            UserProfile.weight = Int32.Parse(WeightBox.Text);
         }
         public string GetInfoCC()
         {

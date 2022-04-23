@@ -115,8 +115,7 @@ namespace GymSharp
 
         private void FirstStartCommand(object sender, RoutedEventArgs e)
         {
-            UserProfile profile = new UserProfile();
-            string prenom = profile.Get_firstName();
+            string prenom = UserProfile.Get_firstName();
             if (prenom == "First name =")
             {
                 FirstStartView view = new FirstStartView();

@@ -30,7 +30,7 @@
                       HorizontalScrollBarVisibility="Disabled">
             <StackPanel Grid.RowSpan="1"
                         Grid.ColumnSpan="1" 
-                        ScrollViewer.VerticalScrollBarVisibility="Visible" 
+                         
                         CanVerticallyScroll="True"
                         Name="Panel">
 

@@ -260,8 +260,11 @@
     <Resource Include="ressources\Images\parametres.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ressources\text\Francais-fr\info_bras.txt" />
+    <Resource Include="ressources\text\Francais-fr\Text_Exo_fr\3.txt" />
     <Resource Include="Data\userProfile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\Images_Exos\3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

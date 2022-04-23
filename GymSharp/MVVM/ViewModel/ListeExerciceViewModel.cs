@@ -22,7 +22,7 @@ namespace GymSharp.MVVM.ViewModel
 
         public static void ChangeInfoAboutMuscle(int muscle)
         {
-            //Suppression des anciens radiobutton 
+            //Suppression des anciens éléments 
             List<UIElement> elementList = new List<UIElement>();
             foreach (UIElement element in View.gridAfficheExo.Children)
             {
@@ -37,69 +37,130 @@ namespace GymSharp.MVVM.ViewModel
             View.gridAfficheExo.RowDefinitions.Clear();
             View.gridAfficheExo.ColumnDefinitions.Clear();
 
-
+            //Création d'un textBlock contenant le titre de l'exo
             View.gridAfficheExo.RowDefinitions.Add(new RowDefinition());
-            TextBlock text = new TextBlock()
+            TextBlock title = new TextBlock()
             {
                 Foreground = System.Windows.Media.Brushes.White,
                 TextAlignment = TextAlignment.Right,
                 FontSize = 50,
                 Margin = new Thickness(0, 0, 25, 0),
             };
-            text.SetValue(Grid.RowProperty, 0);
+            title.SetValue(Grid.RowProperty, 0);
+
+            //Création d'un ScrollViewer contenant le texte associé au titre
+            View.gridAfficheExo.RowDefinitions.Add(new RowDefinition());
+            ScrollViewer scrollViewer = new ScrollViewer()
+            {
+                HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled,
+                VerticalScrollBarVisibility = ScrollBarVisibility.Hidden,
+                
+                
+            };
+            scrollViewer.SetValue(Grid.RowProperty, 1);
+
+            //Ce qui viens dans le ScrollViwer
+            StackPanel stackPanel = new StackPanel()
+            {
+                CanVerticallyScroll = true,
+            };
             
 
+            
+            TextBlock text = new TextBlock()
+            {
+                Foreground = System.Windows.Media.Brushes.White,
+                TextAlignment = TextAlignment.Right,
+                FontSize = 14,
+                Margin = new Thickness(0, 0, 25, 0),
+                
+            };
+            text.Text = getText(muscle);
+
+            //Image
+            Uri imageUri = new Uri(getImage(muscle), UriKind.Relative);
+            Image image = new Image()
+            {
+                Source = new System.Windows.Media.Imaging.BitmapImage(imageUri),
+                HorizontalAlignment = HorizontalAlignment.Left,
+                VerticalAlignment = VerticalAlignment.Top,
+                Height = 500,
+            };
+            
+            
+
+            //Décide de qu'elle titre il faut
             if (muscle > 30 && muscle < 40 || muscle == 310 || muscle == 311 || muscle == 312)
             {
-                text.Text = "Information Exercice Bras";
+                title.Text = "Information Exercice Bras";
             }
             else if (muscle == 3)
             {
-                text.Text = "Information Bras";
+                title.Text = "Information Bras";
             }
             else if (muscle == 6)
             {
-                text.Text = "Information Jambe";
+                title.Text = "Information Jambe";
             }
             else if (muscle > 60 && muscle < 85)
             {
-                text.Text = "Information Exercice Jambe";
+                title.Text = "Information Exercice Jambe";
             }
             else if (muscle == 2)
             {
-                text.Text = "Information Dos";
+                title.Text = "Information Dos";
             }
             else if (muscle > 20 && muscle < 30 || muscle == 210 || muscle == 211 || muscle == 212)
             {
-                text.Text = "Information Exercice Dos";
+                title.Text = "Information Exercice Dos";
             }
             else if (muscle == 1)
             {
-                text.Text = "Information Pectoraux";
+                title.Text = "Information Pectoraux";
             }
             else if (muscle > 10 && muscle < 20)
             {
-                text.Text = "Information Exercice Pectoraux";
+                title.Text = "Information Exercice Pectoraux";
             }
             else if (muscle == 4)
             {
-                text.Text = "Information Epaules";
+                title.Text = "Information Epaules";
             }
             else if (muscle > 40 && muscle < 50)
             {
-                text.Text = "Information Exercice Epaules";
+                title.Text = "Information Exercice Epaules";
             }
             else if (muscle == 5)
             {
-                text.Text = "Information Abdos";
+                title.Text = "Information Abdos";
             }
             else if (muscle > 50 && muscle < 60)
             {
-                text.Text = "Information Exercice Dos";
+                title.Text = "Information Exercice Dos";
             }
 
+            //Affiche tout dans la View
+            View.gridAfficheExo.Children.Add(title);
+            scrollViewer.Content = text;
+            View.gridAfficheExo.Children.Add(scrollViewer);
+        }
+        
+        //Permet d'avoir le chemin des fichiers textes en fonction de leur nom d'exo. EX: 3.txt -> Bras
+        private static string getText(int muscle)
+        {
+            string strMuscle = muscle.ToString();
+            string path = "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/text/Francais-fr/Text_Exo_fr/" + strMuscle + ".txt";
+            using (StreamReader stream = new StreamReader(path))
+            {
+                return stream.ReadToEnd();
+            }
 
-            View.gridAfficheExo.Children.Add(text);
+        }
+
+        private static string getImage(int muscle)
+        {
+            string strMuscle = muscle.ToString();
+            return "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/Images/Images_Exos/" + strMuscle + ".jpg";
         }
     }
 }

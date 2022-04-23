@@ -10,14 +10,13 @@
                             Background="White">
                         <Grid>
                             <TextBox Margin="1"
-                                     Text="{TemplateBinding Text}"
                                      Background="Transparent"
                                      Padding="5"
                                      Foreground="Black"
-                                     x:Name="FirstNameBox"
                                      FontFamily="Berlin sans FB"/>
 
                             <TextBlock IsHitTestVisible="False"
+                                       Text="{TemplateBinding Text}"
                                        Foreground="Black"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Left"

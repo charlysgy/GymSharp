@@ -8,9 +8,5 @@ namespace GymSharp.MVVM.ViewModel
 {
     public class FirstStartViewModel
     {
-        public static void StartButtonClicked(View.FirstStartView View)
-        {
-
-        }
     }
 }

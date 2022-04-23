@@ -135,7 +135,7 @@
                         Margin="15 5"
                         IsReadOnly="False"
                         Style="{StaticResource StyleTextBox}"
-                        TouchEnter="CCBoxProfile_TouchEnter"/>
+                        KeyDown="CCBoxProfile_KeyDown"/>
                         <TextBlock Foreground="White"
                         Text="RM :"
                         TextAlignment="Center"

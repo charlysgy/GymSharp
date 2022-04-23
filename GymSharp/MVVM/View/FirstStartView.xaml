@@ -56,8 +56,11 @@
                      BorderThickness="0.5"
                      Margin="15 5"
                      IsReadOnly="False"
-                     Style="{StaticResource StyleTextBox}"
-                     />
+                     Style="{StaticResource StyleTextBox}" 
+                     TextChanged="FirstNameBox_TextChanged"/>
+            <Label Foreground="Black"
+                   FontSize="24"
+                   Content="{Binding Text, ElementName=FirstNameBox}" />
         </StackPanel>
 
         <StackPanel Grid.Row="0"

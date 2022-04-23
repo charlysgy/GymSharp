@@ -35,9 +35,7 @@ namespace GymSharp.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            FirstStartViewModel.StartButtonClicked(this);
             UserProfile.FillFirstName(this);
-            MainWindow mainWindow = new MainWindow();
             this.Close();
         }
 
@@ -49,6 +47,11 @@ namespace GymSharp.MVVM.View
         public void GetInfoFirstName()
         {
             FirstName = FirstNameBox.Text;
+        }
+
+        private void FirstNameBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Console.WriteLine(FirstNameBox.Text);
         }
     }
 }

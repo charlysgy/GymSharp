@@ -264,7 +264,22 @@
     <Resource Include="Data\userProfile.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="ressources\Images\Images_Exos\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\Images_Exos\6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <Resource Include="ressources\Images\Images_Exos\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\Images_Exos\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\Images_Exos\4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\Images_Exos\5.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

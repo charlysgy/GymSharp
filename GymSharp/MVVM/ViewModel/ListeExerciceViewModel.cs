@@ -62,10 +62,8 @@ namespace GymSharp.MVVM.ViewModel
             ScrollViewer scrollViewer = new ScrollViewer()
             {
                 HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled,
-                VerticalScrollBarVisibility = ScrollBarVisibility.Visible,
-                CanContentScroll = true,
-                Height = 500,
-                
+                VerticalScrollBarVisibility = ScrollBarVisibility.Hidden,
+                CanContentScroll = true,  
             };
             scrollViewer.SetValue(Grid.RowProperty, 1);
             scrollViewer.SetValue(Grid.ColumnProperty, 1);
@@ -176,8 +174,31 @@ namespace GymSharp.MVVM.ViewModel
 
         private static string getImage(int muscle)
         {
-            string strMuscle = muscle.ToString();
-            return "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/Images/Images_Exos/" + strMuscle + ".jpg";
+
+            if (muscle > 30 && muscle < 40 || muscle == 310 || muscle == 311 || muscle == 312 || muscle == 3)
+            {
+                return "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/Images/Images_Exos/3.jpg";
+            }
+            else if (muscle > 60 && muscle < 85 || muscle == 6)
+            {
+                return "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/Images/Images_Exos/6.jpg";
+            }
+            else if (muscle > 20 && muscle < 30 || muscle == 210 || muscle == 211 || muscle == 212 || muscle == 2)
+            {
+                return "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/Images/Images_Exos/2.jpg";
+            }
+            else if (muscle > 10 && muscle < 20 || muscle == 1)
+            {
+                return "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/Images/Images_Exos/1.jpg";
+            }
+            else if (muscle > 40 && muscle < 50 || muscle == 4)
+            {
+                return "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/Images/Images_Exos/4.jpg";
+            }
+            else
+            {
+                return "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/Images/Images_Exos/5.jpg";
+            }
         }
     }
 }

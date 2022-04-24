@@ -63,7 +63,6 @@ namespace GymSharp.Data
         public static void FillFirstName(FirstStartView view)
         {
             string FirstNameToFill = view.FirstNameBox.Text;
-            Console.WriteLine("DZ" + view.FirstNameBox.Text);
             using (StreamWriter sw = new StreamWriter(PATHUSERPROFILE))
             {
                 sw.Write(FirstNameToFill);

@@ -18,7 +18,7 @@ using GymSharp.MVVM.ViewModel;
 using GymSharp.Data;
 
 namespace GymSharp.MVVM.View
-{
+{ 
     /// <summary>
     /// Logique d'interaction pour FirstStartView.xaml
     /// </summary>
@@ -49,9 +49,9 @@ namespace GymSharp.MVVM.View
             FirstName = FirstNameBox.Text;
         }
 
-        private void FirstNameBox_TextChanged(object sender, TextChangedEventArgs e)
+        private void SetFocus(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine(FirstNameBox.Text);
+            ((TextBox)sender).Focus();
         }
     }
 }

@@ -55,14 +55,10 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     IsReadOnly="False"
-                     Style="{StaticResource StyleTextBox}" 
-                     TextChanged="FirstNameBox_TextChanged"/>
-            <Label Foreground="Black"
-                   FontSize="24"
-                   Content="{Binding Text, ElementName=FirstNameBox}" />
+                     Style="{StaticResource StyleTextBox}"
+                     GotFocus="SetFocus"/>
         </StackPanel>
-
+    
         <StackPanel Grid.Row="0"
                     Grid.Column="1"
                     Height="Auto"
@@ -79,7 +75,8 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"/>
+                     Style="{StaticResource StyleTextBox}"
+                     GotFocus="SetFocus"/>
         </StackPanel>
         
         <StackPanel Grid.Row="0"
@@ -98,7 +95,8 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"/>
+                     Style="{StaticResource StyleTextBox}"
+                     GotFocus="SetFocus"/>
         </StackPanel>
 
         <ListBox x:Name="LanguageBox"
@@ -113,6 +111,25 @@
                 <ImageBrush ImageSource="/ressources/Images/frflag.png" Stretch="Fill" TileMode="None"/>
             </ListBox.Background>
         </ListBox>
+        
+        <StackPanel Grid.Row="1"
+                    Grid.Column="0"
+                    Height="Auto"
+                    VerticalAlignment="Center">
+            <TextBlock x:Name="WeightBox"
+                       Text="Votre Poids : "
+                       Foreground="White"
+                       FontSize="20"
+                       FontFamily="{Binding FontFamily, ElementName=WelcomeMessage}" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Margin="15 0 5 5"/>
+            <TextBox BorderBrush="#8D8D8D"
+                     BorderThickness="0.5"
+                     Margin="15 5"
+                     Style="{StaticResource StyleTextBox}"
+                     GotFocus="SetFocus"/>
+        </StackPanel>
 
         <StackPanel Grid.Row="1"
                     Grid.RowSpan="2"
@@ -143,23 +160,6 @@
                          Style="{StaticResource StyleBoutons}"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="1"
-                    Grid.Column="0"
-                    Height="Auto"
-                    VerticalAlignment="Center">
-            <TextBlock x:Name="WeightBox"
-                       Text="Votre Poids : "
-                       Foreground="White"
-                       FontSize="20"
-                       FontFamily="{Binding FontFamily, ElementName=WelcomeMessage}" 
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       Margin="15 0 5 5"/>
-            <TextBox BorderBrush="#8D8D8D"
-                     BorderThickness="0.5"
-                     Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"/>
-        </StackPanel>
 
         <StackPanel Grid.Row="2"
                     Grid.Column="2">

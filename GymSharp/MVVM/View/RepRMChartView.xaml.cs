@@ -23,6 +23,16 @@ namespace GymSharp.MVVM.View
 
         public void ExoChecked(object sender, RoutedEventArgs e)
         {
+            foreach (var element in gridBodyParts.Children)
+            {
+                if (element is RadioButton)
+                {
+                    RadioButton button = (RadioButton)element;
+                    button.IsChecked = false;
+                    Console.WriteLine(button.Name);
+                }
+            }
+
             RadioButton radio = (RadioButton)sender;
             radio.IsChecked = false;
             RepRMChartViewModel.ShowSeries((int)Enum.Parse(typeof(Exercice), radio.Name));

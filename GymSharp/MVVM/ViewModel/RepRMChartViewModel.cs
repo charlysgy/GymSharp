@@ -152,12 +152,13 @@ namespace GymSharp.MVVM.ViewModel
                     foreach (string str in listExos[index])
                     {
                         RadioButton radio = new RadioButton();
-                        radio.BorderBrush = Brushes.Black;
                         radio.Name = str.Replace(" ", "_");
                         radio.Content = str;
                         radio.Cursor = System.Windows.Input.Cursors.Hand;
                         radio.Checked += View.ExoChecked;
                         radio.Style = (Style)Application.Current.TryFindResource("StyleBoutons");
+                        radio.BorderBrush = Brushes.Black;
+                        radio.BorderThickness = new Thickness(5);
                         panel.Children.Add(radio);
                     }
                     index++;

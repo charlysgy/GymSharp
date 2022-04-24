@@ -384,26 +384,6 @@
 
         </StackPanel>
 
-        <!--
-        <ScrollViewer Grid.Row="1"
-                      Grid.RowSpan="2"
-                      Grid.Column="1" 
-                      VerticalAlignment="Top"
-                      HorizontalScrollBarVisibility="Auto"
-                      VerticalScrollBarVisibility="Disabled">
-            <StackPanel ScrollViewer.HorizontalScrollBarVisibility="Auto" 
-                        ScrollViewer.VerticalScrollBarVisibility="Disabled">
-                <Grid x:Name="gridExos"
-                  Grid.Row="1"
-                  Grid.Column="1"
-                  Grid.ColumnSpan="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                    </Grid.RowDefinitions>
-                </Grid>
-            </StackPanel>
-        </ScrollViewer>-->
-
         <DockPanel  x:Name="chartPanel" 
                     Grid.Row="2"
                     Grid.Column="0"

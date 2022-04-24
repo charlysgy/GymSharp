@@ -20,6 +20,32 @@ namespace GymSharp.MVVM.ViewModel
 
         }
 
+        public static List<List<String>> FileToListOfString(string path)
+        {
+            StreamReader stream = new StreamReader(path);
+            List<List<String>> listRetour = new List<List<String>>();
+            List<String> list = new List<String>();
+            string text = stream.ReadToEnd();
+            string strTransi = "";
+            foreach (var c in text)
+            {
+                if (c == '$')
+                {
+                    list.Add(strTransi);
+                    listRetour.Add(list);
+                    list.RemoveAt(0);
+                }
+                else
+                {
+                    strTransi += c;
+                }
+            }
+            return listRetour;
+        }
+
+
+
+
         public static void ChangeInfoAboutMuscle(int muscle)
         {
             //Suppression des anciens éléments 

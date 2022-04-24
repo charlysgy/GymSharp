@@ -10,7 +10,7 @@ namespace GymSharp.MVVM.View
     /// </summary> 
     public partial class ListeExerciceView : UserControl
     {
-
+        
         public ListeExerciceView()
         {
             InitializeComponent();

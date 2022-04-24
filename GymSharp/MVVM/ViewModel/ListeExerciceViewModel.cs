@@ -47,26 +47,37 @@ namespace GymSharp.MVVM.ViewModel
                 Margin = new Thickness(0, 0, 25, 0),
             };
             title.SetValue(Grid.RowProperty, 0);
+            title.SetValue(Grid.ColumnProperty, 1);
+
+            //Ajout de 2 collonnes, une pour le texte et l'aute pour l'image
+            View.gridAfficheExo.ColumnDefinitions.Add(new ColumnDefinition());
+            ColumnDefinition columnDefinition = new ColumnDefinition()
+            {
+                Width = GridLength.Auto,
+            };
+            View.gridAfficheExo.ColumnDefinitions.Add(columnDefinition);
 
             //Création d'un ScrollViewer contenant le texte associé au titre
             View.gridAfficheExo.RowDefinitions.Add(new RowDefinition());
             ScrollViewer scrollViewer = new ScrollViewer()
             {
                 HorizontalScrollBarVisibility = ScrollBarVisibility.Disabled,
-                VerticalScrollBarVisibility = ScrollBarVisibility.Hidden,
-                
+                VerticalScrollBarVisibility = ScrollBarVisibility.Visible,
+                CanContentScroll = true,
+                Height = 500,
                 
             };
             scrollViewer.SetValue(Grid.RowProperty, 1);
+            scrollViewer.SetValue(Grid.ColumnProperty, 1);
+           
 
             //Ce qui viens dans le ScrollViwer
             StackPanel stackPanel = new StackPanel()
             {
-                CanVerticallyScroll = true,
+               
             };
-            
 
-            
+
             TextBlock text = new TextBlock()
             {
                 Foreground = System.Windows.Media.Brushes.White,
@@ -84,8 +95,12 @@ namespace GymSharp.MVVM.ViewModel
                 Source = new System.Windows.Media.Imaging.BitmapImage(imageUri),
                 HorizontalAlignment = HorizontalAlignment.Left,
                 VerticalAlignment = VerticalAlignment.Top,
+                Width = 500,
                 Height = 500,
+                Margin = new Thickness(0, 0, 25, 0),
             };
+            image.SetValue(Grid.ColumnProperty, 0);
+            image.SetValue(Grid.RowProperty, 1);
             
             
 
@@ -141,7 +156,9 @@ namespace GymSharp.MVVM.ViewModel
 
             //Affiche tout dans la View
             View.gridAfficheExo.Children.Add(title);
-            scrollViewer.Content = text;
+            stackPanel.Children.Add(text);
+            scrollViewer.Content = stackPanel;
+            View.gridAfficheExo.Children.Add(image);
             View.gridAfficheExo.Children.Add(scrollViewer);
         }
         

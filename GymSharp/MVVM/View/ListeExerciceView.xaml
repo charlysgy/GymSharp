@@ -6,7 +6,7 @@
              xmlns:viewModel="clr-namespace:GymSharp.MVVM.ViewModel"
              xmlns:local="clr-namespace:GymSharp.MVVM.View"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="1000">
+             d:DesignHeight="600" d:DesignWidth="1000" SizeChanged="UserControl_SizeChanged">
 
     <UserControl.DataContext>
         <viewModel:ListeExerciceViewModel/>
@@ -406,20 +406,25 @@
                 <Image  x:Name="imageExo" 
                         Grid.Row="1"
                         Source="../../ressources/Images/logo_gym.png"
-                        Height="500" 
+                        Height="Auto" 
                         HorizontalAlignment="Left" 
-                        VerticalAlignment="Center" 
-                        Margin="0, 0, 0, 0"/>
+                        VerticalAlignment="Top" 
+                        Margin="25, 25, 0, 0"/>
 
-                <ScrollViewer Grid.Row="1"
-                              Grid.Column="1"
-                              VerticalScrollBarVisibility="Auto"
-                              HorizontalScrollBarVisibility="Disabled"
-                              CanContentScroll="True">
-                    <StackPanel x:Name="panelText">
-                        
-                    </StackPanel>
-                </ScrollViewer>
+                <StackPanel Grid.Row="1"
+                            Grid.Column="1">
+                    <ScrollViewer x:Name="scrollable"
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled"
+                                  MaxWidth="1200"
+                                  CanContentScroll="True">
+                        <StackPanel x:Name="panelText"
+                                    ScrollViewer.CanContentScroll="True"
+                                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                    Height="1200">
+                        </StackPanel>
+                    </ScrollViewer>
+                </StackPanel>
                 
             </Grid>
 

@@ -103,14 +103,16 @@ namespace GymSharp.MVVM.ViewModel
             TextBlock text = new TextBlock()
             {
                 Foreground = System.Windows.Media.Brushes.White,
-                TextAlignment = TextAlignment.Right,
+                TextAlignment = TextAlignment.Left,
                 FontSize = 20,
-                Margin = new Thickness(0, 0, 25, 0),
-                FontFamily = new System.Windows.Media.FontFamily("Berlin sans FB")
-            }; 
+                Margin = new Thickness(25, 0, 10, 0),
+                FontFamily = new System.Windows.Media.FontFamily("Berlin sans FB"),
+            };
             text.Text = getText(muscle, ListeText);
             View.panelText.Children.Add(text);
 
+            RadioButton radio = new RadioButton();
+            View.panelText.Children.Add(radio);
             //Image
             View.imageExo.Source = new BitmapImage(new Uri(getImage(muscle)));
             

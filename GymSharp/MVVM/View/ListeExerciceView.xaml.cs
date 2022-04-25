@@ -23,7 +23,9 @@ namespace GymSharp.MVVM.View
             ListeExerciceViewModel.ChangeInfoAboutMuscle(int.Parse(radio.Name.Replace("_", "")));
         }
 
-        
-
+        private void UserControl_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            imageExo.Height = ActualHeight/2.8;
+        }
     }
 }

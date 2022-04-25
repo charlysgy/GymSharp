@@ -45,7 +45,8 @@
         </Style>
     </Window.Resources>
     
-    <Grid Background="#ADADAD">
+    <Grid Name="AppGrid"
+        Background="#ADADAD">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>

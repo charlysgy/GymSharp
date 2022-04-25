@@ -5,6 +5,7 @@ using System.IO;
 using GymSharp.ressources.enums;
 using System.Linq;
 using GymSharp.Data;
+using System.Windows.Input;
 
 namespace GymSharp
 {

@@ -43,7 +43,7 @@ namespace GymSharp.MVVM.ViewModel
             return listRetour;
         }
 
-
+        List<List<String>> ListeText = FileToListOfString("C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/text/Francais-fr/Text_Exo_fr/ListeInfo.txt");
 
 
         public static void ChangeInfoAboutMuscle(int muscle)
@@ -110,7 +110,7 @@ namespace GymSharp.MVVM.ViewModel
                 Margin = new Thickness(0, 0, 25, 0),
                 
             };
-            text.Text = getText(muscle);
+            text.Text = getText(muscle, ListeTexte);
 
             //Image
             Uri imageUri = new Uri(getImage(muscle), UriKind.Relative);
@@ -187,15 +187,9 @@ namespace GymSharp.MVVM.ViewModel
         }
         
         //Permet d'avoir le chemin des fichiers textes en fonction de leur nom d'exo. EX: 3.txt -> Bras
-        private static string getText(int muscle)
+        private static string getText(int muscle, List<List<String>> ListeTexte)
         {
-            string strMuscle = muscle.ToString();
-            string path = "C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/text/Francais-fr/Text_Exo_fr/" + strMuscle + ".txt";
-            using (StreamReader stream = new StreamReader(path))
-            {
-                return stream.ReadToEnd();
-            }
-
+            return ListeTexte[muscle][0];
         }
 
         private static string getImage(int muscle)

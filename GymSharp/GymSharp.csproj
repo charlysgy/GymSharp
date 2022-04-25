@@ -260,7 +260,7 @@
     <Resource Include="ressources\Images\parametres.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="ressources\text\Francais-fr\Text_Exo_fr\3.txt" />
+    <Resource Include="ressources\text\Francais-fr\Text_Exo_fr\ListeInfo.txt" />
     <Resource Include="Data\userProfile.txt" />
   </ItemGroup>
   <ItemGroup>

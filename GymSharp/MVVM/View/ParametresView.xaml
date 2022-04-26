@@ -42,25 +42,34 @@
                 </Grid.ColumnDefinitions>
 
                 <RadioButton Grid.Row="0" Grid.Column="0"
+                             Cursor="Hand"
                              x:Name="French" 
                              Content="Francais"
                              FontSize="30"
                              Margin="0 12 0 0"
                              Style="{StaticResource StyleBoutons}"/>
                 <RadioButton Grid.Row="0" Grid.Column="1"
+                             Cursor="Hand"
                              x:Name="English" 
                              Content="Anglais"
                              FontSize="30"
                              Margin="0 12 0 0"
                              Style="{StaticResource StyleBoutons}"/>
             </Grid>
+            <Separator Name="SeparatorNotif" 
+               Height="4"
+               Width="Auto"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Bottom"                   
+               Background="Black" />
             <TextBlock Foreground="White"
                        Text="Notification"
                        TextAlignment="Center"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontFamily="Berlin Sans FB"
-                       FontSize="45"/>
+                       FontSize="45"
+                       Margin="0 5 0 0"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -70,12 +79,14 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <RadioButton Grid.Row="0" Grid.Column="0"
+                             Cursor="Hand"
                              x:Name="WithNotif" 
-                             Content="Sans"
+                             Content="Avec"
                              FontSize="30"
                              Margin="0 12 0 0"
                              Style="{StaticResource StyleBoutons}"/>
                 <RadioButton Grid.Row="0" Grid.Column="1"
+                             Cursor="Hand"
                              x:Name="WithoutNotif" 
                              Content="Sans"
                              FontSize="30"
@@ -83,13 +94,20 @@
                              Style="{StaticResource StyleBoutons}">
                 </RadioButton>
             </Grid>
+            <Separator Name="SeparatorSound" 
+               Height="4"
+               Width="Auto"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Bottom"                   
+               Background="Black" />
             <TextBlock Foreground="White"
                        Text="Son"
                        TextAlignment="Center"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontFamily="Berlin Sans FB"
-                       FontSize="45"/>
+                       FontSize="45"
+                       Margin="0 5 0 0"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -123,17 +141,19 @@
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <RadioButton Grid.Row="0" Grid.Column="0"
-                                                     x:Name="WithEffects" 
-                                                     Content="Avec"
-                                                     FontSize="30"
+                                     Cursor="Hand"
+                                     x:Name="WithEffects" 
+                                     Content="Avec"
+                                     FontSize="30"
                                      Margin="0 0 0 0"
-                                                     Style="{StaticResource StyleBoutons}"/>
+                                     Style="{StaticResource StyleBoutons}"/>
                         <RadioButton Grid.Row="0" Grid.Column="1"
-                                             x:Name="WithoutEffects" 
-                                             Content="Sans"
-                                             FontSize="30"
+                                     Cursor="Hand"
+                                     x:Name="WithoutEffects" 
+                                     Content="Sans"
+                                     FontSize="30"
                                      Margin="0 0 0 0"
-                                             Style="{StaticResource StyleBoutons}"/>
+                                     Style="{StaticResource StyleBoutons}"/>
                     </Grid>
                 </StackPanel>
                 <StackPanel Grid.Column="1">
@@ -160,12 +180,14 @@
                         </Grid.ColumnDefinitions>
                         <RadioButton Grid.Row="0" Grid.Column="0"
                                      x:Name="WithSound" 
+                                     Cursor="Hand"
                                      Content="Avec"
                                      FontSize="30"
                                      Margin="0 0 0 0"
                                      Style="{StaticResource StyleBoutons}"/>
                         <RadioButton Grid.Row="0" Grid.Column="1"
                                      x:Name="WithoutSound" 
+                                     Cursor="Hand"
                                      Content="Sans"
                                      FontSize="30"
                                      Margin="0 0 0 0"
@@ -173,13 +195,20 @@
                     </Grid>
                 </StackPanel>
             </Grid>
+            <Separator Name="SeparatorContact" 
+               Height="4"
+               Width="Auto"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Bottom"                   
+               Background="Black" />
             <TextBlock Foreground="White"
                        Text="Nous Contacter"
                        TextAlignment="Center"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontFamily="Berlin Sans FB"
-                       FontSize="45"/>
+                       FontSize="45"
+                       Margin="0 5 0 0"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
@@ -215,13 +244,20 @@
                     </RadioButton.Template>
                 </RadioButton>
             </Grid>
+            <Separator Name="SeparatorTheme" 
+               Height="4"
+               Width="Auto"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Bottom"                   
+               Background="Black" />
             <TextBlock Foreground="White"
                        Text="Thème"
                        TextAlignment="Center"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontFamily="Berlin Sans FB"
-                       FontSize="45"/>
+                       FontSize="45"
+                       Margin="0 5 0 0"/>
             
         </StackPanel>
         

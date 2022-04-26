@@ -89,7 +89,7 @@ namespace GymSharp.MVVM.ViewModel
             else if (muscle > 40 && muscle < 50)
             {
                 View.title.Text = "Information Exercice Epaules";
-            }
+            } 
             else if (muscle == 5)
             {
                 View.title.Text = "Information Abdos";

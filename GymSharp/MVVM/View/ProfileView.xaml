@@ -39,150 +39,153 @@
                        HorizontalAlignment="Center"
                        FontFamily="Berlin Sans FB"
                        FontSize="45"/>
-                    <StackPanel CanVerticallyScroll="True"
-                                ScrollViewer.VerticalScrollBarVisibility="Auto">
-                        <TextBlock Foreground="White"
-                        Text="Prénom :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="30"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="FirstNameBox"
-                        Text= "{Binding ProfileFirstName}"
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        KeyDown="FirstNameBoxProfile_KeyDown"/>
-                        <TextBlock Foreground="White"
-                        Text="Nom :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="30"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="LastNameBox"
-                        Text= "{Binding ProfileLastName}"
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        KeyDown="LastNameBoxProfile_KeyDown"/>
-                        <TextBlock Foreground="White"
-                        Text="Age :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="30"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="AgeBox"
-                        Text= "{Binding ProfileAge}"
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        KeyDown="AgeBoxProfile_KeyDown"/>
-                        <TextBlock Foreground="White"
-                        Text="Poids :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="30"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="WeightBox"
-                        Text= "{Binding ProfileWeight}"
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        KeyDown="WeightBoxProfile_KeyDown"/>
-                        <TextBlock Foreground="White"
-                        Text="Taille :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="30"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="HeightBox" 
-                        Text="{Binding ProfileHeight}"
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        KeyDown="HeightBoxProfile_KeyDown"/>                        
-                        <TextBlock Foreground="White"
-                        Text="N° de carte bancaire :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="25"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="CCBoxProfile" 
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        KeyDown="CCBoxProfile_KeyDown"/>
-                        <TextBlock Foreground="White"
-                        Text="RM :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="30"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="RMBoxProfile" 
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        TouchEnter="RMBoxProfile_TouchEnter"/>
-                        <TextBlock Foreground="White"
-                        Text="Cryptogramme :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="30"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="CryptBoxProfile" 
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        TouchEnter="CryptBoxProfile_TouchEnter"/>
-                        <TextBlock Foreground="White"
-                        Text="Sexe :"
-                        TextAlignment="Center"
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                        FontFamily="Berlin Sans FB"
-                        FontSize="30"
-                        Margin="10, 0, 0, 0"/>
-                        <TextBox x:Name="SexBoxProfile" 
-                        BorderBrush="#8D8D8D"
-                        BorderThickness="0.5"
-                        Margin="15 5"
-                        IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        TouchEnter="SexBoxProfile_TouchEnter"/>
-                    </StackPanel>
-                    
+                    <ScrollViewer Grid.Row="0"
+                                  Grid.Column="0"                                 
+                                  VerticalScrollBarVisibility="Auto"
+                                  HorizontalScrollBarVisibility="Disabled">
+                        <StackPanel >
+                            <TextBlock Foreground="White"
+                            Text="Prénom :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="30"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="FirstNameBox"
+                            Text= "{Binding ProfileFirstName}"
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="FirstNameBoxProfile_KeyDown"/>
+                            <TextBlock Foreground="White"
+                            Text="Nom :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="30"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="LastNameBox"
+                            Text= "{Binding ProfileLastName}"
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="LastNameBoxProfile_KeyDown"/>
+                            <TextBlock Foreground="White"
+                            Text="Age :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="30"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="AgeBox"
+                            Text= "{Binding ProfileAge}"
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="AgeBoxProfile_KeyDown"/>
+                            <TextBlock Foreground="White"
+                            Text="Poids :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="30"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="WeightBox"
+                            Text= "{Binding ProfileWeight}"
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="WeightBoxProfile_KeyDown"/>
+                            <TextBlock Foreground="White"
+                            Text="Taille :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="30"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="HeightBox" 
+                            Text="{Binding ProfileHeight}"
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="HeightBoxProfile_KeyDown"/>                        
+                            <TextBlock Foreground="White"
+                            Text="N° de carte bancaire :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="25"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="CCBoxProfile" 
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="CCBoxProfile_KeyDown"/>
+                            <TextBlock Foreground="White"
+                            Text="RM :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="30"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="RMBoxProfile" 
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="RMBoxProfile_KeyDown"/>
+                            <TextBlock Foreground="White"
+                            Text="Cryptogramme :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="30"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="CryptBoxProfile" 
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="CryptBoxProfile_KeyDown"/>
+                            <TextBlock Foreground="White"
+                            Text="Sexe :"
+                            TextAlignment="Center"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Center"
+                            FontFamily="Berlin Sans FB"
+                            FontSize="30"
+                            Margin="10, 0, 0, 0"/>
+                            <TextBox x:Name="SexBoxProfile" 
+                            BorderBrush="#8D8D8D"
+                            BorderThickness="0.5"
+                            Margin="15 5"
+                            IsReadOnly="False"
+                            Style="{StaticResource StyleTextBox}"
+                            KeyDown="SexBoxProfile_KeyDown"/>
+                        </StackPanel>
+                    </ScrollViewer>
                 </StackPanel>
                 <StackPanel Grid.Row="0" Grid.Column="1">
                     <TextBlock Foreground="White"
@@ -206,7 +209,7 @@
                         Margin="15 5"
                         IsReadOnly="False"
                         Style="{StaticResource StyleTextBox}"
-                        TouchEnter="WeightObjBoxProfile_TouchEnter"/>
+                        KeyDown="WeightObjBoxProfile_KeyDown"/>
                     <TextBlock Foreground="White"
                         Text="RM :"
                         TextAlignment="Center"
@@ -221,7 +224,7 @@
                         Margin="15 5"
                         IsReadOnly="False"
                         Style="{StaticResource StyleTextBox}"
-                        TouchEnter="RMObjBoxProfile_TouchEnter"/>
+                        KeyDown="RMObjBoxProfile_KeyDown"/>
                     <RadioButton Cursor="Hand">
                         <RadioButton.Template>
                             <ControlTemplate>
@@ -237,70 +240,40 @@
                     </RadioButton>
                     <StackPanel CanVerticallyScroll="True"
                                 ScrollViewer.VerticalScrollBarVisibility="Auto">
-                        <RadioButton Cursor="Hand">
-                            <RadioButton.Template>
-                                <ControlTemplate>
-                                    <TextBlock Foreground="White"
-                                       Text="Commencer le sport"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       FontFamily="Berlin Sans FB"
-                                       FontSize="25"
-                                       Margin="10, 0, 0, 0"/>
-                                </ControlTemplate>
-                            </RadioButton.Template>
+                        <RadioButton Cursor="Hand"
+                                     x:Name="StartSport"
+                                     FontSize="25"
+                                     Content="Commencer le sport"
+                                     Margin="0 0 0 0"
+                                     Style="{StaticResource StyleBoutons}">
                         </RadioButton>
-                        <RadioButton Cursor="Hand">
-                            <RadioButton.Template>
-                                <ControlTemplate>
-                                    <TextBlock Foreground="White"
-                                       Text="Améliorer mon endurence"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       FontFamily="Berlin Sans FB"
-                                       FontSize="25"
-                                       Margin="10, 0, 0, 0"/>
-                                </ControlTemplate>
-                            </RadioButton.Template>
+                        <RadioButton Cursor="Hand"
+                                     x:Name="IncreaseSamina"
+                                     FontSize="25"
+                                     Content="Améliorer mon endurence"
+                                     Margin="0 0 0 0"
+                                     Style="{StaticResource StyleBoutons}">
                         </RadioButton>
-                        <RadioButton Cursor="Hand">
-                            <RadioButton.Template>
-                                <ControlTemplate>
-                                    <TextBlock Foreground="White"
-                                       Text="Améliorer ma force"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       FontFamily="Berlin Sans FB"
-                                       FontSize="25"
-                                       Margin="10, 0, 0, 0"/>
-                                </ControlTemplate>
-                            </RadioButton.Template>
+                        <RadioButton Cursor="Hand"
+                                     x:Name="IncreaseStrenght"
+                                     Content="Améliorer ma force"
+                                     FontSize="25"
+                                     Margin="0 0 0 0"
+                                     Style="{StaticResource StyleBoutons}">
                         </RadioButton>
-                        <RadioButton Cursor="Hand">
-                            <RadioButton.Template>
-                                <ControlTemplate>
-                                    <TextBlock Foreground="White"
-                                       Text="Améliorer mon physique"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       FontFamily="Berlin Sans FB"
-                                       FontSize="25"
-                                       Margin="10, 0, 0, 0"/>
-                                </ControlTemplate>
-                            </RadioButton.Template>
+                        <RadioButton Cursor="Hand"
+                                     x:Name="BetterBody"
+                                     Content="Améliorer mon physique"
+                                     FontSize="25"
+                                     Margin="0 0 0 0"
+                                     Style="{StaticResource StyleBoutons}">
                         </RadioButton>
-                        <RadioButton Cursor="Hand">
-                            <RadioButton.Template>
-                                <ControlTemplate>
-                                    <TextBlock Foreground="White"
-                                       Text="Rester en forme"
-                                       VerticalAlignment="Center"
-                                       HorizontalAlignment="Center"
-                                       FontFamily="Berlin Sans FB"
-                                       FontSize="25"
-                                       Margin="10, 0, 0, 0"/>
-                                </ControlTemplate>
-                            </RadioButton.Template>
+                        <RadioButton Cursor="Hand"
+                                     x:Name="KeepFit"
+                                     Content="Rester en forme"
+                                     FontSize="25"
+                                     Margin="0 0 0 0"
+                                     Style="{StaticResource StyleBoutons}">
                         </RadioButton>
                     </StackPanel>
                 </StackPanel>

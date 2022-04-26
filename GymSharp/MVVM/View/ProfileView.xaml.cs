@@ -57,7 +57,7 @@ namespace GymSharp.MVVM.View
             if (e.Key == Key.Enter)
             {
                 UserProfile.age = Int32.Parse(AgeBox.Text);
-                ///UserProfile.FillLastName();
+                ///UserProfile.FillAge();
             }
         }
 
@@ -66,7 +66,7 @@ namespace GymSharp.MVVM.View
             if (e.Key == Key.Enter)
             {
                 UserProfile.weight = Int32.Parse(WeightBox.Text);
-                ///UserProfile.FillLastName();
+                ///UserProfile.FillWeight();
             }
         }
 
@@ -81,33 +81,43 @@ namespace GymSharp.MVVM.View
         {
             if (e.Key == Key.Enter)
             {
-                cc = Int32.Parse(LastNameBox.Text);
+                cc = Int32.Parse(CCBoxProfile.Text);
             }
         }
-
-        private void CryptBoxProfile_TouchEnter(object sender, TouchEventArgs e)
+        private void CryptBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            crypt = Int32.Parse(CryptBoxProfile.Text);
+            if (e.Key == Key.Enter)
+            {
+                crypt = Int32.Parse(CryptBoxProfile.Text);
+            }
         }
-        
-        private void SexBoxProfile_TouchEnter(object sender, TouchEventArgs e)
+        private void SexBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            sex = SexBoxProfile.Text;
+            if (e.Key == Key.Enter)
+            {
+                sex = SexBoxProfile.Text;
+            }
         }
-        
-        private void RMObjBoxProfile_TouchEnter(object sender, TouchEventArgs e)
+        private void RMBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            rmObj = Int32.Parse(RMObjBoxProfile.Text);
+            if (e.Key == Key.Enter)
+            {
+                rm = Int32.Parse(RMBoxProfile.Text);
+            }
         }
-        
-        private void WeightObjBoxProfile_TouchEnter(object sender, TouchEventArgs e)
+        private void RMObjBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            weightObj = Int32.Parse(WeightObjBoxProfile.Text);
+            if (e.Key == Key.Enter)
+            {
+                rmObj = Int32.Parse(RMObjBoxProfile.Text);
+            }
         }
-        
-        private void RMBoxProfile_TouchEnter(object sender, TouchEventArgs e)
+        private void WeightObjBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
-            rm = Int32.Parse(RMBoxProfile.Text);
-        }
+            if (e.Key == Key.Enter)
+            {
+                weightObj = Int32.Parse(WeightObjBoxProfile.Text);
+            }
+        }       
     }
 }

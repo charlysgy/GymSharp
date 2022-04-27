@@ -16,7 +16,7 @@ namespace GymSharp.MVVM.ViewModel
     internal class ListeExerciceViewModel : UserControl
     {
         public static ListeExerciceView View { get; set; }
-        public static List<List<string>> ListeText = FileToListOfString("C:/Users/theodore2/Desktop/Epita/1ère année PREPA/Projet S2/GymSharp/GymSharp/ressources/text/Francais-fr/Text_Exo_fr/ListeInfo.txt");
+        public static List<List<string>> ListeText = FileToListOfString("../../ressources/text/Francais-fr/Text_Exo_fr/ListeInfo.txt");
 
         public ListeExerciceViewModel()
         {

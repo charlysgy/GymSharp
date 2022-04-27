@@ -99,17 +99,7 @@ namespace GymSharp.MVVM.ViewModel
                 View.title.Text = "Information Exercice Dos";
             }
 
-            View.panelText.Children.Clear();
-            TextBlock text = new TextBlock()
-            {
-                Foreground = System.Windows.Media.Brushes.White,
-                TextAlignment = TextAlignment.Right,
-                FontSize = 20,
-                Margin = new Thickness(0, 0, 25, 0),
-                FontFamily = new System.Windows.Media.FontFamily("Berlin sans FB")
-            };
-            text.Text = getText(muscle, ListeText);
-            View.panelText.Children.Add(text);
+            View.textInfos.Text = getText(muscle, ListeText);
 
             //Image
             View.imageExo.Source = new BitmapImage(new Uri(getImage(muscle)));

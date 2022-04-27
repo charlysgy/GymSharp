@@ -383,11 +383,12 @@
             <Grid x:Name="gridAfficheExo">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition/>
+                    <RowDefinition x:Name="colScrollViewer" 
+                                   Height="1*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
 
@@ -411,20 +412,22 @@
                         VerticalAlignment="Top" 
                         Margin="25, 25, 0, 0"/>
 
-                <StackPanel Grid.Row="1"
-                            Grid.Column="1">
+                <DockPanel Grid.Row="1"
+                           Grid.Column="1">
                     <ScrollViewer x:Name="scrollable"
                                   VerticalScrollBarVisibility="Auto"
                                   HorizontalScrollBarVisibility="Disabled"
-                                  MaxWidth="1200"
-                                  CanContentScroll="True">
-                        <StackPanel x:Name="panelText"
-                                    ScrollViewer.CanContentScroll="True"
-                                    ScrollViewer.VerticalScrollBarVisibility="Auto"
-                                    Height="1200">
-                        </StackPanel>
+                                  CanContentScroll="True"
+                                  MaxHeight="{Binding AcutalHeight, ElementName=colScrollViewer}">
+                        <TextBlock x:Name="textInfos" 
+                                   TextWrapping="Wrap"
+                                   FontFamily="Berlin sans FB"
+                                   TextAlignment="Left"
+                                   Margin="25 0 0 0"
+                                   Foreground="White"
+                                   FontSize="20"/>
                     </ScrollViewer>
-                </StackPanel>
+                </DockPanel>
                 
             </Grid>
 

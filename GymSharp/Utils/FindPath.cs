@@ -80,8 +80,8 @@ namespace GymSharp.Utils
                     {
                         found = true;
                     }
-                    path += "../";
                 }
+                path += "../";
             }
             return path;
         }

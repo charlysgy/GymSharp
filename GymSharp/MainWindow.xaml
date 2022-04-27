@@ -91,7 +91,8 @@
                                   Height="50"
                                   Width="50"
                                   BorderThickness="0"
-                                  Style="{StaticResource StyleToggleButton}">
+                                  Style="{StaticResource StyleToggleButton}"
+                                  Cursor="Hand">
                         <ToggleButton.Background>
                             <ImageBrush ImageSource="/ressources/Images/logo_gym.png"/>
                         </ToggleButton.Background>
@@ -132,9 +133,11 @@
                     <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
                                   Selected="HomeCommand"
-                                   MouseEnter="ListViewItem_MouseEnter">
+                                   MouseEnter="ListViewItem_MouseEnter"
+                                  Cursor="Hand">
                         <StackPanel Orientation="Horizontal"
-                                        Width="230">
+                                        Width="230"
+                                    Cursor="Hand">
                             <Image Source="/ressources/Images/icone_maison.png"
                                        Stretch="None"
                                        Margin="12,0,0,0"/>
@@ -152,9 +155,11 @@
                     <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
                                       Selected="ProfileCommand"
-                                   MouseEnter="ListViewItem_MouseEnter">
+                                   MouseEnter="ListViewItem_MouseEnter"
+                                  Cursor="Hand">
                         <StackPanel Orientation="Horizontal"
-                                        Width="230">
+                                        Width="230"
+                                    Cursor="Hand">
                             <Image Source="/ressources/Images/utilisateur.png"
                                        Stretch="None"
                                        Margin="12,0,0,0"/>
@@ -172,9 +177,11 @@
                     <ListViewItem HorizontalAlignment="Left"
                                       Margin="0,0,0,15"
                                       Selected="ExercicesCommand"
-                                  MouseEnter="ListViewItem_MouseEnter">
+                                  MouseEnter="ListViewItem_MouseEnter"
+                                  Cursor="Hand">
                         <StackPanel Orientation="Horizontal"
-                                    Width="230">
+                                    Width="230"
+                                    Cursor="Hand">
                             <Image  Source="/ressources/Images/haltere.png"
                                     Stretch="None"
                                     Margin="12,0,0,0"/>
@@ -192,9 +199,11 @@
                     <ListViewItem HorizontalAlignment="Left"
                                   Margin="0,0,0,15"
                                   Selected="GraphiqueCommand"
-                                   MouseEnter="ListViewItem_MouseEnter">
+                                   MouseEnter="ListViewItem_MouseEnter"
+                                  Cursor="Hand">
                         <StackPanel Orientation="Horizontal"
-                                    Width="230">
+                                    Width="230"
+                                    Cursor="Hand">
                             <Image  Source="/ressources/Images/graphique.png"
                                     Stretch="None"
                                     Margin="12,0,0,0"/>
@@ -212,9 +221,11 @@
                     <ListViewItem   HorizontalAlignment="Left"
                                     Margin="0,0,0,15"
                                     Selected="ModelCommand"
-                                     MouseEnter="ListViewItem_MouseEnter">
+                                     MouseEnter="ListViewItem_MouseEnter"
+                                    Cursor="Hand">
                         <StackPanel Orientation="Horizontal"
-                                    Width="230">
+                                    Width="230"
+                                    Cursor="Hand">
                             <Image  Source="/ressources/Images/corps.png"
                                     Stretch="None"
                                     Margin="12,0,0,0"/>
@@ -232,7 +243,8 @@
                     <ListViewItem   HorizontalAlignment="Left"
                                     Margin="0,0,0,15"
                                     Selected="ParametresCommand"
-                                     MouseEnter="ListViewItem_MouseEnter">
+                                     MouseEnter="ListViewItem_MouseEnter"
+                                    Cursor="Hand">
                         <StackPanel Orientation="Horizontal"
                                     Width="230">
                             <Image  Source="/ressources/Images/parametres.png"

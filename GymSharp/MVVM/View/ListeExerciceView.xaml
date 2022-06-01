@@ -37,17 +37,17 @@
                              Name="_3"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Curls_a_la_barre"
+                <RadioButton Content="Curls à la barre"
                              Style="{StaticResource StyleBoutons}"
                              Name="_31"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Curls_halteres"
+                <RadioButton Content="Curls aux haltères"
                              Style="{StaticResource StyleBoutons}"
                              Name="_32"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Curls_poulie"
+                <RadioButton Content="Curls à la poulie"
                              Style="{StaticResource StyleBoutons}"
                              Name="_33"
                              Checked="ExoChecked"/>
@@ -62,37 +62,37 @@
                              Name="_35"
                              Checked="ExoChecked"/>
 
-               <RadioButton Content="Developpes_a_la barre"
+               <RadioButton Content="Developpés à la barre"
                             Style="{StaticResource StyleBoutons}"
                             Name="_36"
                             Checked="ExoChecked"/>
 
-                <RadioButton Content="Extension_assis"
+                <RadioButton Content="Extension assis"
                              Style="{StaticResource StyleBoutons}"
                              Name="_37"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Extension_couche"
+                <RadioButton Content="Extension couché"
                              Style="{StaticResource StyleBoutons}"
                              Name="_38"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Extension_a_la_poulie"
+                <RadioButton Content="Extension à la poulie"
                              Style="{StaticResource StyleBoutons}"
                              Name="_39"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Flexion_aux_halteres"
+                <RadioButton Content="Flexion aux haltères"
                              Style="{StaticResource StyleBoutons}"
                              Name="_310"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Flexion_barre_pronation"
+                <RadioButton Content="Flexion à la barre pronation"
                              Style="{StaticResource StyleBoutons}"
                              Name="_311"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Flexion_barre_supination"
+                <RadioButton Content="Flexion à la barre supination"
                              Style="{StaticResource StyleBoutons}"
                              Name="_312"
                              Checked="ExoChecked"/>
@@ -108,52 +108,52 @@
                              Name="_61"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Leg_extension"
+                <RadioButton Content="Leg extension"
                              Style="{StaticResource StyleBoutons}"
                              Name="_62"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Hack_squat"
+                <RadioButton Content="Hack squat"
                              Style="{StaticResource StyleBoutons}"
                              Name="_63"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Presse_a_cuisse"
+                <RadioButton Content="Presse"
                              Style="{StaticResource StyleBoutons}"
                              Name="_64"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Squat_barre_guidee"
+                <RadioButton Content="Squat barre guidée"
                              Style="{StaticResource StyleBoutons}"
                              Name="_65"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Montee_sur_banc"
+                <RadioButton Content="Montée sur banc"
                              Style="{StaticResource StyleBoutons}"
                              Name="_66"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Sissy_squat"
+                <RadioButton Content="Sissy squats"
                              Style="{StaticResource StyleBoutons}"
                              Name="_67"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Souleve_de_terre_jambes_tendues"
+                <RadioButton Content="Soulevé de terre jambes tendues"
                              Style="{StaticResource StyleBoutons}"
                              Name="_71"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Leg_curl_debout"
+                <RadioButton Content="Leg curl debout"
                              Style="{StaticResource StyleBoutons}"
                              Name="_72"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Good_morning"
+                <RadioButton Content="Good morning"
                              Style="{StaticResource StyleBoutons}"
                              Name="_73"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Leg_curl_assis"
+                <RadioButton Content="Leg curl assis"
                              Style="{StaticResource StyleBoutons}"
                              Name="_74"
                              Checked="ExoChecked"/>
@@ -163,22 +163,22 @@
                              Name="_75"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Mollets_a_la_presse"
+                <RadioButton Content="Mollets à la presse"
                              Style="{StaticResource StyleBoutons}"
                              Name="_81"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Elevation_a_45"
+                <RadioButton Content="Elevation à 45"
                              Style="{StaticResource StyleBoutons}"
                              Name="_82"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Mollets_assis"
+                <RadioButton Content="Mollets assis"
                              Style="{StaticResource StyleBoutons}"
                              Name="_83"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Mollets_debout"
+                <RadioButton Content="Mollets debout"
                              Style="{StaticResource StyleBoutons}"
                              Name="_84"
                              Checked="ExoChecked"/>
@@ -204,17 +204,17 @@
                              Name="_23"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Tirages_verticaux"
+                <RadioButton Content="Tirages verticaux"
                              Style="{StaticResource StyleBoutons}"
                              Name="_24"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Tirages_horizontaux"
+                <RadioButton Content="Tirages horizontaux"
                              Style="{StaticResource StyleBoutons}"
                              Name="_25"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Extension_lombaire"
+                <RadioButton Content="Extension lombaire"
                              Style="{StaticResource StyleBoutons}"
                              Name="_26"
                              Checked="ExoChecked"/>
@@ -224,27 +224,27 @@
                              Name="_27"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Shrug_incline_halteres"
+                <RadioButton Content="Shrug incliné haltères"
                              Style="{StaticResource StyleBoutons}"
                              Name="_28"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Rowing_barre_t"
+                <RadioButton Content="Rowing barre T"
                              Style="{StaticResource StyleBoutons}"
                              Name="_29"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Rowing_haltere"
+                <RadioButton Content="Rowing haltère"
                              Style="{StaticResource StyleBoutons}"
                              Name="_210"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Tirage_horizontal_haut"
+                <RadioButton Content="Tirage horizontal haut"
                              Style="{StaticResource StyleBoutons}"
                              Name="_211"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Rowing_deux_halteres"
+                <RadioButton Content="Rowing deux haltères"
                              Style="{StaticResource StyleBoutons}"
                              Name="_212"
                              Checked="ExoChecked"/>
@@ -255,33 +255,33 @@
                              Name="_1"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Developpes_couche"
+                <RadioButton Content="Développés couché"
                              Style="{StaticResource StyleBoutons}"
                              Name="_11"
                              Checked="ExoChecked"/>
 
 
-                <RadioButton Content="Developpes_incline"
+                <RadioButton Content="Développés incliné"
                              Style="{StaticResource StyleBoutons}"
                              Name="_12"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Developpes_decline"
+                <RadioButton Content="Développés decliné"
                              Style="{StaticResource StyleBoutons}"
                              Name="_13"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Ecarte_halteres"
+                <RadioButton Content="Ecarté haltères"
                              Style="{StaticResource StyleBoutons}"
                              Name="_14"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Ecarte_poulies"
+                <RadioButton Content="Ecarté poulies"
                              Style="{StaticResource StyleBoutons}"
                              Name="_15"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Pec_deck"
+                <RadioButton Content="Pec deck"
                              Style="{StaticResource StyleBoutons}"
                              Name="_16"
                              Checked="ExoChecked"/>
@@ -297,42 +297,42 @@
                              Name="_4"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Developpes_epaules"
+                <RadioButton Content="Développés épaules"
                              Style="{StaticResource StyleBoutons}"
                              Name="_41"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Elevation_laterale"
+                <RadioButton Content="Elévation laterale"
                              Style="{StaticResource StyleBoutons}"
                              Name="_42"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Elevation_frontale"
+                <RadioButton Content="Elévation frontale"
                              Style="{StaticResource StyleBoutons}"
                              Name="_43"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Elevation_buste_penche"
+                <RadioButton Content="Elévation buste penche"
                              Style="{StaticResource StyleBoutons}"
                              Name="_44"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Tirage_menton"
+                <RadioButton Content="Tirage menton"
                              Style="{StaticResource StyleBoutons}"
                              Name="_45"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Rowing_assis"
+                <RadioButton Content="Rowing assis"
                              Style="{StaticResource StyleBoutons}"
                              Name="_46"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Oiseau_a_la_poulie"
+                <RadioButton Content="Oiseau à la poulie"
                              Style="{StaticResource StyleBoutons}"
                              Name="_47"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Elevation_frontales_incline"
+                <RadioButton Content="Elévation frontales incliné"
                              Style="{StaticResource StyleBoutons}"
                              Name="_48"
                              Checked="ExoChecked"/>
@@ -348,7 +348,7 @@
                              Name="_51"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Crunch_a_la_poulie"
+                <RadioButton Content="Crunch à la poulie"
                              Style="{StaticResource StyleBoutons}"
                              Name="_52"
                              Checked="ExoChecked"/>
@@ -358,17 +358,17 @@
                              Name="_53"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Releves_de_jambes"
+                <RadioButton Content="Relevés de jambes"
                              Style="{StaticResource StyleBoutons}"
                              Name="_54"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Flexions_laterales"
+                <RadioButton Content="Flexions laterales"
                              Style="{StaticResource StyleBoutons}"
                              Name="_55"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Rotation_avec_baton"
+                <RadioButton Content="Rotation avecbaton"
                              Style="{StaticResource StyleBoutons}"
                              Name="_56"
                              Checked="ExoChecked"/>

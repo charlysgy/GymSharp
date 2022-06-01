@@ -1,21 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Media3D;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using GymSharp.MVVM.Model;
 using HelixToolkit.Wpf;
 using GymSharp.Utils;
+using System.Threading;
 
 namespace GymSharp.MVVM.View
 {
@@ -25,17 +16,16 @@ namespace GymSharp.MVVM.View
     public partial class _3DView : UserControl
     {
         private string side { get; set; }
-        public _3DView()
+        public _3DView(bool IsLoaded, Thread thread, Model3DGroup group)
         {
             InitializeComponent();
-
-            string modelPath = "model.obj";
-            FindPath.FindFile(ref modelPath);
-
-            ModelImporter importer = new ModelImporter();
-            Model3DGroup group = importer.Load($"{modelPath}");
-
             ModelVisual3D modelVisual3D = new ModelVisual3D();
+
+            if (!IsLoaded)
+            {
+                while (thread.IsAlive)
+                    continue;
+            }
 
             modelVisual3D.Content = group;
             myViewport.Children.Add(modelVisual3D);

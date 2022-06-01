@@ -13,6 +13,9 @@ using System.Windows.Media.Media3D;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using GymSharp.MVVM.Model;
+using HelixToolkit.Wpf;
+using GymSharp.Utils;
 
 namespace GymSharp.MVVM.View
 {
@@ -21,33 +24,28 @@ namespace GymSharp.MVVM.View
     /// </summary>
     public partial class _3DView : UserControl
     {
+        private string side { get; set; }
         public _3DView()
         {
             InitializeComponent();
+
+            string modelPath = "model.obj";
+            FindPath.FindFile(ref modelPath);
+
+            ModelImporter importer = new ModelImporter();
+            Model3DGroup group = importer.Load($"{modelPath}");
+
+            ModelVisual3D modelVisual3D = new ModelVisual3D();
+
+            modelVisual3D.Content = group;
+            myViewport.Children.Add(modelVisual3D);
+            myViewport.UpdateLayout();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            switch (button.Name)
-            {
-                case "Left":
-                    pCamera.Position = new Point3D(5, 0, 0);
-                    pCamera.LookDirection = new Vector3D(-1, 0, 0);
-                    break;
-                case "Right":
-                    pCamera.Position = new Point3D(-5, 0, 0);
-                    pCamera.LookDirection = new Vector3D(1, 0, 0);
-                    break;
-                case "Face":
-                    pCamera.Position = new Point3D(0, 0, 5);
-                    pCamera.LookDirection = new Vector3D(0.0001, 0, -1);
-                    break;
-                case "Back":
-                    pCamera.Position = new Point3D(0, 0, -5);
-                    pCamera.LookDirection = new Vector3D(0.0001, 0, 1);
-                    break;
-            }
+            side = button.Name;
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -66,6 +64,13 @@ namespace GymSharp.MVVM.View
                 but.Height = ActualHeight / 8;
                 but.Width = ActualHeight / 8;
             }
+        }
+
+        private void myViewport_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Point pos = e.GetPosition(myViewport);
+            Console.WriteLine((pos.X, pos.Y));
+            _3Dclass.CoordsToMuscle(pos, UserControl.Width, UserControl.Height, side);
         }
     }
 }

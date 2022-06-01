@@ -97,6 +97,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Data\UserProfile.cs" />
+    <Compile Include="MVVM\Model\3Dclass.cs" />
     <Compile Include="MVVM\Model\GraphicClass.cs" />
     <Compile Include="MVVM\ViewModel\ParametresViewModel.cs" />
     <Compile Include="MVVM\ViewModel\FirstStartViewModel.cs" />
@@ -204,6 +205,9 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="ressources\Anatomy.fbx" />
+    <None Include="ressources\model.mtl" />
+    <None Include="ressources\model.obj" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

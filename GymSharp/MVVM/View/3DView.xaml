@@ -1,8 +1,9 @@
 ﻿<UserControl x:Class="GymSharp.MVVM.View._3DView"
+             x:Name="UserControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:HelixToolKit="clr-namespace:HelixToolkit.Wpf;assembly=HelixToolkit.Wpf"
              xmlns:local="clr-namespace:GymSharp.MVVM.View"
              mc:Ignorable="d" 
@@ -35,7 +36,8 @@ les exercices pour le travailler"/>
                     Grid.Row="0"
                     Grid.RowSpan="2"
                     Grid.Column="0"
-                    HorizontalAlignment="Left">
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
 
             <Button x:Name="Face" 
                     DockPanel.Dock="Top" 
@@ -51,11 +53,11 @@ les exercices pour le travailler"/>
                     <EventTrigger RoutedEvent="Button.Click">
                         <BeginStoryboard>
                             <Storyboard>
-                                <Point3DAnimation Storyboard.TargetName="pCamera" 
+                                <Point3DAnimation Storyboard.TargetName="myCamera" 
                                                   Storyboard.TargetProperty="Position" 
                                                   To="10,0,0" 
                                                   Duration="0:0:2" />
-                                <Vector3DAnimation Storyboard.TargetName="pCamera" 
+                                <Vector3DAnimation Storyboard.TargetName="myCamera" 
                                                    Storyboard.TargetProperty="LookDirection" 
                                                    To="-1,0,0" 
                                                    Duration="0:0:2" />
@@ -80,11 +82,11 @@ les exercices pour le travailler"/>
                     <EventTrigger RoutedEvent="Button.Click">
                         <BeginStoryboard>
                             <Storyboard>
-                                <Point3DAnimation Storyboard.TargetName="pCamera" 
+                                <Point3DAnimation Storyboard.TargetName="myCamera" 
                                                   Storyboard.TargetProperty="Position" 
                                                   To="-10,0,0" 
                                                   Duration="0:0:2" />
-                                <Vector3DAnimation Storyboard.TargetName="pCamera" 
+                                <Vector3DAnimation Storyboard.TargetName="myCamera" 
                                                    Storyboard.TargetProperty="LookDirection" 
                                                    To="1,0,0" 
                                                    Duration="0:0:2" />
@@ -108,11 +110,11 @@ les exercices pour le travailler"/>
                     <EventTrigger RoutedEvent="Button.Click">
                         <BeginStoryboard>
                             <Storyboard>
-                                <Point3DAnimation Storyboard.TargetName="pCamera" 
+                                <Point3DAnimation Storyboard.TargetName="myCamera" 
                                                   Storyboard.TargetProperty="Position" 
                                                   To="0,10,0" 
                                                   Duration="0:0:2" />
-                                <Vector3DAnimation Storyboard.TargetName="pCamera" 
+                                <Vector3DAnimation Storyboard.TargetName="myCamera" 
                                                    Storyboard.TargetProperty="LookDirection" 
                                                    To="0,-1,0" 
                                                    Duration="0:0:2" />
@@ -136,11 +138,11 @@ les exercices pour le travailler"/>
                     <EventTrigger RoutedEvent="Button.Click">
                         <BeginStoryboard>
                             <Storyboard>
-                                <Point3DAnimation Storyboard.TargetName="pCamera" 
+                                <Point3DAnimation Storyboard.TargetName="myCamera" 
                                                   Storyboard.TargetProperty="Position" 
                                                   To="0,-10,0" 
                                                   Duration="0:0:2" />
-                                <Vector3DAnimation Storyboard.TargetName="pCamera" 
+                                <Vector3DAnimation Storyboard.TargetName="myCamera" 
                                                    Storyboard.TargetProperty="LookDirection" 
                                                    To="0,1,0" 
                                                    Duration="0:0:2" />
@@ -151,35 +153,26 @@ les exercices pour le travailler"/>
                 </Button.Triggers>
             </Button>
         </StackPanel>
-
         <Viewport3D Name="myViewport" 
                     Grid.Row="0"
                     Grid.RowSpan="2"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    Margin="25">
+                    Margin="25" 
+                    MouseDown="myViewport_MouseDown">
 
-            <!-- Add a camera. -->
-            <Viewport3D.Camera>
-                <PerspectiveCamera  x:Name="pCamera"
-                                    FarPlaneDistance="20" 
-                                    UpDirection="0,0,1" 
-                                    NearPlaneDistance="1" 
-                                    Position="10, 0, 0" 
-                                    LookDirection="-1, 0, 0" 
-                                    FieldOfView="45" />
-            </Viewport3D.Camera>
-
-            <!-- Add models. -->
             <Viewport3D.Children>
-                <HelixToolKit:Teapot Position="0, 0, 0"
-                                     UpDirection="0, 0, 1">
-                    <HelixToolKit:Teapot.Material>
-                        <DiffuseMaterial Brush="Blue"/>
-                    </HelixToolKit:Teapot.Material>
-                    <HelixToolKit:SunLight/>
-                </HelixToolKit:Teapot>
+                <ModelVisual3D>
+                    <ModelVisual3D.Content>
+                        <SpotLight Color="White" Direction="0, 0, -1" Position="0, 0, 8"/>
+                    </ModelVisual3D.Content>
+                </ModelVisual3D>
             </Viewport3D.Children>
+            <Viewport3D.Camera>
+                <PerspectiveCamera x:Name="myCamera" 
+                                   Position="0, 0, 8" 
+                                   LookDirection="0, 0, -1"/>
+            </Viewport3D.Camera>
         </Viewport3D>
     </Grid>
 </UserControl>

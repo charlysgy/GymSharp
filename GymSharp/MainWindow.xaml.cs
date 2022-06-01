@@ -136,8 +136,10 @@ namespace GymSharp
             string modelPath = "model.obj";
             FindPath.FindFile(ref modelPath);
             ModelImporter importer = new ModelImporter();
+            Console.WriteLine(modelPath);
             group = new Model3DGroup();
-            thread1 = new System.Threading.Thread(() => importer.Load($"{modelPath}"));
+            thread1 = new System.Threading.Thread(() => group = importer.Load($"{modelPath}"));
+            thread1.Start();
         }
     }
 }

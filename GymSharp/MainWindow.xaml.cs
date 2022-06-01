@@ -6,11 +6,16 @@ using GymSharp.ressources.enums;
 using System.Linq;
 using GymSharp.Data;
 using System.Windows.Input;
+using GymSharp.Utils;
+using HelixToolkit.Wpf;
+using System.Windows.Media.Media3D;
 
 namespace GymSharp
 {
     public partial class MainWindow : Window
     {
+        private System.Threading.Thread thread1;
+        private Model3DGroup group;
         private const string PathAccueil = "../../ressources/text/messages_accueil.txt";
         private const string PathUserProfile = "../../Data/userProfile.txt";
 
@@ -51,7 +56,7 @@ namespace GymSharp
         private void ModelCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
-            UIElement element = new _3DView();
+            UIElement element = thread1.IsAlive ? new _3DView(false, thread1, group) : new _3DView(true, thread1, group);
             viewContainer.Children.Add(element);
         }
         private void ProfileCommand(object sender, RoutedEventArgs e)
@@ -127,6 +132,12 @@ namespace GymSharp
         private void Window_Initialized(object sender, EventArgs e)
         {
             FirstStartCommand();
+
+            string modelPath = "model.obj";
+            FindPath.FindFile(ref modelPath);
+            ModelImporter importer = new ModelImporter();
+            group = new Model3DGroup();
+            thread1 = new System.Threading.Thread(() => importer.Load($"{modelPath}"));
         }
     }
 }

@@ -26,7 +26,7 @@ namespace GymSharp
             ModelImporter importer = new ModelImporter();
             Console.WriteLine(modelPath);
             group = new Model3DGroup();
-            this.Dispatcher.Invoke(() => group = importer.Load($"{modelpath}"));
+            this.Dispatcher.Invoke(() => group = importer.Load($"{modelPath}"));
 
             InitializeComponent();
             Anecdote.Text = GetAnecdote();

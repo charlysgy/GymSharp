@@ -15,8 +15,7 @@ namespace GymSharp
     public partial class MainWindow : Window
     {
         private Model3DGroup group;
-        private const string PathAccueil = "../../ressources/text/messages_accueil.txt";
-        private const string PathUserProfile = "../../Data/userProfile.txt";
+        private static string pathAccueil = "messages_accueil.txt";
 
         public MainWindow()
         {
@@ -74,9 +73,10 @@ namespace GymSharp
 
         public static string GetAnecdote()
         {
+            FindPath.FindFile(ref pathAccueil);
             string date = DateTime.Now.DayOfYear.ToString();
             int jour = Int32.Parse(date);
-            int nbAnecdote = File.ReadLines(PathAccueil).Count() - 1;
+            int nbAnecdote = File.ReadLines(pathAccueil).Count() - 1;
             int anecdoteJour = 0;
             if (nbAnecdote > jour)
             {
@@ -87,7 +87,7 @@ namespace GymSharp
                 anecdoteJour = jour % nbAnecdote;
             }
             string res = "";
-            using (StreamReader sr = new StreamReader(PathAccueil))
+            using (StreamReader sr = new StreamReader(pathAccueil))
             {
                 for (int i = 0; i <= anecdoteJour; i++)
                 {

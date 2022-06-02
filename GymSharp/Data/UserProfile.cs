@@ -6,12 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using GymSharp.MVVM.View;
+using GymSharp.Utils;
 
 namespace GymSharp.Data
 {
     public static class UserProfile
     {
-        private const string PATHUSERPROFILE = "../../Data/userProfile.txt";
+        private static string pathUserProfile = "userProfile.txt";
         public static string firstName;
         public static string lastName;
         public static int age;
@@ -19,7 +20,8 @@ namespace GymSharp.Data
 
         public static string Get_firstName()
         {
-            using (StreamReader sr = new StreamReader(PATHUSERPROFILE))
+            FindPath.FindFile(ref pathUserProfile);
+            using (StreamReader sr = new StreamReader(pathUserProfile))
             {
                 firstName = sr.ReadLine();
             }
@@ -28,7 +30,8 @@ namespace GymSharp.Data
 
         public static string Get_lastName()
         {
-            using (StreamReader sr = new StreamReader(PATHUSERPROFILE))
+            FindPath.FindFile(ref pathUserProfile);
+            using (StreamReader sr = new StreamReader(pathUserProfile))
             {
                 for (int i = 0; i <= 1; i++)
                 {
@@ -40,7 +43,8 @@ namespace GymSharp.Data
 
         public static int Get_age()
         {
-            using (StreamReader sr = new StreamReader(PATHUSERPROFILE))
+            FindPath.FindFile(ref pathUserProfile);
+            using (StreamReader sr = new StreamReader(pathUserProfile))
             {
                 string res;
                 for(int i = 0; i <= 2; i++)
@@ -53,7 +57,8 @@ namespace GymSharp.Data
 
         public static int Get_weight()
         {
-            using (StreamReader sr = new StreamReader(PATHUSERPROFILE))
+            FindPath.FindFile(ref pathUserProfile);
+            using (StreamReader sr = new StreamReader(pathUserProfile))
             {
                 firstName = sr.ReadLine();
             }
@@ -62,8 +67,9 @@ namespace GymSharp.Data
 
         public static void FillFirstName(FirstStartView view)
         {
+            FindPath.FindFile(ref pathUserProfile);
             string FirstNameToFill = view.FirstNameBox.Text;
-            using (StreamWriter sw = new StreamWriter(PATHUSERPROFILE))
+            using (StreamWriter sw = new StreamWriter(pathUserProfile))
             {
                 sw.Write(FirstNameToFill);
                 sw.Close();
@@ -71,7 +77,8 @@ namespace GymSharp.Data
         }
         public static void FillFirstName(string name)
         {
-            using (StreamWriter sw = new StreamWriter(PATHUSERPROFILE))
+            FindPath.FindFile(ref pathUserProfile);
+            using (StreamWriter sw = new StreamWriter(pathUserProfile))
             {
                 sw.Write(name);
             }

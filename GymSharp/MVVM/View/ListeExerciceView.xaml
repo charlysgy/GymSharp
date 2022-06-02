@@ -82,11 +82,6 @@
                              Name="_39"
                              Checked="ExoChecked"/>
 
-                <RadioButton Content="Flexion aux haltères"
-                             Style="{StaticResource StyleBoutons}"
-                             Name="_310"
-                             Checked="ExoChecked"/>
-
                 <RadioButton Content="Flexion à la barre pronation"
                              Style="{StaticResource StyleBoutons}"
                              Name="_311"

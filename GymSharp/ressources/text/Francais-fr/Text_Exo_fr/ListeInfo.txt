@@ -1096,7 +1096,15 @@ Positionnez le poids de manière à ce que l’avant-bras soit perpendiculaire a
 Ensuite remontez en effectuant une extension complète du bras vers l’arrière 
 avant de redescendre en position initiale.
 $
-_$
+Exécution :
+
+Couché(e) sur un banc plat, une barre EZ dans les mains, écartement des mains de la largeur des épaules, 
+les bras sont pliés derrière la tête (le dos des mains est pratiquement en appui sur le front). 
+Levez la barre en tendant complètement les bras au dessus de la tête.
+
+Revenez lentement à la position de départ en pliant complètement les coudes en faisant attention 
+de ne pas cogner le front avec la barre.
+$
 Les triceps sont des muscles placés sur la partie postérieure du bras. 
 Dans les bonnes proportions, ils correspondent approximativement aux 2/3 
 du volume total du bras. Ce sont les triceps qui permettent l’extension du coude.
@@ -2195,3 +2203,111 @@ que vous avez passé le point délicat du mouvement.
 Faites le nombre nécessaire de reps pour terminer votre série.
 $
 213$
+214$
+215$
+216$
+217$
+218$
+219$
+220$
+221$
+223$
+224$
+225$
+226$
+227$
+228$
+229$
+230$
+231$
+232$
+233$
+234$
+235$
+236$
+237$
+238$
+239$
+240$
+241$
+242$
+243$
+244$
+245$
+246$
+247$
+248$
+249$
+250$
+251$
+252$
+253$
+254$
+255$
+256$
+257$
+258$
+259$
+260$
+261$
+262$
+263$
+264$
+265$
+266$
+267$
+268$
+269$
+270$
+271$
+272$
+273$
+274$
+275$
+276$
+277$
+278$
+279$
+280$
+281$
+282$
+283$
+284$
+285$
+286$
+287$
+288$
+289$
+290$
+291$
+292$
+293$
+294$
+295$
+296$
+297$
+298$
+299$
+300$
+301$
+302$
+303$
+304$
+305$
+306$
+307$
+308$
+309$
+310$
+_$
+Le curl biceps barre en prise pronation est un exercice qui sollicite les biceps
+mais aussi les muscles des avant-bras. Plus précisément, il vous permettra de 
+muscler le bas du biceps. Par un mouvement de flexion/extension de coude, c'est 
+un très bon exercice pour muscler vos bras efficacement. Bien-évidemment, la 
+charge doit être adaptée à votre niveau.
+$
+Le curl biceps barre en prise supination est un exercice d'isolation des biceps
+brachiaux. Il est l'un des meilleurs exercices pour obtenir la boule des biceps 
+tant convoitée. Par des mouvements de flexion/extension de bras, cet exercice est
+efficace pour muscler vos bras. Bien-évidemment, la charge doit être adaptée à votre niveau.
+$

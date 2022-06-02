@@ -21,6 +21,13 @@ namespace GymSharp
 
         public MainWindow()
         {
+            string modelPath = "model.obj";
+            FindPath.FindFile(ref modelPath);
+            ModelImporter importer = new ModelImporter();
+            Console.WriteLine(modelPath);
+            group = new Model3DGroup();
+            this.Dispatcher.Invoke(() => group = importer.Load($"{modelpath}"));
+
             InitializeComponent();
             Anecdote.Text = GetAnecdote();
             toggle_button.Width = this.Height/10;
@@ -56,7 +63,7 @@ namespace GymSharp
         private void ModelCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
-            UIElement element = thread1.IsAlive ? new _3DView(false, thread1, group) : new _3DView(true, thread1, group);
+            UIElement element = new _3DView(group);
             viewContainer.Children.Add(element);
         }
         private void ProfileCommand(object sender, RoutedEventArgs e)
@@ -132,14 +139,6 @@ namespace GymSharp
         private void Window_Initialized(object sender, EventArgs e)
         {
             FirstStartCommand();
-
-            string modelPath = "model.obj";
-            FindPath.FindFile(ref modelPath);
-            ModelImporter importer = new ModelImporter();
-            Console.WriteLine(modelPath);
-            group = new Model3DGroup();
-            thread1 = new System.Threading.Thread(() => group = importer.Load($"{modelPath}"));
-            thread1.Start();
         }
     }
 }

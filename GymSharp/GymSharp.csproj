@@ -205,7 +205,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="ressources\Anatomy.fbx" />
     <None Include="ressources\model.mtl" />
     <None Include="ressources\model.obj" />
   </ItemGroup>

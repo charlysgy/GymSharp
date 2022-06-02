@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Windows;
 using GymSharp.ressources.enums;
+using GymSharp.Utils;
+using System.IO;
 
 namespace GymSharp.MVVM.Model
 {
@@ -20,6 +22,19 @@ namespace GymSharp.MVVM.Model
             double angle = 0;
 
             return angle;
+        }
+
+        public static void RegisterCoords()
+        {
+            string pathToDir = "text";
+            FindPath.FindDirectory(ref pathToDir);
+
+            List<string> faces = new List<string> { "front", "back", "left", "right" };
+
+            StreamWriter sw = new StreamWriter(pathToDir);
+            foreach (string face in faces)
+            {
+            }
         }
     }
 }

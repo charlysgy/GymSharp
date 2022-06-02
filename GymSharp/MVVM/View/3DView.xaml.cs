@@ -16,18 +16,12 @@ namespace GymSharp.MVVM.View
     public partial class _3DView : UserControl
     {
         private string side { get; set; }
-        public _3DView(bool IsLoaded, Thread thread, Model3DGroup group)
+        public _3DView(Model3DGroup group)
         {
             InitializeComponent();
             ModelVisual3D modelVisual3D = new ModelVisual3D();
 
-            if (!IsLoaded)
-            {
-                while (thread.IsAlive)
-                    continue;
-            }
-
-            modelVisual3D.Content = group;
+            modelVisual3D.Content = group.Clone();
             myViewport.Children.Add(modelVisual3D);
             myViewport.UpdateLayout();
         }
@@ -60,7 +54,6 @@ namespace GymSharp.MVVM.View
         {
             Point pos = e.GetPosition(myViewport);
             Console.WriteLine((pos.X, pos.Y));
-            _3Dclass.CoordsToMuscle(pos, UserControl.Width, UserControl.Height, side);
         }
     }
 }

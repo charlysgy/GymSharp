@@ -14,7 +14,6 @@ namespace GymSharp
 {
     public partial class MainWindow : Window
     {
-        private System.Threading.Thread thread1;
         private Model3DGroup group;
         private const string PathAccueil = "../../ressources/text/messages_accueil.txt";
         private const string PathUserProfile = "../../Data/userProfile.txt";

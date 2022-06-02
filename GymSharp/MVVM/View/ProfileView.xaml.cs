@@ -77,39 +77,11 @@ namespace GymSharp.MVVM.View
                 height = Int32.Parse(HeightBox.Text);
             }
         }
-        private void CCBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                cc = Int32.Parse(CCBoxProfile.Text);
-            }
-        }
-        private void CryptBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                crypt = Int32.Parse(CryptBoxProfile.Text);
-            }
-        }
         private void SexBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
             {
                 sex = SexBoxProfile.Text;
-            }
-        }
-        private void RMBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                rm = Int32.Parse(RMBoxProfile.Text);
-            }
-        }
-        private void RMObjBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                rmObj = Int32.Parse(RMObjBoxProfile.Text);
             }
         }
         private void WeightObjBoxProfile_KeyDown(object sender, KeyEventArgs e)

@@ -196,7 +196,7 @@
                 </StackPanel>
             </Grid>
             <Separator Name="SeparatorContact" 
-               Height="4"
+               Height="3"
                Width="Auto"
                HorizontalAlignment="Stretch"
                VerticalAlignment="Bottom"                   

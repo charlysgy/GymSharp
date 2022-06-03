@@ -132,13 +132,37 @@
                             FontFamily="Berlin Sans FB"
                             FontSize="30"
                             Margin="10, 0, 0, 0"/>
-                            <TextBox x:Name="SexBoxProfile" 
-                            BorderBrush="#8D8D8D"
-                            BorderThickness="0.5"
-                            Margin="15 5"
-                            IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"
-                            KeyDown="SexBoxProfile_KeyDown"/>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <RadioButton Grid.Row="0" Grid.Column="0"
+                                     x:Name="Man" 
+                                     Cursor="Hand"
+                                     Content="Homme"
+                                     FontSize="20"
+                                     Margin="0 0 0 0"
+                                     Style="{StaticResource StyleBoutons}"/>
+                                <RadioButton Grid.Row="0" Grid.Column="1"
+                                     x:Name="Woman" 
+                                     Cursor="Hand"
+                                     Content="Femme"
+                                     FontSize="20"
+                                     Margin="0 0 0 0"
+                                     Style="{StaticResource StyleBoutons}"/>
+                                <RadioButton Grid.Row="0" Grid.Column="2"
+                                     x:Name="Other" 
+                                     Cursor="Hand"
+                                     Content="Autre"
+                                     FontSize="20"
+                                     Margin="0 0 0 0"
+                                     Style="{StaticResource StyleBoutons}"/>
+                            </Grid>
                         </StackPanel>
                     </ScrollViewer>
                 </StackPanel>

@@ -217,49 +217,43 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <RadioButton Grid.Row="0" Grid.Column="0">
-                    <RadioButton.Template>
-                        <ControlTemplate>
-                            <TextBlock Foreground="White"
+                <StackPanel Grid.Row="0" Grid.Column="0">
+                    <TextBlock Foreground="White"
                                        Text="Site"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        FontFamily="Berlin Sans FB"
                                        FontSize="30"
                                        Margin="10, 0, 0, 0"/>
-                        </ControlTemplate>
-                    </RadioButton.Template>
-                </RadioButton>
-                <RadioButton Grid.Row="0" Grid.Column="1">
-                    <RadioButton.Template>
-                        <ControlTemplate>
-                            <TextBlock Foreground="White"
+
+                    <TextBlock Foreground="White"
+                           Text="https://gymsharp.000webhostapp.com/"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           FontFamily="Berlin Sans FB"
+                           FontSize="30"
+                           Margin="10, 0, 0, 0"/>
+                </StackPanel>
+                <StackPanel Grid.Row="0" Grid.Column="1">
+                    <TextBlock Foreground="White"
                                        Text="Adresse mail"
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        FontFamily="Berlin Sans FB"
                                        FontSize="30"
                                        Margin="10, 0, 0, 0"/>
-                        </ControlTemplate>
-                    </RadioButton.Template>
-                </RadioButton>
+
+                    <TextBlock Foreground="White"
+                                       Text="gymsharp-pro@gmail.com"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Center"
+                                       FontFamily="Berlin Sans FB"
+                                       FontSize="30"
+                                       Margin="10, 0, 0, 0"/>
+                </StackPanel>
             </Grid>
-            <Separator Name="SeparatorTheme" 
-               Height="4"
-               Width="Auto"
-               HorizontalAlignment="Stretch"
-               VerticalAlignment="Bottom"                   
-               Background="Black" />
-            <TextBlock Foreground="White"
-                       Text="Thème"
-                       TextAlignment="Center"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"
-                       FontFamily="Berlin Sans FB"
-                       FontSize="45"
-                       Margin="0 5 0 0"/>
-            
+
         </StackPanel>
-        
+
     </Grid>
 </UserControl>

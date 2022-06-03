@@ -25,12 +25,9 @@ namespace GymSharp.MVVM.View
     public partial class ProfileView : UserControl
     {
         int height;
-        int cc;
-        int rm;
-        int rmObj;
-        int crypt;
         string sex;
         int weightObj;
+        string ProfileFirstName = UserProfile.firstName;
         public ProfileView()
         {
             InitializeComponent();
@@ -77,13 +74,7 @@ namespace GymSharp.MVVM.View
                 height = Int32.Parse(HeightBox.Text);
             }
         }
-        private void SexBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                sex = SexBoxProfile.Text;
-            }
-        }
+        
         private void WeightObjBoxProfile_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)

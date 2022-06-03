@@ -30,11 +30,16 @@ namespace GymSharp
             Anecdote.Text = GetAnecdote();
             toggle_button.Width = this.Height/10;
             toggle_button.Height = this.Height/10;
+            Object sender = new Object();
+            RoutedEventArgs e = new RoutedEventArgs();
+            HomeCommand(sender, e);
         }
 
         private void HomeCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
+            UIElement element = new HomeView();
+            viewContainer.Children.Add(element);
         }
 
         private void ExercicesCommand(object sender, RoutedEventArgs e)

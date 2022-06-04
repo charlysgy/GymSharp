@@ -4,7 +4,16 @@ Your First Name
 Your Surname
 Your Age
 Your weight
-What's your purpose ?{Begin Sport, Increase my Endurance, Increase Power, Decrease Fat Purcentage, Keep my body trained}
+What's your purpose ?:Begin Sport;Increase my Endurance;Increase Power;Decrease Fat Purcentage;Keep my body trained
 $graphique
-textblock1:Your stats
-radiobuttons:
+title:Your stats
+radiobuttons:Pectorals;Back;Arms;Shoulders;Abs;Quadriceps;Hamstrings;Calves
+textPart1:Each point on the graph corresponds to 
+textPart2:(the red line) 
+textPart3:the average weight used during a session and 
+textPart4:(the blue line) 
+textPart5:the average number of repetition ou did in a session.
+textPart6:If your sessions are spread over several weeks, each point correspond to the average of each week.
+textPart7:If your seesions are spread over several months, each point correspond to the average of each month.
+axisXName:Date
+axisYName:Weight (Kg)

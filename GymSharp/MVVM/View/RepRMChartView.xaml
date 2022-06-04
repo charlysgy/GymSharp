@@ -1,4 +1,5 @@
 ﻿<UserControl x:Class="GymSharp.MVVM.View.RepRMChartView"
+             x:Name="userControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -21,6 +22,7 @@
             <RowDefinition x:Name="StackPanels" 
                            Height="Auto"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -387,7 +389,9 @@
         <DockPanel  x:Name="chartPanel" 
                     Grid.Row="2"
                     Grid.Column="0"
-                    Grid.ColumnSpan="8">
+                    Grid.ColumnSpan="8"
+                    Margin="20">
+            
             <chart:CartesianChart x:Name="chart"
                                   LegendLocation="Left"
                                   Zoom="Y">
@@ -413,5 +417,27 @@
 
             </chart:CartesianChart>
         </DockPanel>
+        <TextBlock x:Name="textChart"
+                   Grid.Row="3"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="8"
+                   Margin="10"
+                   Height="Auto"
+                   Width="{Binding Width, ElementName=chartPanel}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontFamily="Berlin sans FB"
+                   FontSize="20"
+                   Foreground="White"
+                   TextWrapping="WrapWithOverflow"
+                   TextAlignment="Center">
+            <Run x:Name="textPart1" Text="{Binding textPart1, Mode=OneWay}"/>
+            <Run x:Name="textPart2" Text="{Binding textPart2, Mode=OneWay}" Foreground="Red"/>
+            <Run x:Name="textPart3" Text="{Binding textPart3, Mode=OneWay}"/>
+            <Run x:Name="textPart4" Text="{Binding textPart4, Mode=OneWay}" Foreground="Blue"/>
+            <Run x:Name="textPart5" Text="{Binding textPart5, Mode=OneWay}"/>
+            <Run x:Name="textPart6" Text="{Binding textPart6, Mode=OneWay}"/>
+            <Run x:Name="textPart7" Text="{Binding textPart7, Mode=OneWay}"/>
+        </TextBlock>
     </Grid>
 </UserControl>

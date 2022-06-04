@@ -22,7 +22,14 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <TextBlock Foreground="White" Text="Liste" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Berlin Sans FB" FontSize="20" Grid.Column="0" Grid.Row="0"/>
+        <TextBlock Foreground="White" 
+                   Text="Liste" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   FontFamily="Berlin Sans FB" 
+                   FontSize="20" 
+                   Grid.Column="0" 
+                   Grid.Row="0"/>
 
         <ScrollViewer Grid.Row="1"
                       Grid.Column="0"
@@ -406,27 +413,23 @@
                         HorizontalAlignment="Left" 
                         VerticalAlignment="Top" 
                         Margin="25, 25, 0, 0"/>
-
-                <DockPanel Grid.Row="1"
-                           Grid.Column="1">
-                    <ScrollViewer x:Name="scrollable"
-                                  VerticalScrollBarVisibility="Auto"
-                                  HorizontalScrollBarVisibility="Disabled"
-                                  CanContentScroll="True"
-                                  MaxHeight="{Binding AcutalHeight, ElementName=colScrollViewer}">
-                        <TextBlock x:Name="textInfos" 
-                                   TextWrapping="Wrap"
-                                   FontFamily="Berlin sans FB"
-                                   TextAlignment="Left"
-                                   Margin="25 0 0 0"
-                                   Foreground="White"
-                                   FontSize="20"/>
-                    </ScrollViewer>
-                </DockPanel>
-                
+                <ScrollViewer  x:Name="scrollViewerText" 
+                               Grid.Row="1"
+                               Grid.Column="1"
+                               VerticalScrollBarVisibility="Auto"
+                               HorizontalScrollBarVisibility="Disabled">
+                    <DockPanel>
+                        <TextBlock  x:Name="textInfos"
+                                    TextWrapping="Wrap"
+                                    FontFamily="Berlin sans FB"
+                                    TextAlignment="Left"
+                                    Margin="25 0 0 5"
+                                    Foreground="White"
+                                    Background="Transparent"
+                                    FontSize="20"/>
+                    </DockPanel>
+                </ScrollViewer>
             </Grid>
-
-
         </StackPanel>
 
     </Grid>

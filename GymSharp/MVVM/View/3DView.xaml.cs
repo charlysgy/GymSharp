@@ -15,7 +15,9 @@ namespace GymSharp.MVVM.View
     /// </summary>
     public partial class _3DView : UserControl
     {
-        private string side { get; set; }
+        public string side { get; set; }
+        private _3Dclass _3dclass;
+        private Thread thread;
         public _3DView(Model3DGroup group)
         {
             InitializeComponent();
@@ -24,6 +26,10 @@ namespace GymSharp.MVVM.View
             modelVisual3D.Content = group.Clone();
             myViewport.Children.Add(modelVisual3D);
             myViewport.UpdateLayout();
+
+            _3dclass = new _3Dclass();
+             thread = new Thread(() => _3dclass.RegisterCoords(this));
+            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -39,6 +45,7 @@ namespace GymSharp.MVVM.View
                 but.Height = ActualHeight / 8;
                 but.Width = ActualHeight / 8;
             }
+            thread.Start();
         }
 
         private void UserControl_SizeChanged(object sender, SizeChangedEventArgs e)
@@ -53,7 +60,9 @@ namespace GymSharp.MVVM.View
         private void myViewport_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Point pos = e.GetPosition(myViewport);
-            Console.WriteLine((pos.X, pos.Y));
+            _3dclass.point = pos;
         }
+
+
     }
 }

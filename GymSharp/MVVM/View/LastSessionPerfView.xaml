@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="GymSharp.MVVM.View.LastSessionPerfView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymSharp.MVVM.View"
+             xmlns:ViewModel="clr-namespace:GymSharp.MVVM.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <ViewModel:LastSessionPerfViewModel/>
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="title"
+                   Grid.Row="0"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="3"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   FontFamily="Berlin sans FB"
+                   FontSize="20"
+                   Text="{Binding Title}"/>
+
+        <StackPanel x:Name="LastDayPerfPanel"
+                    Grid.Row="1"
+                    Grid.Column="0">
+            <TextBlock x:Name="LastDayTitle" 
+                       VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Foreground="White"
+                       FontSize="20"
+                       FontFamily="Berlin sans FB"
+                       Text="{Binding LastDayTitle}"/>
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

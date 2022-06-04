@@ -1,0 +1,933 @@
+﻿<UserControl x:Class="GymSharp.MVVM.View.PerfEnterXHunterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GymSharp.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Foreground="White" 
+                   Text="Ajouter des exercices à votre séance du jour !" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   FontFamily="Berlin Sans FB" 
+                   FontSize="25"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="4"/>
+
+        <TextBlock Foreground="White" 
+                   Text="Exercice" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   FontFamily="Berlin Sans FB" 
+                   FontSize="25"
+                   Grid.Row="1"/>
+
+        <TextBlock Foreground="White" 
+                   Text="Poids" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   FontFamily="Berlin Sans FB" 
+                   FontSize="25"
+                   Grid.Row="1"
+                   Grid.Column="1"/>
+
+        <TextBlock Foreground="White" 
+                   Text="Nombre de répétition" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   FontFamily="Berlin Sans FB" 
+                   FontSize="25"
+                   Grid.Row="1"
+                   Grid.Column="2"/>
+
+        <ScrollViewer Grid.Row="2"
+                      Grid.RowSpan="2"
+                      Grid.Column="0"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Grid.RowSpan="1"
+                        Grid.ColumnSpan="1" 
+                        Name="PanelListeExercice">
+
+                <RadioButton Content="Curls à la barre"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_31"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Curls aux haltères"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_32"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Curls à la poulie"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_33"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Dips"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_34"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="KickBack"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_35"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Developpés à la barre"
+                            Style="{StaticResource StyleBoutons}"
+                            Name="_36"
+                            Checked="ExoChecked"/>
+
+                <RadioButton Content="Extension assis"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_37"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Extension couché"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_38"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Extension à la poulie"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_39"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Flexion à la barre pronation"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_311"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Flexion à la barre supination"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_312"
+                             Checked="ExoChecked"/>
+
+
+                <RadioButton Content="Squat"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_61"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Leg extension"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_62"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Hack squat"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_63"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Presse"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_64"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Squat barre guidée"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_65"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Montée sur banc"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_66"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Sissy squats"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_67"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Soulevé de terre jambes tendues"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_71"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Leg curl debout"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_72"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Good morning"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_73"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Leg curl assis"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_74"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Fentes"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_75"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Mollets à la presse"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_81"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Elevation à 45"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_82"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Mollets assis"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_83"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Mollets debout"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_84"
+                             Checked="ExoChecked"/>
+
+
+                <RadioButton Content="Traction"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_21"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Rowing"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_22"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Shrug"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_23"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Tirages verticaux"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_24"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Tirages horizontaux"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_25"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Extension lombaire"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_26"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Pullover"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_27"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Shrug incliné haltères"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_28"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Rowing barre T"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_29"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Rowing haltère"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_210"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Tirage horizontal haut"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_211"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Rowing deux haltères"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_212"
+                             Checked="ExoChecked"/>
+
+
+                <RadioButton Content="Développés couché"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_11"
+                             Checked="ExoChecked"/>
+
+
+                <RadioButton Content="Développés incliné"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_12"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Développés decliné"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_13"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Ecarté haltères"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_14"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Ecarté poulies"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_15"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Pec deck"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_16"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Pompes"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_17"
+                             Checked="ExoChecked"/>
+
+
+                <RadioButton Content="Développés épaules"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_41"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Elévation laterale"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_42"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Elévation frontale"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_43"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Elévation buste penche"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_44"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Tirage menton"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_45"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Rowing assis"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_46"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Oiseau à la poulie"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_47"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Elévation frontales incliné"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_48"
+                             Checked="ExoChecked"/>
+
+
+                <RadioButton Content="Crunch"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_51"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Crunch à la poulie"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_52"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Gainage"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_53"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Relevés de jambes"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_54"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Flexions laterales"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_55"
+                             Checked="ExoChecked"/>
+
+                <RadioButton Content="Rotation avecbaton"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_56"
+                             Checked="ExoChecked"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="2"
+                      Grid.RowSpan="2"
+                      Grid.Column="1"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Grid.RowSpan="1"
+                        Grid.ColumnSpan="1" 
+                        Name="PanelListePoids">
+
+                <RadioButton Content="1 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P1"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="2 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P2"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="3 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P3"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="4 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P4"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="5 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P5"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="6 kg"
+                            Style="{StaticResource StyleBoutons}"
+                            Name="_P6"
+                            Checked="PoidsChecked"/>
+
+                <RadioButton Content="7 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P7"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="8 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P8"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="9 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P9"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="10 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P10"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="12 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P12"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="14 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P14"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="16 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P16"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="18 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P18"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="20 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P20"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="22 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P22"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="24 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P24"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="26 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P26"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="28 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P28"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="30 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P30"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="32 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P32"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="34 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P34"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="36 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P36"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="38 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P38"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="40 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P40"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="42 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P42"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="44 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P44"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="46 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P46"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="48 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P48"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="50 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P50"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="52 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P52"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="54 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P54"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="56 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P56"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="58 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P85"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="60 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P60"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="62 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P62"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="64 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P64"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="66 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P66"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="68 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P68"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="70 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P70"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="72 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P72"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="74 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P74"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="76 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P76"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="78 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P78"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="80"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P80"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="82 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P82"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="84 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P84"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="86 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P86"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="88 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P88"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="90 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P90"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="92 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P92"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="94 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P94"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="96 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P96"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="98 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P98"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="100 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P100"
+                             Checked="PoidsChecked"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="2"
+                      Grid.RowSpan="2"
+                      Grid.Column="2"
+                      VerticalScrollBarVisibility="Hidden"
+                      HorizontalScrollBarVisibility="Disabled">
+            <StackPanel Grid.RowSpan="1"
+                        Grid.ColumnSpan="1" 
+                        Name="PanelListeRepetition">
+
+                <RadioButton Content="1"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R1"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="2"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R2"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="3"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R3"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="4"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R4"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="5"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R5"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="6"
+                            Style="{StaticResource StyleBoutons}"
+                            Name="_R6"
+                            Checked="RepChecked"/>
+
+                <RadioButton Content="7"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R7"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="8"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R8"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="9"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R9"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="10"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R10"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="11"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R11"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="12"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R12"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="13"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R13"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="14"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R14"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="15"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R15"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="16"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R16"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="17"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R17"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="18"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R18"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="19"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R19"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="20"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R20"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="21"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R21"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="22"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R22"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="23"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R23"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="24"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R24"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="25"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R25"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="26"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R26"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="27"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R27"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="28"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R28"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="29"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R29"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="30"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R30"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="31"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R31"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="32"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R32"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="33"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R33"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="34"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R34"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="35"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R35"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="36"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R36"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="37"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R37"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="38"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R38"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="39"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R39"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="40"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R40"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="41"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R41"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="42"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R42"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="43"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R43"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="44"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R44"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="45"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R45"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="46"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R46"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="47"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R47"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="48"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R48"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="49"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R49"
+                             Checked="RepChecked"/>
+
+                <RadioButton Content="50"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_R50"
+                             Checked="RepChecked"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <RadioButton Grid.Row="3"
+                     Grid.Column="3"
+                     Content="Valider"
+                     Style="{StaticResource StyleBoutons}"
+                     Name="Valid"
+                     Checked="Checked"/>
+
+
+
+    </Grid>
+</UserControl>

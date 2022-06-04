@@ -5,7 +5,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:GymSharp.MVVM.View"
              mc:Ignorable="d" 
+             xmlns:viewModel="clr-namespace:GymSharp.MVVM.ViewModel"
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.DataContext>
+        <viewModel:PerfEnterXHunterViewModel/>
+    </UserControl.DataContext>
+    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -653,6 +658,506 @@
                 <RadioButton Content="100 kg"
                              Style="{StaticResource StyleBoutons}"
                              Name="_P100"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="102 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P102"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="104 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P104"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="106 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P106"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="108 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P108"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="110 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P110"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="112 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P112"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="114 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P114"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="116 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P116"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="118 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P118"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="120 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P120"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="122 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P122"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="124 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P124"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="126 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P126"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="128 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P128"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="130 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P130"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="132 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P132"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="134 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P134"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="136 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P136"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="138 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P138"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="140 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P140"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="142 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P142"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="144 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P144"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="146 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P146"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="148 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P148"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="150 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P150"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="152 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P152"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="154 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P154"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="156 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P156"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="158 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P158"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="160 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P160"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="162 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P162"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="164 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P164"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="166 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P166"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="168 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P168"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="170 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P170"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="172 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P172"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="174 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P174"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="176 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P176"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="178 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P178"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="180 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P180"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="182 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P182"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="184 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P184"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="186 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P186"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="188 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P188"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="190 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P190"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="192 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P192"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="194 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P194"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="196 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P196"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="198 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P198"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="200 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P200"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="202 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P202"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="204 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P204"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="206 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P206"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="208 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P208"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="210 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P210"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="212 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P212"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="214 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P214"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="216 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P216"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="218 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P218"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="220 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P220"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="222 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P222"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="224 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P224"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="226 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P226"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="228 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P228"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="230 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P230"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="232 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P232"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="234 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P234"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="236 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P236"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="238 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P238"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="240 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P240"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="242 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P242"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="244 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P244"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="246 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P246"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="248 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P248"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="250 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P250"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="252 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P252"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="254 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P254"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="256 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P256"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="258 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P258"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="260 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P260"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="262 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P262"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="264 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P264"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="266 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P266"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="268 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P268"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="270 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P270"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="272 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P272"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="274 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P274"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="276 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P276"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="278 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P278"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="280 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P280"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="282 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P282"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="284 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P284"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="286 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P286"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="288 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P288"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="290 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P290"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="292 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P292"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="294 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P294"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="296 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P296"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="298 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P298"
+                             Checked="PoidsChecked"/>
+
+                <RadioButton Content="300 kg"
+                             Style="{StaticResource StyleBoutons}"
+                             Name="_P300"
                              Checked="PoidsChecked"/>
 
             </StackPanel>

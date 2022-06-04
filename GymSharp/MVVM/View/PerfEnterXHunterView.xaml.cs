@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using GymSharp.MVVM.ViewModel;
 
 namespace GymSharp.MVVM.View
 {
@@ -23,6 +14,29 @@ namespace GymSharp.MVVM.View
         public PerfEnterXHunterView()
         {
             InitializeComponent();
+            PerfEnterXHunterViewModel.View = this;
+        }
+        
+        public void ExoChecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void PoidsChecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void RepChecked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        //renvoie un couple avec d'abord un string sous la forme jj/mm/aa/NumExo/NbrRep/NbrPoids/None et le boolléen qui définis si tout les boutons étaient cliqués avant de cliqué sur valider.
+        public void Checked(object sender, RoutedEventArgs e)
+        {
+            
+            (string, bool) perf = PerfEnterXHunterViewModel.PerfEnter();
         }
     }
 }

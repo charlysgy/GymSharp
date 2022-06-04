@@ -12,7 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
 using GymSharp.MVVM.ViewModel;
+using GymSharp.Utils;
+
 
 namespace GymSharp.MVVM.View
 {
@@ -25,6 +28,11 @@ namespace GymSharp.MVVM.View
         {
             InitializeComponent();
             LastSessionPerfViewModel.View = this;
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            LastSessionPerfViewModel.DisplayLastSessions();
         }
     }
 }

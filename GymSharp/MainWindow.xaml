@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GymSharp"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="600" 
+        Height="650" 
         Width="800"
         Background="Transparent" 
         WindowStartupLocation="CenterScreen"
@@ -214,6 +214,50 @@
                         <ListViewItem.ToolTip>
                             <ToolTip    x:Name="tooltip_liste_graphique"
                                         Content="Graphique"
+                                        Style="{StaticResource tooltip_style}"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+
+                    <ListViewItem HorizontalAlignment="Left"
+                                  Margin="0,0,0,15"
+                                  Selected="WorkoutCommand"
+                                   MouseEnter="ListViewItem_MouseEnter"
+                                  Cursor="Hand">
+                        <StackPanel Orientation="Horizontal"
+                                    Width="230"
+                                    Cursor="Hand">
+                            <Image  Source="/ressources/Images/seance.png"
+                                    Stretch="None"
+                                    Margin="12,0,0,0"/>
+                            <TextBlock Text="Séance en cours"
+                                               Margin="50,0,0,0"/>
+
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip    x:Name="tooltip_liste_seance"
+                                        Content="Séance"
+                                        Style="{StaticResource tooltip_style}"/>
+                        </ListViewItem.ToolTip>
+                    </ListViewItem>
+
+                    <ListViewItem HorizontalAlignment="Left"
+                                  Margin="0,0,0,15"
+                                  Selected="HistoricalCommand"
+                                   MouseEnter="ListViewItem_MouseEnter"
+                                  Cursor="Hand">
+                        <StackPanel Orientation="Horizontal"
+                                    Width="230"
+                                    Cursor="Hand">
+                            <Image  Source="/ressources/Images/historique.png"
+                                    Stretch="None"
+                                    Margin="12,0,0,0"/>
+                            <TextBlock Text="Historique des séances"
+                                               Margin="50,0,0,0"/>
+
+                        </StackPanel>
+                        <ListViewItem.ToolTip>
+                            <ToolTip    x:Name="tooltip_liste_historique"
+                                        Content="Historique"
                                         Style="{StaticResource tooltip_style}"/>
                         </ListViewItem.ToolTip>
                     </ListViewItem>

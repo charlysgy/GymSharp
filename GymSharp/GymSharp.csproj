@@ -235,7 +235,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <Resource Include="Data\exosData.txt" />
   </ItemGroup>
@@ -311,6 +310,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="logo_gym.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\historique.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ressources\Images\seance.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

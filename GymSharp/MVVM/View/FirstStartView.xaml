@@ -75,7 +75,8 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"/>
+                     Style="{StaticResource StyleTextBox}"
+                     GotFocus="SetFocus"/>
         </StackPanel>
         
         <StackPanel Grid.Row="0"
@@ -94,7 +95,8 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"/>
+                     Style="{StaticResource StyleTextBox}"
+                     GotFocus="SetFocus"/>
         </StackPanel>
 
         <ListBox x:Name="LanguageBox"
@@ -114,7 +116,7 @@
                     Grid.Column="0"
                     Height="Auto"
                     VerticalAlignment="Center">
-            <TextBlock x:Name="WeightBox"
+            <TextBlock x:Name="WeightBlock"
                        Text="Votre Poids : "
                        Foreground="White"
                        FontSize="20"
@@ -122,10 +124,12 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        Margin="15 0 5 5"/>
-            <TextBox BorderBrush="#8D8D8D"
+            <TextBox x:Name="WeightBox"
+                BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"/>
+                     Style="{StaticResource StyleTextBox}"
+                     GotFocus="SetFocus"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1"

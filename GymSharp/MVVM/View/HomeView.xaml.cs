@@ -24,7 +24,7 @@ namespace GymSharp.MVVM.View
         public HomeView()
         {
             InitializeComponent();
-            HelloName.Text = "Bonjour " + UserProfile.firstName + ", que souhaitez-vous faire aujourd'hui ?";
+            HelloName.Text = "Bonjour " + FirstStartView.FirstName + ", que souhaitez-vous faire aujourd'hui ?";
         }
     }
 }

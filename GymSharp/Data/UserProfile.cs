@@ -65,13 +65,18 @@ namespace GymSharp.Data
             return weight;
         }
 
-        public static void FillFirstName(string name)
+        public static void FillInfos(string name, string lastname, string age, string weight, string objective)
         {
             FindPath.FindFile(ref pathUserProfile);
             using (StreamWriter sw = new StreamWriter(pathUserProfile))
             {
-                sw.Write(name);
+                sw.WriteLine(name);
+                sw.WriteLine(lastname);
+                sw.WriteLine(age);
+                sw.WriteLine(weight);
+                sw.Write(objective);
             }
         }
+
     }
 }

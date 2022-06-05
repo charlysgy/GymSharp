@@ -24,7 +24,11 @@ namespace GymSharp.MVVM.View
     /// </summary>
     public partial class FirstStartView : Window
     {
-        public string FirstName;
+        public static string FirstName;
+        public static string LastName;
+        public static string Age;
+        public static string Weight;
+        public static string Objective;
         public FirstStartView()
         {
             InitializeComponent();
@@ -33,10 +37,33 @@ namespace GymSharp.MVVM.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Console.WriteLine(FirstNameBox.Text);
-            if (FirstNameBox.Text != "")
+            if (FirstNameBox.Text != "" && LastNameBox.Text != "" && AgeBox.Text != "" && WeightBox.Text != "")
             {
                 FirstName = FirstNameBox.Text;
-                UserProfile.FillFirstName(FirstName);
+                LastName = LastNameBox.Text;
+                Age = AgeBox.Text;
+                Weight = WeightBox.Text;
+                if (StartSport.IsChecked == true)
+                {
+                    Objective = (string)StartSport.Content;
+                }
+                else if (IncreaseEndurance.IsChecked == true)
+                {
+                    Objective = (string)IncreaseEndurance.Content;
+                }
+                else if (IncreasePower.IsChecked == true)
+                {
+                    Objective = (string)IncreasePower.Content;
+                }
+                else if (DecreaseFat.IsChecked == true)
+                {
+                    Objective = (string)DecreaseFat.Content;
+                }
+                else
+                {
+                    Objective = (string)KeepTrained.Content;
+                }
+                UserProfile.FillInfos(FirstName, LastName, Age, Weight, Objective);
                 this.Close();
             }
         }

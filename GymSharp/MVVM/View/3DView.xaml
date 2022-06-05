@@ -39,7 +39,7 @@ les exercices pour le travailler"/>
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center">
 
-            <Button x:Name="Face"
+            <Button x:Name="front"
                     MaxHeight="70"
                     MaxWidth="70"
                     MinHeight="40"
@@ -67,7 +67,7 @@ les exercices pour le travailler"/>
                 </Button.Triggers>
             </Button>
 
-            <Button x:Name="Back" 
+            <Button x:Name="back" 
                     MaxHeight="70"
                     MaxWidth="70"
                     MinHeight="40"
@@ -95,7 +95,7 @@ les exercices pour le travailler"/>
                 </Button.Triggers>
             </Button>
 
-            <Button x:Name="Left"
+            <Button x:Name="left"
                     MaxHeight="70"
                     MaxWidth="70"
                     MinHeight="40"
@@ -123,7 +123,7 @@ les exercices pour le travailler"/>
                 </Button.Triggers>
             </Button>
 
-            <Button x:Name="Right"
+            <Button x:Name="right"
                     MaxHeight="70"
                     MaxWidth="70"
                     MinHeight="40"
@@ -160,7 +160,7 @@ les exercices pour le travailler"/>
                     MouseDown="myViewport_MouseDown">
 
             <Viewport3D.Children>
-                <ModelVisual3D>
+                <ModelVisual3D x:Name="myModel">
                     <ModelVisual3D.Content>
                         <SpotLight Color="White" 
                                    Direction="{Binding LookDirection, ElementName=myCamera}" 
@@ -174,5 +174,11 @@ les exercices pour le travailler"/>
                                    LookDirection="0, 0, -1"/>
             </Viewport3D.Camera>
         </Viewport3D>
+        <Rectangle x:Name="rect" 
+                   Grid.Row="0"
+                   Grid.RowSpan="2"
+                   Grid.Column="0"
+                   Grid.ColumnSpan="2"
+                   Margin="50, 35"/>
     </Grid>
 </UserControl>

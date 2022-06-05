@@ -13,7 +13,7 @@ namespace GymSharp.ressources.enums
         Bras = 3,
         Epaules = 4,
         Abdominaux = 5,
-        Quadirceps = 6,
+        Quadriceps = 6,
         Ischios = 7,
         Mollets = 8,
     }

@@ -81,7 +81,8 @@ namespace GymSharp.Utils
                         found = true;
                     }
                 }
-                path += "../";
+               if (!found)
+                    path += "../";
             }
             return path;
         }

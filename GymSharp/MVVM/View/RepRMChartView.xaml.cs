@@ -29,7 +29,6 @@ namespace GymSharp.MVVM.View
                 {
                     RadioButton button = (RadioButton)element;
                     button.IsChecked = false;
-                    Console.WriteLine(button.Name);
                 }
             }
 

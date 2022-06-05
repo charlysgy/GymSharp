@@ -53,13 +53,12 @@
                             FontSize="30"
                             Margin="10, 0, 0, 0"/>
                             <TextBox x:Name="FirstNameBox"
-                            Text= "{Binding ProfileFirstName}"
+                            Text= "{Binding ProfileFirstName, Mode=OneWay}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"
-                            KeyDown="FirstNameBoxProfile_KeyDown"/>
+                            Style="{StaticResource StyleTextBox}"/>
                             <TextBlock Foreground="White"
                             Text="Nom :"
                             TextAlignment="Center"
@@ -69,13 +68,12 @@
                             FontSize="30"
                             Margin="10, 0, 0, 0"/>
                             <TextBox x:Name="LastNameBox"
-                            Text= "{Binding ProfileLastName}"
+                            Text= "{Binding ProfileLastName, Mode=OneWay}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"
-                            KeyDown="LastNameBoxProfile_KeyDown"/>
+                            Style="{StaticResource StyleTextBox}"/>
                             <TextBlock Foreground="White"
                             Text="Age :"
                             TextAlignment="Center"
@@ -85,13 +83,12 @@
                             FontSize="30"
                             Margin="10, 0, 0, 0"/>
                             <TextBox x:Name="AgeBox"
-                            Text= "{Binding ProfileAge}"
+                            Text= "{Binding ProfileAge, Mode=OneWay}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"
-                            KeyDown="AgeBoxProfile_KeyDown"/>
+                            Style="{StaticResource StyleTextBox}"/>
                             <TextBlock Foreground="White"
                             Text="Poids :"
                             TextAlignment="Center"
@@ -101,13 +98,12 @@
                             FontSize="30"
                             Margin="10, 0, 0, 0"/>
                             <TextBox x:Name="WeightBox"
-                            Text= "{Binding ProfileWeight}"
+                            Text= "{Binding ProfileWeight, Mode=OneWay}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"
-                            KeyDown="WeightBoxProfile_KeyDown"/>
+                            Style="{StaticResource StyleTextBox}"/>
                             <TextBlock Foreground="White"
                             Text="Taille :"
                             TextAlignment="Center"
@@ -122,8 +118,7 @@
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"
-                            KeyDown="HeightBoxProfile_KeyDown"/>
+                            Style="{StaticResource StyleTextBox}"/>
                             <TextBlock Foreground="White"
                             Text="Sexe :"
                             TextAlignment="Center"
@@ -187,8 +182,7 @@
                         BorderThickness="0.5"
                         Margin="15 5"
                         IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"
-                        KeyDown="WeightObjBoxProfile_KeyDown"/>
+                        Style="{StaticResource StyleTextBox}"/>
                     <RadioButton Cursor="Hand">
                         <RadioButton.Template>
                             <ControlTemplate>
@@ -212,7 +206,7 @@
                                      Style="{StaticResource StyleBoutons}">
                         </RadioButton>
                         <RadioButton Cursor="Hand"
-                                     x:Name="IncreaseSamina"
+                                     x:Name="IncreaseStamina"
                                      FontSize="25"
                                      Content="Améliorer mon endurence"
                                      Margin="0 0 0 0"
@@ -242,6 +236,12 @@
                     </StackPanel>
                 </StackPanel>
             </Grid>
+            <RadioButton Content="Valider"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="Valid"
+                         FontSize="25"
+                         Checked="Checked"
+                         Cursor="Hand"/>
         </StackPanel>
     </Grid>
 </UserControl>

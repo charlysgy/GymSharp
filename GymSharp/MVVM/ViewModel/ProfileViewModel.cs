@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GymSharp.Data;
+using System.Windows.Controls;
+using GymSharp.MVVM.View;
 
 namespace GymSharp.MVVM.ViewModel
 {
@@ -20,7 +22,7 @@ namespace GymSharp.MVVM.ViewModel
             ProfileLastName = UserProfile.lastName;
             ProfileAge = Convert.ToString(UserProfile.age);
             ProfileWeight = Convert.ToString(UserProfile.weight);
-            ///ProfileHeight = Convert.ToString(View.ProfileView.height)
+            //ProfileHeight = Convert.ToString(View.ProfileView.height)
         }
         
     }

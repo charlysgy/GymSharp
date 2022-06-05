@@ -220,19 +220,24 @@
                 <StackPanel Grid.Row="0" Grid.Column="0">
                     <TextBlock Foreground="White"
                                        Text="Site"
+                               
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        FontFamily="Berlin Sans FB"
                                        FontSize="30"
-                                       Margin="10, 0, 0, 0"/>
-
+                                       Margin="10, 0, 0, 0">
+                            <Hyperlink Cursor="Hand"
+                                NavigateUri="https://gymsharp.000webhostapp.com/"/>
+                    </TextBlock>
                     <TextBlock Foreground="White"
-                           Text="https://gymsharp.000webhostapp.com/"
-                           VerticalAlignment="Center"
-                           HorizontalAlignment="Center"
-                           FontFamily="Berlin Sans FB"
-                           FontSize="30"
-                           Margin="10, 0, 0, 0"/>
+                               Text="https://gymsharp.000webhostapp.com/"
+                               VerticalAlignment="Center"
+                               HorizontalAlignment="Center"
+                               FontFamily="Berlin Sans FB"
+                               FontSize="30"
+                               Margin="10, 0, 0, 0"/>
+
+
                 </StackPanel>
                 <StackPanel Grid.Row="0" Grid.Column="1">
                     <TextBlock Foreground="White"
@@ -252,6 +257,18 @@
                                        Margin="10, 0, 0, 0"/>
                 </StackPanel>
             </Grid>
+            <Separator Name="SeparatorValid" 
+               Height="4"
+               Width="Auto"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Bottom"                   
+               Background="Black" />
+            <RadioButton Content="Valider"
+                         Style="{StaticResource StyleBoutons}"
+                         Name="Valid"
+                         FontSize="25"
+                         Checked="Checked"
+                         Cursor="Hand"/>
 
         </StackPanel>
 

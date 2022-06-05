@@ -16,6 +16,7 @@ using System.IO;
 using GymSharp;
 using GymSharp.MVVM.ViewModel;
 using GymSharp.Data;
+using GymSharp.Utils;
 
 namespace GymSharp.MVVM.View
 {
@@ -27,60 +28,42 @@ namespace GymSharp.MVVM.View
         int height;
         string sex;
         int weightObj;
-        string ProfileFirstName = UserProfile.firstName;
+        
         public ProfileView()
         {
             InitializeComponent();
+            FirstNameBox.Text = UserProfile.firstName;
+            LastNameBox.Text = UserProfile.lastName;
+            AgeBox.Text = Convert.ToString(UserProfile.age);
+            WeightBox.Text = Convert.ToString(UserProfile.weight);
         }
-        private void FirstNameBoxProfile_KeyDown(object sender, KeyEventArgs e)
+        public void Checked(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.Enter)
+            string Obj;
+            if (StartSport.IsChecked == true)
             {
-                UserProfile.firstName = FirstNameBox.Text;
-                //UserProfile.FillFirstName(UserProfile.firstName);
-            }            
-        }
-        
-        private void LastNameBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
+                Obj = (string)StartSport.Content;
+            }
+            else if (IncreaseStamina.IsChecked == true)
             {
-                UserProfile.lastName = LastNameBox.Text;
-                ///UserProfile.FillLastName();
+                Obj = (string)IncreaseStamina.Content;
+            }
+            else if (IncreaseStrenght.IsChecked == true)
+            {
+                Obj = (string)IncreaseStrenght.Content;
+            }
+            else if (BetterBody.IsChecked == true)
+            {
+                Obj = (string)BetterBody.Content;
+            }
+            else
+            {
+                Obj = (string)KeepFit.Content;
+            }
+            if (Valid.IsChecked == true)
+            {
+                UserProfile.FillInfos(FirstNameBox.Text, LastNameBox.Text, AgeBox.Text, WeightBox.Text, Obj);
             }
         }
-        private void AgeBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                UserProfile.age = Int32.Parse(AgeBox.Text);
-                ///UserProfile.FillAge();
-            }
-        }
-
-        private void WeightBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                UserProfile.weight = Int32.Parse(WeightBox.Text);
-                ///UserProfile.FillWeight();
-            }
-        }
-
-        private void HeightBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                height = Int32.Parse(HeightBox.Text);
-            }
-        }
-        
-        private void WeightObjBoxProfile_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.Key == Key.Enter)
-            {
-                weightObj = Int32.Parse(WeightObjBoxProfile.Text);
-            }
-        }       
     }
 }

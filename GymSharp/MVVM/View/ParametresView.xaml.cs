@@ -24,5 +24,13 @@ namespace GymSharp.MVVM.View
         {
             InitializeComponent();
         }
+
+        public void Checked(object sender, RoutedEventArgs e)
+        {
+            if (Valid.IsChecked == true)
+            {
+                
+            }
+        }
     }
 }

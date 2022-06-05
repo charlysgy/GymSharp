@@ -10,13 +10,15 @@ using System.Windows.Controls;
 using GymSharp.MVVM.View;
 using GymSharp.ressources.enums;
 using System.Windows.Media.Imaging;
+using GymSharp.Utils;
 
 namespace GymSharp.MVVM.ViewModel
 {
     internal class ListeExerciceViewModel : UserControl
     {
         public static ListeExerciceView View { get; set; }
-        public static List<List<string>> ListeText = FileToListOfString("../../ressources/text/Francais-fr/Text_Exo_fr/ListeInfo.txt");
+        public static string path = "ListeInfo.txt";
+        public static List<List<string>> ListeText = FileToListOfString(path);
 
         public ListeExerciceViewModel()
         {
@@ -25,6 +27,7 @@ namespace GymSharp.MVVM.ViewModel
 
         public static List<List<string>> FileToListOfString(string path)
         {
+            FindPath.FindFile(ref path);
             StreamReader stream = new StreamReader(path);
             List<List<string>> listRetour = new List<List<string>>();
             string text = stream.ReadToEnd();

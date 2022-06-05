@@ -71,7 +71,8 @@
                 <RadioButton Content="Curls à la barre"
                              Style="{StaticResource StyleBoutons}"
                              Name="_31"
-                             Checked="ExoChecked"/>
+                             Checked="ExoChecked"
+                             IsChecked="True"/>
 
                 <RadioButton Content="Curls aux haltères"
                              Style="{StaticResource StyleBoutons}"
@@ -388,7 +389,8 @@
                 <RadioButton Content="1 kg"
                              Style="{StaticResource StyleBoutons}"
                              Name="_P1"
-                             Checked="PoidsChecked"/>
+                             Checked="PoidsChecked"
+                             IsChecked="True"/>
 
                 <RadioButton Content="2 kg"
                              Style="{StaticResource StyleBoutons}"
@@ -1175,7 +1177,8 @@
                 <RadioButton Content="1"
                              Style="{StaticResource StyleBoutons}"
                              Name="_R1"
-                             Checked="RepChecked"/>
+                             Checked="RepChecked"
+                             IsChecked="True"/>
 
                 <RadioButton Content="2"
                              Style="{StaticResource StyleBoutons}"

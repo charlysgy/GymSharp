@@ -37,7 +37,7 @@ namespace GymSharp.MVVM.View
             if (e.Key == Key.Enter)
             {
                 UserProfile.firstName = FirstNameBox.Text;
-                UserProfile.FillFirstName(UserProfile.firstName);
+                //UserProfile.FillFirstName(UserProfile.firstName);
             }            
         }
         

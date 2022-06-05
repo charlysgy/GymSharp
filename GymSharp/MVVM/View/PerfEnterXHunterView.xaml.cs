@@ -3,6 +3,9 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using GymSharp.MVVM.ViewModel;
+using System.IO;
+using GymSharp.Utils;
+
 
 namespace GymSharp.MVVM.View
 {
@@ -11,6 +14,7 @@ namespace GymSharp.MVVM.View
     /// </summary>
     public partial class PerfEnterXHunterView : UserControl
     {
+
         public PerfEnterXHunterView()
         {
             InitializeComponent();
@@ -35,8 +39,26 @@ namespace GymSharp.MVVM.View
         //renvoie un couple avec d'abord un string sous la forme jj/mm/aa/NumExo/NbrRep/NbrPoids/None et le boolléen qui définis si tout les boutons étaient cliqués avant de cliqué sur valider.
         public void Checked(object sender, RoutedEventArgs e)
         {
+            if ((string)Valid.Content == "Valider")
+            {
+                string perf = PerfEnterXHunterViewModel.PerfEnter();
+                string path = "exosData.txt";
+                FindPath.FindFile(ref path);
+                StreamWriter sw = new StreamWriter(path, true);
+                sw.WriteLine(perf);
+                sw.Close();
+                Valid.Content = "Enregistrer ! Cliquez pour de nouveau enregistrer une donnée";
+                Valid.IsChecked = false;
+            }
+            else if ((string)Valid.Content == "Enregistrer ! Cliquez pour de nouveau enregistrer une donnée")
+            {
+                Valid.Content = "Valider";
+                Valid.IsChecked = false;
+                _31.IsChecked = true;
+                _P1.IsChecked = true;
+                _R1.IsChecked = true;
+            }
             
-            (string, bool) perf = PerfEnterXHunterViewModel.PerfEnter();
         }
     }
 }

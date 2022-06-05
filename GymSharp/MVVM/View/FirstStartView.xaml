@@ -54,8 +54,7 @@
             <TextBox x:Name="FirstNameBox" 
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
-                     Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"/>
+                     Margin="15 5"/>
         </StackPanel>
     
         <StackPanel Grid.Row="0"

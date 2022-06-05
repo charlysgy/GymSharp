@@ -43,55 +43,55 @@ namespace GymSharp
             viewContainer.Children.Add(element);
         }
 
-        private void HomeCommand(object sender, RoutedEventArgs e)
+        public void HomeCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
             UIElement element = new HomeView();
             viewContainer.Children.Add(element);
         }
 
-        private void ExercicesCommand(object sender, RoutedEventArgs e)
+        public void ExercicesCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
             UIElement element = new ListeExerciceView();
             viewContainer.Children.Add(element);
         }
 
-        private void ParametresCommand(object sender, RoutedEventArgs e)
+        public void ParametresCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
             UIElement element = new ParametresView();
             viewContainer.Children.Add(element);
         }
 
-        private void GraphiqueCommand(object sender, RoutedEventArgs e)
+        public void GraphiqueCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
             UIElement element = new RepRMChartView();
             viewContainer.Children.Add(element);
         }
 
-        private void WorkoutCommand(object sender, RoutedEventArgs e)
+        public void WorkoutCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
             UIElement element = new PerfEnterXHunterView();
             viewContainer.Children.Add(element);
         }
 
-        private void HistoricalCommand(object sender, RoutedEventArgs e)
+        public void HistoricalCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
             UIElement element = new LastSessionPerfView();
             viewContainer.Children.Add(element);
         }
 
-        private void ModelCommand(object sender, RoutedEventArgs e)
+        public void ModelCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
             UIElement element = new _3DView(group);
             viewContainer.Children.Add(element);
         }
-        private void ProfileCommand(object sender, RoutedEventArgs e)
+        public void ProfileCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();
             UIElement element = new ProfileView();

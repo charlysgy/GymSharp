@@ -347,7 +347,7 @@
 
         <TextBlock  TextBlock.TextAlignment="Center"
                     TextWrapping="Wrap"
-                    FontSize="20"
+                    FontSize="25"
                     Background="#ADADAD"
                     x:Name="Anecdote"
                     VerticalAlignment="Top"

@@ -26,5 +26,11 @@ namespace GymSharp.MVVM.View
             InitializeComponent();
             HelloName.Text = "Bonjour " + FirstStartView.FirstName + ", que souhaitez-vous faire aujourd'hui ?";
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
+ 

@@ -96,6 +96,8 @@ namespace GymSharp.MVVM.ViewModel
 
             foreach (string line in content.Split('\n').Reverse())
             {
+                if (line == "")
+                    continue;
                 parts = line.Split('/');
 
                 TextBlock textBlock = new TextBlock()

@@ -65,6 +65,8 @@ namespace GymSharp.MVVM.View
         {
             Point pos = e.GetPosition(rect);
             string muscle = _3dclass.IsPointInsideAMuscle(pos, side, this);
+            MainWindow parent = (MainWindow)Application.Current.MainWindow;
+            parent.RouteFromBodyToExo(muscle);
             //_3dclass.point = pos;
         }
 

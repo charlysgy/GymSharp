@@ -33,6 +33,8 @@ namespace GymSharp.MVVM.Model
         {
             foreach (string line in content)
             {
+                if (line == "")
+                    continue;
                 string[] data = line.Replace("\r", "").Split('/');
                 if (days.Count == 0 || (days.Count > 0 && days[days.Count - 1] != int.Parse(data[0])))
                 {

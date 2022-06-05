@@ -44,6 +44,12 @@ namespace GymSharp.MVVM.View
                 string perf = PerfEnterXHunterViewModel.PerfEnter();
                 string path = "exosData.txt";
                 FindPath.FindFile(ref path);
+
+                using (StreamReader sr = new StreamReader(path))
+                {
+
+                }
+
                 StreamWriter sw = new StreamWriter(path, true);
                 sw.WriteLine(perf);
                 sw.Close();

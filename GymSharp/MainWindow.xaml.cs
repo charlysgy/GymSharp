@@ -35,6 +35,14 @@ namespace GymSharp
             HomeCommand(sender, e);
         }
 
+        public void RouteFromBodyToExo(string muscle)
+        {
+            Console.WriteLine(muscle);
+            viewContainer.Children.Clear();
+            UIElement element = new ListeExerciceView();
+            viewContainer.Children.Add(element);
+        }
+
         private void HomeCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();

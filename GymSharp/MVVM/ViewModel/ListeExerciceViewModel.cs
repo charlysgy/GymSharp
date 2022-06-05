@@ -99,13 +99,15 @@ namespace GymSharp.MVVM.ViewModel
             }
             else if (muscle > 50 && muscle < 60)
             {
-                View.title.Text = "Information Exercice Dos";
+                View.title.Text = "Information Exercice Abdos";
             }
 
             View.textInfos.Text = getText(muscle, ListeText);
+            View.textInfos.Margin = new Thickness(15);
 
             //Image
             View.imageExo.Source = new BitmapImage(new Uri(getImage(muscle), UriKind.Relative));
+            View.border.Visibility = Visibility.Visible;
 
         }
 

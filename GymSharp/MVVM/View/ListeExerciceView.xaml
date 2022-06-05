@@ -406,13 +406,24 @@
                            Margin="0, 0, 25, 0" 
                            TextWrapping="Wrap"/>
 
-                <Image  x:Name="imageExo" 
+                <Border Name="border" 
+                        BorderThickness="3"
+                        BorderBrush="#FF000000"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Margin="15"
                         Grid.Row="1"
-                        Source="../../ressources/Images/logo_gym.png"
-                        Height="Auto" 
-                        HorizontalAlignment="Left" 
-                        VerticalAlignment="Top" 
-                        Margin="25, 25, 0, 0"/>
+                        Grid.ColumnSpan="1"
+                        Grid.RowSpan="1"
+                        Visibility="Hidden">
+                    <Image  x:Name="imageExo"
+                            Source="../../ressources/Images/logo_gym.png"
+                            Height="Auto"/>
+                </Border>
+
+                
+        
+                
                 <ScrollViewer  x:Name="scrollViewerText" 
                                Grid.Row="1"
                                Grid.Column="1"
@@ -423,7 +434,6 @@
                                     TextWrapping="Wrap"
                                     FontFamily="Berlin sans FB"
                                     TextAlignment="Left"
-                                    Margin="25 0 0 5"
                                     Foreground="White"
                                     Background="Transparent"
                                     FontSize="20"/>

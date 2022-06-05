@@ -63,6 +63,20 @@ namespace GymSharp
             viewContainer.Children.Add(element);
         }
 
+        private void WorkoutCommand(object sender, RoutedEventArgs e)
+        {
+            viewContainer.Children.Clear();
+            UIElement element = new PerfEnterXHunterView();
+            viewContainer.Children.Add(element);
+        }
+
+        private void HistoricalCommand(object sender, RoutedEventArgs e)
+        {
+            viewContainer.Children.Clear();
+            UIElement element = new LastSessionPerfView();
+            viewContainer.Children.Add(element);
+        }
+
         private void ModelCommand(object sender, RoutedEventArgs e)
         {
             viewContainer.Children.Clear();

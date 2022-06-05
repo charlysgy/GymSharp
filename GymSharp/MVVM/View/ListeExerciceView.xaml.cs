@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using GymSharp.MVVM.ViewModel;
+using GymSharp.ressources.enums;
 
 namespace GymSharp.MVVM.View
 {
@@ -18,11 +19,19 @@ namespace GymSharp.MVVM.View
             ListeExerciceViewModel.View = this;
         }
 
-        public ListeExerciceView(string muscle)
+        public ListeExerciceView(int numMuscle)
         {
+            Muscles muscle = (Muscles)numMuscle;
+            switch (muscle)
+            {
+                case Muscles.Ischios:
+                case Muscles.Mollets:
+                    muscle = Muscles.Quadriceps;
+                    break;
+            }
             InitializeComponent();
             ListeExerciceViewModel.View = this;
-            ListeExerciceViewModel.ChangeInfoAboutMuscle(int.Parse(muscle));
+            ListeExerciceViewModel.ChangeInfoAboutMuscle((int)muscle);
             scrollViewerText.MaxHeight = ActualHeight - title.ActualHeight;
         }
 

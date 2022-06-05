@@ -7,6 +7,7 @@ using GymSharp.MVVM.Model;
 using HelixToolkit.Wpf;
 using GymSharp.Utils;
 using System.Threading;
+using GymSharp.ressources.enums;
 
 namespace GymSharp.MVVM.View
 {
@@ -64,9 +65,16 @@ namespace GymSharp.MVVM.View
         private void myViewport_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Point pos = e.GetPosition(rect);
-            string muscle = _3dclass.IsPointInsideAMuscle(pos, side, this);
-            MainWindow parent = (MainWindow)Application.Current.MainWindow;
-            parent.RouteFromBodyToExo(muscle);
+            string res = _3dclass.IsPointInsideAMuscle(pos, side, this);
+
+            Muscles muscle;
+            if (res != "none" && Enum.TryParse<Muscles>(res, out muscle))
+            {
+                MainWindow parent = (MainWindow)Application.Current.MainWindow;
+                parent.RouteFromBodyToExo((int)muscle);
+            }
+
+            
             //_3dclass.point = pos;
         }
 

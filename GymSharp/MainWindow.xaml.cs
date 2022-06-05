@@ -9,6 +9,7 @@ using System.Windows.Input;
 using GymSharp.Utils;
 using HelixToolkit.Wpf;
 using System.Windows.Media.Media3D;
+using System.Windows.Controls;
 
 namespace GymSharp
 {
@@ -35,11 +36,14 @@ namespace GymSharp
             HomeCommand(sender, e);
         }
 
-        public void RouteFromBodyToExo(string muscle)
+        public void RouteFromBodyToExo(int muscle)
         {
-            Console.WriteLine(muscle);
+            foreach (ListViewItem listItem in List_View.Items)
+            {
+                listItem.IsSelected = false;
+            }
             viewContainer.Children.Clear();
-            UIElement element = new ListeExerciceView();
+            UIElement element = new ListeExerciceView(muscle);
             viewContainer.Children.Add(element);
         }
 

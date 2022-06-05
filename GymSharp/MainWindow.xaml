@@ -92,7 +92,8 @@
                                   Width="50"
                                   BorderThickness="0"
                                   Style="{StaticResource StyleToggleButton}"
-                                  Cursor="Hand">
+                                  Cursor="Hand"
+                                  MaxHeight="85" MaxWidth="85">
                         <ToggleButton.Background>
                             <ImageBrush ImageSource="/ressources/Images/logo_gym.png"/>
                         </ToggleButton.Background>

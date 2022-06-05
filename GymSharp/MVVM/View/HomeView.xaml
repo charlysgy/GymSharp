@@ -13,8 +13,10 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="HelloName"
                    Grid.Row="0"
@@ -23,7 +25,7 @@
                    VerticalAlignment="Top"
                    HorizontalAlignment="Center"
                    FontSize="25"
-                   Padding="0,10,0,0"
+                   Padding="0,10,0,10"
                    TextWrapping="Wrap"
                    Foreground="#F3F3F3"/>
 
@@ -31,13 +33,66 @@
                     Grid.Column="0"
                     Grid.Row="1"
                     Orientation="Horizontal">
-            <TextBlock Text="Si vous savez déjà quel exercice effectuer, rendez-vous dans la section Séance"
+            <TextBlock Text="Si vous souhaitez consulter vos performances sur un exercice, rendez-vous ici"
                    TextWrapping="Wrap"
                    Foreground="#F3F3F3"
                        FontSize="15"/>
-            <Button Content="Page séance ici" Click="Button_Click"/>
-
+            <Button Content="Page graphiques ici"
+                    Margin="10,0,0,0"
+                    TextBlock.TextAlignment="Center"
+                    BorderThickness="2"
+                        Width="Auto" Height="25"
+                        VerticalAlignment="Top" Click="Button_Click_2"/>
         </StackPanel>
-        
+
+        <StackPanel Margin="10"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Orientation="Horizontal">
+            <TextBlock Text="Si vous savez déjà quel exercice effectuer, rendez-vous ici"
+                   TextWrapping="Wrap"
+                   Foreground="#F3F3F3"
+                       FontSize="15"/>
+                <Button Content="Page séance ici" 
+                    Click="Button_Click"
+                    Margin="10,0,0,0"
+                    TextBlock.TextAlignment="Center"
+                    BorderThickness="2"
+                        Width="Auto" Height="25"
+                        VerticalAlignment="Top"/>
+        </StackPanel>
+
+        <StackPanel Margin="10"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    Orientation="Horizontal">
+            <TextBlock Text="Si vous souhaitez consulter l'historique de vos séances, rendez-vous ici"
+                   TextWrapping="Wrap"
+                   Foreground="#F3F3F3"
+                       FontSize="15"/>
+            <Button Content="Page historique ici"
+                    Margin="10,0,0,0"
+                    TextBlock.TextAlignment="Center"
+                    BorderThickness="2"
+                        Width="Auto" Height="25"
+                        VerticalAlignment="Top" Click="Button_Click_1"/>
+        </StackPanel>
+
+        <StackPanel Margin="10"
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    Orientation="Horizontal">
+           <TextBlock Text="Si vous voulez travailler un muscle en particulier mais que vous ne savez pas quel exercice effectuer, allez consulter le corps en 3D"
+                   TextWrapping="Wrap"
+                   Foreground="#F3F3F3"
+                       FontSize="15"/>
+            <Button Content="Corps 3D ici"
+                    Margin="10,0,0,0"
+                    TextBlock.TextAlignment="Center"
+                    BorderThickness="2"
+                        Width="Auto" Height="25"
+                        VerticalAlignment="Top" Click="Button_Click_3"/>
+        </StackPanel>
+
     </Grid>
 </UserControl>

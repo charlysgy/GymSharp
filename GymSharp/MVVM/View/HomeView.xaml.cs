@@ -29,7 +29,8 @@ namespace GymSharp.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            MainWindow parent = (MainWindow)Application.Current.MainWindow;
+            parent.WorkoutCommand(sender, e);
         }
     }
 }

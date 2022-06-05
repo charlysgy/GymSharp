@@ -32,6 +32,7 @@ namespace GymSharp.MVVM.View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Console.WriteLine(FirstNameBox.Text);
             if (FirstNameBox.Text != "")
             {
                 FirstName = FirstNameBox.Text;
@@ -48,6 +49,11 @@ namespace GymSharp.MVVM.View
         public void GetInfoFirstName()
         {
             FirstName = FirstNameBox.Text;
+        }
+
+        public void SetFocus(object sender, RoutedEventArgs e)
+        {
+            ((TextBox)sender).Focus();
         }
     }
 }

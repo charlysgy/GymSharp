@@ -18,6 +18,14 @@ namespace GymSharp.MVVM.View
             ListeExerciceViewModel.View = this;
         }
 
+        public ListeExerciceView(string muscle)
+        {
+            InitializeComponent();
+            ListeExerciceViewModel.View = this;
+            ListeExerciceViewModel.ChangeInfoAboutMuscle(int.Parse(muscle));
+            scrollViewerText.MaxHeight = ActualHeight - title.ActualHeight;
+        }
+
         public void ExoChecked(object sender, RoutedEventArgs e)
         {
             RadioButton radio = (RadioButton)sender;

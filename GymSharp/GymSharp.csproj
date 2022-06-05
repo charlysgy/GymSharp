@@ -79,10 +79,10 @@
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>14B051AE7094016026B5508D8CC861C2C692D7AB</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>EE03724B9CA52112DF378C29899A8AAC5952E995</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>GymSharp_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>GymSharp_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -254,6 +254,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="GymSharp_1_TemporaryKey.pfx" />
     <None Include="GymSharp_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

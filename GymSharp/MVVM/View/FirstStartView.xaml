@@ -55,8 +55,7 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"
-                     GotFocus="SetFocus"/>
+                     Style="{StaticResource StyleTextBox}"/>
         </StackPanel>
     
         <StackPanel Grid.Row="0"
@@ -75,8 +74,7 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"
-                     GotFocus="SetFocus"/>
+                     Style="{StaticResource StyleTextBox}"/>
         </StackPanel>
         
         <StackPanel Grid.Row="0"
@@ -95,8 +93,7 @@
                      BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"
-                     GotFocus="SetFocus"/>
+                     Style="{StaticResource StyleTextBox}"/>
         </StackPanel>
 
         <ListBox x:Name="LanguageBox"
@@ -127,8 +124,7 @@
             <TextBox BorderBrush="#8D8D8D"
                      BorderThickness="0.5"
                      Margin="15 5"
-                     Style="{StaticResource StyleTextBox}"
-                     GotFocus="SetFocus"/>
+                     Style="{StaticResource StyleTextBox}"/>
         </StackPanel>
 
         <StackPanel Grid.Row="1"

@@ -24,19 +24,20 @@ namespace GymSharp.MVVM.View
     /// </summary>
     public partial class FirstStartView : Window
     {
-
         public string FirstName;
         public FirstStartView()
         {
             InitializeComponent();
-            /*ImageBrush lBoxBg = new ImageBrush();
-            lBoxBg.ImageSource = new BitmapImage(new Uri(@"../../ressources/Images/enflag.png"));*/
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            UserProfile.FillFirstName(this);
-            this.Close();
+            if (FirstNameBox.Text != "")
+            {
+                FirstName = FirstNameBox.Text;
+                UserProfile.FillFirstName(FirstName);
+                this.Close();
+            }
         }
 
         public void OpenDialog()
@@ -47,11 +48,6 @@ namespace GymSharp.MVVM.View
         public void GetInfoFirstName()
         {
             FirstName = FirstNameBox.Text;
-        }
-
-        private void SetFocus(object sender, RoutedEventArgs e)
-        {
-            ((TextBox)sender).Focus();
         }
     }
 }

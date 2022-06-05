@@ -65,16 +65,6 @@ namespace GymSharp.Data
             return weight;
         }
 
-        public static void FillFirstName(FirstStartView view)
-        {
-            FindPath.FindFile(ref pathUserProfile);
-            string FirstNameToFill = view.FirstNameBox.Text;
-            using (StreamWriter sw = new StreamWriter(pathUserProfile))
-            {
-                sw.Write(FirstNameToFill);
-                sw.Close();
-            }
-        }
         public static void FillFirstName(string name)
         {
             FindPath.FindFile(ref pathUserProfile);

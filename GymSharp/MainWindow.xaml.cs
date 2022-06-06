@@ -144,6 +144,8 @@ namespace GymSharp
                 tooltip_liste_graphique.Visibility = Visibility.Collapsed;
                 tooltip_corps.Visibility = Visibility.Collapsed;
                 tooltip_parametres.Visibility = Visibility.Collapsed;
+                tooltip_liste_historique.Visibility = Visibility.Collapsed;
+                tooltip_liste_seance.Visibility = Visibility.Collapsed;
             }
             else
             {
@@ -153,6 +155,8 @@ namespace GymSharp
                 tooltip_liste_graphique.Visibility = Visibility.Visible;
                 tooltip_corps.Visibility = Visibility.Visible;
                 tooltip_parametres.Visibility = Visibility.Visible;
+                tooltip_liste_historique.Visibility = Visibility.Visible;
+                tooltip_liste_seance.Visibility = Visibility.Visible;
             }
         }
 

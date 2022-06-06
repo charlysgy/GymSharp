@@ -5,6 +5,7 @@ using System.Windows.Data;
 using GymSharp.MVVM.ViewModel;
 using System.IO;
 using GymSharp.Utils;
+using System.Linq;
 
 
 namespace GymSharp.MVVM.View
@@ -44,15 +45,45 @@ namespace GymSharp.MVVM.View
                 string perf = PerfEnterXHunterViewModel.PerfEnter();
                 string path = "exosData.txt";
                 FindPath.FindFile(ref path);
-
+                /*
+                string[] content;
                 using (StreamReader sr = new StreamReader(path))
                 {
-
+                    content = sr.ReadToEnd().Replace("\r", "").Split('\n');
                 }
 
+                string lastDay = perf.Split('/')[0];
+                string month = perf.Split('/')[1];
+                string year = perf.Split('/')[2];
+                string numExo = perf.Split('/')[3];
+                int rep = int.Parse(perf.Split('/')[4]);
+                int weight = int.Parse(perf.Split('/')[5]);
+                int coef = 1;
+
+                foreach (string line in content.Reverse())
+                {
+                    if (lastDay == line.Split('/')[0] && line.Split('/')[3] == numExo)
+                    {
+                        coef++;
+                        rep = (rep + int.Parse(line.Split('/')[4])) / coef;
+                        weight = (weight + int.Parse(line.Split('/')[5])) / coef;
+                    }
+                    else
+                    {
+                        for(; coef > 0; coef--)
+                        {
+                            content.
+                        }
+                        StreamWriter sw = new StreamWriter(path, true);
+                        sw.WriteLine(perf);
+                        sw.Close();
+                        break;
+                    }
+                }*/
                 StreamWriter sw = new StreamWriter(path, true);
                 sw.WriteLine(perf);
                 sw.Close();
+
                 Valid.Content = "Enregistrer ! Cliquez pour de nouveau enregistrer une donnée";
                 Valid.IsChecked = false;
             }

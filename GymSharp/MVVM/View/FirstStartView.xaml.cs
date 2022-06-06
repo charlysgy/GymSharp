@@ -63,7 +63,7 @@ namespace GymSharp.MVVM.View
                 {
                     Objective = (string)KeepTrained.Content;
                 }
-                UserProfile.FillInfos(FirstName, LastName, Age, Weight, Objective);
+                UserProfile.FillInfos(name:FirstName, lastname:LastName, age:Age, weight:Weight, objective:Objective);
                 this.Close();
             }
         }

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:GymSharp.MVVM.View"
       xmlns:viewModel="clr-namespace:GymSharp.MVVM.ViewModel"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800">
+      d:DesignHeight="800" d:DesignWidth="1400">
     <UserControl.DataContext>
         <viewModel:ProfileViewModel/>
     </UserControl.DataContext>
@@ -38,7 +38,7 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontFamily="Berlin Sans FB"
-                       FontSize="45"/>
+                       FontSize="50"/>
                     <ScrollViewer Grid.Row="0"
                                   Grid.Column="0"                                 
                                   VerticalScrollBarVisibility="Auto"
@@ -50,83 +50,99 @@
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             FontFamily="Berlin Sans FB"
-                            FontSize="30"
+                            FontSize="40"
                             Margin="10, 0, 0, 0"/>
+                            
                             <TextBox x:Name="FirstNameBox"
                             Text= "{Binding ProfileFirstName, Mode=OneWay}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"/>
+                            Style="{StaticResource StyleTextBox}"
+                            GotFocus="ForceFocus"/>
+                            
                             <TextBlock Foreground="White"
                             Text="Nom :"
                             TextAlignment="Center"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             FontFamily="Berlin Sans FB"
-                            FontSize="30"
+                            FontSize="40"
                             Margin="10, 0, 0, 0"/>
+                            
                             <TextBox x:Name="LastNameBox"
                             Text= "{Binding ProfileLastName, Mode=OneWay}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"/>
+                            Style="{StaticResource StyleTextBox}"
+                            GotFocus="ForceFocus"/>
+                            
                             <TextBlock Foreground="White"
                             Text="Age :"
                             TextAlignment="Center"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             FontFamily="Berlin Sans FB"
-                            FontSize="30"
+                            FontSize="40"
                             Margin="10, 0, 0, 0"/>
+                            
                             <TextBox x:Name="AgeBox"
                             Text= "{Binding ProfileAge, Mode=OneWay}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"/>
+                            Style="{StaticResource StyleTextBox}"
+                            GotFocus="ForceFocus"/>
+                           
                             <TextBlock Foreground="White"
                             Text="Poids :"
                             TextAlignment="Center"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             FontFamily="Berlin Sans FB"
-                            FontSize="30"
+                            FontSize="40"
                             Margin="10, 0, 0, 0"/>
+                           
                             <TextBox x:Name="WeightBox"
                             Text= "{Binding ProfileWeight, Mode=OneWay}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"/>
+                            Style="{StaticResource StyleTextBox}"
+                            GotFocus="ForceFocus"/>
+                           
                             <TextBlock Foreground="White"
                             Text="Taille :"
                             TextAlignment="Center"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             FontFamily="Berlin Sans FB"
-                            FontSize="30"
+                            FontSize="40"
                             Margin="10, 0, 0, 0"/>
+                            
                             <TextBox x:Name="HeightBox" 
                             Text="{Binding ProfileHeight}"
                             BorderBrush="#8D8D8D"
                             BorderThickness="0.5"
                             Margin="15 5"
                             IsReadOnly="False"
-                            Style="{StaticResource StyleTextBox}"/>
+                            Style="{StaticResource StyleTextBox}"
+                            GotFocus="ForceFocus"/>
+
                             <TextBlock Foreground="White"
                             Text="Sexe :"
                             TextAlignment="Center"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Center"
                             FontFamily="Berlin Sans FB"
-                            FontSize="30"
+                            FontSize="40"
                             Margin="10, 0, 0, 0"/>
+
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
@@ -140,21 +156,21 @@
                                      x:Name="Man" 
                                      Cursor="Hand"
                                      Content="Homme"
-                                     FontSize="20"
+                                     FontSize="30"
                                      Margin="0 0 0 0"
                                      Style="{StaticResource StyleBoutons}"/>
                                 <RadioButton Grid.Row="0" Grid.Column="1"
                                      x:Name="Woman" 
                                      Cursor="Hand"
                                      Content="Femme"
-                                     FontSize="20"
+                                     FontSize="30"
                                      Margin="0 0 0 0"
                                      Style="{StaticResource StyleBoutons}"/>
                                 <RadioButton Grid.Row="0" Grid.Column="2"
                                      x:Name="Other" 
                                      Cursor="Hand"
                                      Content="Autre"
-                                     FontSize="20"
+                                     FontSize="30"
                                      Margin="0 0 0 0"
                                      Style="{StaticResource StyleBoutons}"/>
                             </Grid>
@@ -168,21 +184,22 @@
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"
                        FontFamily="Berlin Sans FB"
-                       FontSize="45"/>
+                       FontSize="50"/>
                     <TextBlock Foreground="White"
                         Text="Poids :"
                         TextAlignment="Center"
                         VerticalAlignment="Center"
                         HorizontalAlignment="Center"
                         FontFamily="Berlin Sans FB"
-                        FontSize="30"
+                        FontSize="40"
                         Margin="10, 0, 0, 0"/>
                     <TextBox x:Name="WeightObjBoxProfile" 
                         BorderBrush="#8D8D8D"
                         BorderThickness="0.5"
                         Margin="15 5"
                         IsReadOnly="False"
-                        Style="{StaticResource StyleTextBox}"/>
+                        Style="{StaticResource StyleTextBox}"
+                        GotFocus="ForceFocus"/>
                     <RadioButton Cursor="Hand">
                         <RadioButton.Template>
                             <ControlTemplate>
@@ -191,7 +208,7 @@
                                        VerticalAlignment="Center"
                                        HorizontalAlignment="Center"
                                        FontFamily="Berlin Sans FB"
-                                       FontSize="30"
+                                       FontSize="40"
                                        Margin="10, 0, 0, 0"/>
                             </ControlTemplate>
                         </RadioButton.Template>
@@ -200,37 +217,37 @@
                                 ScrollViewer.VerticalScrollBarVisibility="Auto">
                         <RadioButton Cursor="Hand"
                                      x:Name="StartSport"
-                                     FontSize="25"
+                                     FontSize="40"
                                      Content="Commencer le sport"
-                                     Margin="0 0 0 0"
+                                     Margin="5"
                                      Style="{StaticResource StyleBoutons}">
                         </RadioButton>
                         <RadioButton Cursor="Hand"
                                      x:Name="IncreaseStamina"
-                                     FontSize="25"
+                                     FontSize="40"
                                      Content="Améliorer mon endurence"
-                                     Margin="0 0 0 0"
+                                     Margin="5"
                                      Style="{StaticResource StyleBoutons}">
                         </RadioButton>
                         <RadioButton Cursor="Hand"
                                      x:Name="IncreaseStrenght"
                                      Content="Améliorer ma force"
-                                     FontSize="25"
-                                     Margin="0 0 0 0"
+                                     FontSize="40"
+                                     Margin="5"
                                      Style="{StaticResource StyleBoutons}">
                         </RadioButton>
                         <RadioButton Cursor="Hand"
                                      x:Name="BetterBody"
                                      Content="Améliorer mon physique"
-                                     FontSize="25"
-                                     Margin="0 0 0 0"
+                                     FontSize="40"
+                                     Margin="5"
                                      Style="{StaticResource StyleBoutons}">
                         </RadioButton>
                         <RadioButton Cursor="Hand"
                                      x:Name="KeepFit"
                                      Content="Rester en forme"
-                                     FontSize="25"
-                                     Margin="0 0 0 0"
+                                     FontSize="40"
+                                     Margin="5"
                                      Style="{StaticResource StyleBoutons}">
                         </RadioButton>
                     </StackPanel>

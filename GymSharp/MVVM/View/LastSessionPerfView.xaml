@@ -32,8 +32,7 @@
                    Margin="10"
                    Foreground="White"
                    FontFamily="Berlin sans FB"
-                   FontSize="20"
-                   Text="{Binding Title, Mode=OneWay}"/>
+                   FontSize="20"/>
 
         <Border Grid.Row="1"
                 Grid.Column="0" 

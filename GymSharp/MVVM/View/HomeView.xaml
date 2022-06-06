@@ -41,8 +41,9 @@
                     Margin="10,0,0,0"
                     TextBlock.TextAlignment="Center"
                     BorderThickness="2"
-                        Width="Auto" Height="25"
-                        VerticalAlignment="Top" Click="Button_Click_2"/>
+                    Width="Auto" Height="25"
+                    VerticalAlignment="Top" 
+                    Click="Button_Click_2"/>
         </StackPanel>
 
         <StackPanel Margin="10"
@@ -50,8 +51,8 @@
                     Grid.Row="2"
                     Orientation="Horizontal">
             <TextBlock Text="Si vous savez déjà quel exercice effectuer, rendez-vous ici"
-                   TextWrapping="Wrap"
-                   Foreground="#F3F3F3"
+                       TextWrapping="Wrap"
+                       Foreground="#F3F3F3"
                        FontSize="15"/>
                 <Button Content="Page séance ici" 
                     Click="Button_Click"
@@ -75,7 +76,8 @@
                     TextBlock.TextAlignment="Center"
                     BorderThickness="2"
                         Width="Auto" Height="25"
-                        VerticalAlignment="Top" Click="Button_Click_1"/>
+                        VerticalAlignment="Top" 
+                    Click="Button_Click_1"/>
         </StackPanel>
 
         <StackPanel Margin="10"
@@ -91,7 +93,8 @@
                     TextBlock.TextAlignment="Center"
                     BorderThickness="2"
                         Width="Auto" Height="25"
-                        VerticalAlignment="Top" Click="Button_Click_3"/>
+                        VerticalAlignment="Top" 
+                    Click="Button_Click_3"/>
         </StackPanel>
 
     </Grid>

@@ -32,11 +32,44 @@ namespace GymSharp.MVVM.View
         public ProfileView()
         {
             InitializeComponent();
-            FirstNameBox.Text = UserProfile.firstName;
-            LastNameBox.Text = UserProfile.lastName;
-            AgeBox.Text = Convert.ToString(UserProfile.age);
-            WeightBox.Text = Convert.ToString(UserProfile.weight);
+            switch(UserProfile.Get_sexe())
+            {
+                case "Homme":
+                    Man.IsChecked = true;
+                    break;
+                case "Femme":
+                    Woman.IsChecked = true;
+                    break;
+                default:
+                    Other.IsChecked = true;
+                    break;
+            }
+
+            switch (UserProfile.Get_objective())
+            {
+                case "Commencer le sport":
+                    StartSport.IsChecked = true;
+                    break;
+                case "Améliorer mon endurance":
+                    IncreaseStamina.IsChecked = true;
+                    break;
+                case "Améliorer ma force":
+                    IncreaseStrenght.IsChecked = true;
+                    break;
+                case "Améliorer mon physique":
+                    BetterBody.IsChecked = true;
+                    break;
+                case "Rester en forme":
+                    KeepFit.IsChecked = true;
+                    break;
+            }
         }
+
+        private void ForceFocus(object sender, RoutedEventArgs e)
+        {
+            ((TextBox)sender).Focus();
+        }
+
         public void Checked(object sender, RoutedEventArgs e)
         {
             string Obj;
@@ -60,9 +93,29 @@ namespace GymSharp.MVVM.View
             {
                 Obj = (string)KeepFit.Content;
             }
+
+            string sexe;
+            if (Man.IsChecked == true)
+            {
+                sexe = (string)Man.Content;
+            }
+            else if (Woman.IsChecked == true)
+            {
+                sexe= (string)Woman.Content;
+            }
+            else
+            {
+                sexe = (string)Other.Content;
+            }
+
+
             if (Valid.IsChecked == true)
             {
-                UserProfile.FillInfos(FirstNameBox.Text, LastNameBox.Text, AgeBox.Text, WeightBox.Text, Obj);
+                Console.WriteLine(FirstNameBox.Text);
+                Console.WriteLine(AgeBox.Text);
+                UserProfile.FillInfos(FirstNameBox.Text, LastNameBox.Text, AgeBox.Text, WeightBox.Text, HeightBox.Text, sexe, Obj);
+                Valid.IsChecked = null;
+                Valid.Content = "Vos données ont été enregistrées";
             }
         }
     }

@@ -16,8 +16,6 @@ namespace GymSharp.MVVM.ViewModel
     public class LastSessionPerfViewModel : UserControl
     {
         public static LastSessionPerfView View { get; set; }
-
-
         public LastSessionPerfViewModel()
         {            
         }
@@ -109,7 +107,7 @@ namespace GymSharp.MVVM.ViewModel
                     VerticalAlignment = VerticalAlignment.Center,
                     HorizontalAlignment = HorizontalAlignment.Center,
                     TextWrapping = TextWrapping.Wrap,
-                    Margin = new Thickness(5),
+                    Margin = new Thickness(15),
                     MaxHeight = 20
                 };
                 textBlock.MouseDown += TextBlockClicked;

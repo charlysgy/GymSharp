@@ -30,24 +30,40 @@ namespace GymSharp.MVVM.View
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             MainWindow parent = (MainWindow)Application.Current.MainWindow;
+            foreach (ListViewItem listItem in parent.List_View.Items)
+            {
+                listItem.IsSelected = false;
+            }
             parent.WorkoutCommand(sender, e);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             MainWindow parent = (MainWindow)Application.Current.MainWindow;
+            foreach (ListViewItem listItem in parent.List_View.Items)
+            {
+                listItem.IsSelected = false;
+            }
             parent.HistoricalCommand(sender, e);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             MainWindow parent = (MainWindow)Application.Current.MainWindow;
+            foreach (ListViewItem listItem in parent.List_View.Items)
+            {
+                listItem.IsSelected = false;
+            }
             parent.GraphiqueCommand(sender, e);
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             MainWindow parent = (MainWindow)Application.Current.MainWindow;
+            foreach (ListViewItem listItem in parent.List_View.Items)
+            {
+                listItem.IsSelected = false;
+            }
             parent.ModelCommand(sender, e);
         }
     }

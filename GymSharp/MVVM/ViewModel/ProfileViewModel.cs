@@ -18,11 +18,11 @@ namespace GymSharp.MVVM.ViewModel
         public string ProfileHeight { get; set; }
         public ProfileViewModel()
         {
-            ProfileFirstName = UserProfile.firstName;
-            ProfileLastName = UserProfile.lastName;
-            ProfileAge = Convert.ToString(UserProfile.age);
-            ProfileWeight = Convert.ToString(UserProfile.weight);
-            //ProfileHeight = Convert.ToString(View.ProfileView.height)
+            ProfileFirstName = UserProfile.Get_firstName();
+            ProfileLastName = UserProfile.Get_lastName();
+            ProfileAge = UserProfile.Get_age().ToString();
+            ProfileWeight = UserProfile.Get_weight().ToString();
+            ProfileHeight = UserProfile.Get_height().ToString();
         }
         
     }
